@@ -123,8 +123,8 @@
             <div class="vl-offcanvas-info">
                 <h3 class="vl-offcanvas-sm-title">Contact Us</h3>
                 <div class="space20"></div>
-                <span><a href="#"> <i class="fa-regular fa-envelope"></i> (+263) 777 157 102</a></span>
-                <span><a href="#"><i class="fa-solid fa-phone"></i>
+                <span><a href="#"> <i class="fa-regular fa-phone"></i> (+263) 777 157 102</a></span>
+                <span><a href="#"><i class="fa-solid fa-envelope"></i>
 info@visionpluswealth.com</a></span>
                 <span><a href="#"><i class="fa-solid fa-location-dot"></i>
 9th Floor Michael House, 62 Nelson Mandela Avenue, Harare, Zimbabwe</a></span>

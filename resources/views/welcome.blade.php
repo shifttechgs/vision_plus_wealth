@@ -9,7 +9,7 @@
                     <div class="hero4-heading">
 {{--                        <h5 data-aos="fade-left" data-aos-duration="800"> Trusted Microfinance Solutions for Real Growth</h5>--}}
                         <div class="space20"></div>
-                        <h2 class="text-anime-style-3">Fast, Flexible Loans for Real Growth</h2>
+                        <h2 class="text-anime-style-3">FFFast, Flexible Loans for Real Growth</h2>
                         <div class="space20"></div>
                         <p data-aos="fade-left" data-aos-duration="900">VisionPlus Wealth provides accessible, personalised financing that helps individuals, entrepreneurs, and SMEs grow with confidence.</p>
                         <div class="space32"></div>

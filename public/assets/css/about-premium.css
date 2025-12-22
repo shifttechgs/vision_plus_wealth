@@ -1,0 +1,452 @@
+/* ========================================
+   Premium About Page - Mission, Vision & Values
+   ======================================== */
+
+/* Value Cards Styling */
+.value-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 32px 24px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid  rgb(242, 244, 246);
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #07294e 0%, #07294e 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    /*box-shadow: 0 20px 40px #07294e;*/
+    border-color:#07294e;
+}
+
+.value-card:hover::before {
+    transform: scaleX(1);
+}
+
+.value-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #07294e 0%, #07294e 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.value-icon img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.value-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.value-card:hover h4 {
+    color: #07294e;
+}
+
+.value-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Enhanced Tab Navigation */
+.mission-vission-area .nav-pills {
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 15px;
+    display: inline-flex;
+    margin: 0 auto;
+}
+
+.mission-vission-area .nav-pills .nav-item {
+    margin: 0 4px;
+}
+
+.mission-vission-area .nav-pills .nav-link {
+    padding-top: 0px !important;
+    border-radius: 15px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #666 !important;
+    background: transparent !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.mission-vission-area .nav-pills .nav-link .text {
+    text-align: center;
+}
+
+.mission-vission-area .nav-pills .nav-link:hover {
+    background: rgb(242, 244, 246) !important;
+    color: #07294e !important;
+    transform: translateY(-2px);
+}
+
+.mission-vission-area .nav-pills .nav-link.active {
+    background: linear-gradient(135deg, #07294e 0%, #07294e 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(7, 41, 78, 0.3) !important;
+}
+
+/* Focus state for accessibility */
+.mission-vission-area .nav-pills .nav-link:focus {
+    outline: 2px solid #07294e;
+    outline-offset: 2px;
+}
+
+.mission-vission-area .nav-pills .nav-link:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.mission-vission-area .nav-pills .nav-link:focus-visible {
+    outline: 2px solid #07294e;
+    outline-offset: 2px;
+}
+
+/* Tab Content Animation */
+.tab-content .tab-pane {
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mission & Vision Enhanced Typography */
+.tab-pane .lead {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #07294e;
+    font-style: italic;
+    padding: 20px;
+    background: rgb(242, 244, 246);
+    border-left: 4px solid #07294e;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .mission-vission-area .nav-pills {
+        flex-direction: column;
+        width: 100%;
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .mission-vission-area .nav-pills .nav-item {
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    .mission-vission-area .nav-pills .nav-link {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .value-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .mission-vission-area .nav-pills {
+        padding: 8px;
+    }
+
+    .mission-vission-area .nav-pills .nav-link {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+    .value-card {
+        padding: 24px 20px;
+    }
+
+    .value-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .value-icon img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .value-card h4 {
+        font-size: 18px;
+    }
+
+    .value-card p {
+        font-size: 14px;
+    }
+}
+
+/* Enhanced Hover Effects for Images in Mission/Vision */
+.tab-pane .img1 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.tab-pane .img1 img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-pane .img1:hover img {
+    transform: scale(1.05);
+}
+
+/* Premium Button Styling in Tabs */
+.tab-pane .btn-area1 .vl-btn1 {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px  rgb(242, 244, 246);
+}
+
+.tab-pane .btn-area1 .vl-btn1:hover {
+    box-shadow: 0 6px 20px  rgb(242, 244, 246);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   Premium CTA Section Styling
+   ======================================== */
+
+.cta1-section-area {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.cta1-section-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(7,41,78,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.cta1-section-area .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #07294e;
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+
+.cta-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* CTA Buttons Styling */
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+
+.cta-buttons .vl-btn4 {
+    padding: 16px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta-buttons .vl-btn4:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-buttons .vl-btn4 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.cta-buttons .vl-btn4:hover span {
+    transform: translateX(4px);
+}
+
+/* CTA Image Styling */
+.cta-img {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(7, 41, 78, 0.15);
+}
+
+.cta-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-img:hover img {
+    transform: scale(1.05);
+}
+
+
+/* CTA Outer Wrapper */
+.cta1-section-area {
+    padding: 40px;                 /* OUTER spacing */
+}
+
+/* CTA Card */
+.cta1-section-area .cta-inner {
+    background: #07294e;
+    border-radius: 20px;           /* rounded corners */
+    padding: 48px 40px;            /* INNER padding */
+    overflow: hidden;              /* IMPORTANT for images */
+}
+
+/* CTA Heading */
+.cta1-section-area h2 {
+    color: #07294e;
+    font-weight: 700;
+}
+
+/* CTA Image */
+.cta-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Buttons spacing */
+.cta1-section-area .btn-area1 {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .cta1-section-area {
+        padding: 20px;
+    }
+
+    .cta1-section-area .cta-inner {
+        padding: 32px 24px;
+        text-align: center;
+    }
+
+    .cta1-section-area .btn-area1 {
+        justify-content: center;
+    }
+
+    .cta-img {
+        margin-top: 32px;
+        text-align: center;
+    }
+}
+
+/* Responsive Design for CTA */
+@media (max-width: 991px) {
+    .cta-header h2 {
+        font-size: 2rem;
+    }
+
+    .cta-description {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-buttons .vl-btn4 {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-img {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cta-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-description {
+        font-size: 0.9375rem;
+    }
+
+    .cta-buttons .vl-btn4 {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .cta-img {
+        margin-top: 32px;
+        border-radius: 12px;
+    }
+}
+

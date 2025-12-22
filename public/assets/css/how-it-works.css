@@ -1,0 +1,315 @@
+/* ========================================
+   VisionPlus Wealth - How It Works Section
+   Production Ready - Polished & Optimized
+   ======================================== */
+
+/* ===== Core Animations ===== */
+
+/* Progress Bar Animation - Smooth & Natural */
+.vpw-progress-bar {
+    animation: progressFill 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.6s;
+}
+
+@keyframes progressFill {
+    from {
+        width: 0%;
+        opacity: 0.5;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* ===== Card Interactions ===== */
+
+/* Step Card Hover - Subtle Lift */
+.vpw-step-card {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.vpw-step-card:hover {
+    transform: translateY(-12px);
+}
+
+/* Step Number Hover - Enhanced Depth */
+.vpw-step-number > div {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vpw-step-card:hover .vpw-step-number > div {
+    transform: scale(1.08);
+    box-shadow: 0 16px 40px rgba(7, 41, 78, 0.3) !important;
+}
+
+/* Icon Hover - Smooth Scale */
+.vpw-step-number i {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vpw-step-card:hover .vpw-step-number i {
+    transform: scale(1.12) rotate(5deg);
+}
+
+/* Badge Rotation - Playful Detail */
+.vpw-step-number span {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vpw-step-card:hover .vpw-step-number span {
+    transform: rotate(360deg) scale(1.08);
+}
+
+/* ===== CTA Button ===== */
+
+/* Button Hover - Professional Lift */
+.vpw-how-it-works .vl-btn4:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 16px 32px rgba(7, 41, 78, 0.35) !important;
+}
+
+.vpw-how-it-works .vl-btn4:hover i {
+    transform: translateX(4px);
+}
+
+.vpw-how-it-works .vl-btn4:active {
+    transform: translateY(-2px) scale(1.01);
+    transition: all 0.1s ease;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablet & Below - Hide Progress Line */
+@media (max-width: 991px) {
+    .vpw-progress-line {
+        display: none !important;
+    }
+
+    .vpw-how-it-works {
+        padding: 80px 0 60px !important;
+    }
+
+    .vpw-step-card {
+        margin-bottom: 60px !important;
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 767px) {
+    .vpw-how-it-works {
+        padding: 60px 0 50px !important;
+    }
+
+    .vpw-how-it-works .text-center {
+        margin-bottom: 50px !important;
+    }
+
+    .vpw-step-number {
+        width: 100px !important;
+        height: 100px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .vpw-step-number i {
+        font-size: 36px !important;
+    }
+
+    .vpw-step-number span {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 14px !important;
+        border-width: 3px !important;
+    }
+
+    .vpw-step-card h4 {
+        font-size: 20px !important;
+    }
+
+    .vpw-step-card p {
+        font-size: 14px !important;
+    }
+
+    .vpw-how-it-works .vl-btn4 {
+        padding: 16px 32px !important;
+        font-size: 15px !important;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 575px) {
+    .vpw-how-it-works {
+        padding: 50px 0 40px !important;
+    }
+
+    .vpw-step-card {
+        padding: 0 5px !important;
+    }
+
+    .vpw-step-card p {
+        padding: 0 5px !important;
+    }
+}
+
+/* Large Desktop - Optimize Spacing */
+@media (min-width: 1400px) {
+    .vpw-how-it-works {
+        padding: 120px 0 100px !important;
+    }
+
+    .vpw-step-card {
+        padding: 0 20px !important;
+    }
+}
+
+/* ===== Visual Polish ===== */
+
+/* Text Selection */
+.vpw-how-it-works ::selection {
+    background: #07294e;
+    color: #FFFFFF;
+}
+
+.vpw-how-it-works ::-moz-selection {
+    background: #07294e;
+    color: #FFFFFF;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.vpw-how-it-works {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card Entrance Animation (triggered by JS) */
+.vpw-step-card.in-view {
+    animation: cardAppear 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Accessibility ===== */
+
+/* Focus States - WCAG Compliant */
+.vpw-how-it-works a:focus,
+.vpw-how-it-works button:focus {
+    outline: 3px solid #07294e;
+    outline-offset: 4px;
+    border-radius: 50px;
+}
+
+.vpw-how-it-works a:focus-visible,
+.vpw-how-it-works button:focus-visible {
+    outline: 3px solid #07294e;
+    outline-offset: 4px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .vpw-progress-bar,
+    .vpw-step-card,
+    .vpw-step-number,
+    .vpw-how-it-works .vl-btn4,
+    .vpw-how-it-works {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .vpw-step-card:hover {
+        transform: none;
+    }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .vpw-how-it-works {
+        background: white !important;
+        padding: 40px 0 !important;
+    }
+
+    .vpw-progress-line,
+    .vpw-how-it-works .vl-btn4 {
+        display: none !important;
+    }
+
+    .vpw-step-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .vpw-how-it-works *,
+    .vpw-step-card h4,
+    .vpw-step-card p {
+        color: black !important;
+    }
+
+    .vpw-step-number > div {
+        background: #f0f0f0 !important;
+        box-shadow: none !important;
+    }
+
+    .vpw-step-number i,
+    .vpw-step-number span {
+        color: black !important;
+        background: #e0e0e0 !important;
+    }
+}
+
+/* ===== Performance Optimizations ===== */
+
+/* GPU Acceleration for Smooth Animations */
+.vpw-step-card,
+.vpw-step-number,
+.vpw-progress-bar,
+.vpw-how-it-works .vl-btn4 {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Remove will-change after animation completes */
+.vpw-step-card:not(:hover),
+.vpw-how-it-works .vl-btn4:not(:hover) {
+    will-change: auto;
+}
+
+/* ===== Browser-Specific Fixes ===== */
+
+/* Safari Fixes */
+@supports (-webkit-appearance: none) {
+    .vpw-step-number > div {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+/* Firefox Smoothing */
+@-moz-document url-prefix() {
+    .vpw-step-card {
+        image-rendering: -moz-crisp-edges;
+    }
+}

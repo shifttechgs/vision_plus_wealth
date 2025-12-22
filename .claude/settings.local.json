@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:visionpluswealth.com)",
+      "Bash(python3:*)",
+      "WebFetch(domain:payhousefinance.com)",
+      "Bash(php artisan:*)",
+      "Bash(composer require:*)",
+      "Bash(/mnt/c/wamp64_3.3.4/bin/php/php8.3.14/php.exe /mnt/c/ProgramData/ComposerSetup/bin/composer:*)",
+      "Bash(/mnt/c/wamp64_3.3.4/bin/php/php8.3.14/php.exe:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

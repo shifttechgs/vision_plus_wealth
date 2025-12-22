@@ -622,9 +622,9 @@
                         </div>
                         <div class="space24"></div>
                         <div class="content-area text-center">
-                            <a href="" class="team-name">Naome Muzvdziwa</a>
+                            <a href="" class="team-name">Naome Muzvidziwa</a>
                             <div class="space8"></div>
-                            <p class="team-role"> Board Chair</p>
+                            <p class="team-role"> Board Chair (Non Executive)</p>
                         </div>
                     </div>
                 </div>
@@ -663,7 +663,7 @@
                         </div>
                         <div class="space24"></div>
                         <div class="content-area text-center">
-                            <a href="" class="team-name">Rudo A.L Nodoro </a>
+                            <a href="" class="team-name">Rudo A.L. Ndoro </a>
                             <div class="space8"></div>
                             <p class="team-role"> Executive Director</p>
                         </div>
@@ -732,94 +732,49 @@
             <div class="row">
                 <div class="col-lg-12" data-aos="fade-up" data-aos-duration="1000">
                     <div class="history-single-slider owl-carousel">
-                        <div class="history-boxarea">
-                            <h2>1995</h2>
-                            <div class="space32"></div>
-                            <span></span>
-                            <div class="space32"></div>
-                            <a href="">Founder In London</a>
-                            <div class="space12"></div>
-                            <p>Over the years, we’ve grown from a small consultancy to leading provider.</p>
-                        </div>
-
-                        <div class="history-boxarea">
-                            <h2>1998</h2>
-                            <div class="space32"></div>
-                            <span></span>
-                            <div class="space32"></div>
-                            <a href="">Opening New Office</a>
-                            <div class="space12"></div>
-                            <p>Our journey has marked a continuous innovation, a commitment excellence.</p>
-                        </div>
-
-                        <div class="history-boxarea">
-                            <h2>2008</h2>
-                            <div class="space32"></div>
-                            <span></span>
-                            <div class="space32"></div>
-                            <a href="">Famous In Town</a>
-                            <div class="space12"></div>
-                            <p>As we've expanded our services and expertise, stayed true to our core.</p>
-                        </div>
-
-                        <div class="history-boxarea">
-                            <h2>2010</h2>
-                            <div class="space32"></div>
-                            <span></span>
-                            <div class="space32"></div>
-                            <a href="">Business Growth</a>
-                            <div class="space12"></div>
-                            <p>Today, we are proud to be trusted by companies around the world, helping.</p>
-                        </div>
-
-                        <div class="history-boxarea">
-                            <h2>2014</h2>
-                            <div class="space32"></div>
-                            <span></span>
-                            <div class="space32"></div>
-                            <a href="">Founder In London</a>
-                            <div class="space12"></div>
-                            <p>Over the years, we’ve grown from a small consultancy to leading provider.</p>
-                        </div>
-
-                        <div class="history-boxarea">
-                            <h2>2018</h2>
-                            <div class="space32"></div>
-                            <span></span>
-                            <div class="space32"></div>
-                            <a href="">Opening New Office</a>
-                            <div class="space12"></div>
-                            <p>Our journey has marked a continuous innovation, a commitment excellence.</p>
-                        </div>
-
-                        <div class="history-boxarea">
-                            <h2>2020</h2>
-                            <div class="space32"></div>
-                            <span></span>
-                            <div class="space32"></div>
-                            <a href="">Famous In Town</a>
-                            <div class="space12"></div>
-                            <p>As we've expanded our services and expertise, stayed true to our core.</p>
-                        </div>
 
                         <div class="history-boxarea">
                             <h2>2022</h2>
                             <div class="space32"></div>
                             <span></span>
                             <div class="space32"></div>
-                            <a href="">Business Growth</a>
+                            <a href="">Our Beginning</a>
                             <div class="space12"></div>
-                            <p>Today, we are proud to be trusted by companies around the world, helping.</p>
+                            <p>Established as a registered microfinance institution in Harare, bringing together seasoned finance professionals to unlock SME potential.</p>
                         </div>
+
+                        <div class="history-boxarea">
+                            <h2>2023</h2>
+                            <div class="space32"></div>
+                            <span></span>
+                            <div class="space32"></div>
+                            <a href="">Regional Expansion</a>
+                            <div class="space12"></div>
+                            <p>Expanded our footprint with branches in Bulawayo, Gweru, and Kwekwe, introducing specialized lending solutions for SMEs.</p>
+                        </div>
+
+                        <div class="history-boxarea">
+                            <h2>2024</h2>
+                            <div class="space32"></div>
+                            <span></span>
+                            <div class="space32"></div>
+                            <a href="">Team Growth</a>
+                            <div class="space12"></div>
+                            <p>Expanded our team to over 50 dedicated professionals, building a strong and capable workforce across Zimbabwe.</p>
+
+                        </div>
+
                         <div class="history-boxarea">
                             <h2>2025</h2>
                             <div class="space32"></div>
                             <span></span>
                             <div class="space32"></div>
-                            <a href="">Business Growth</a>
+                            <a href="">Digital Innovation</a>
                             <div class="space12"></div>
-                            <p>Today, we are proud to be trusted by companies around the world, helping.</p>
+                            <p>Investing in digital transformation to enhance service delivery and empower thousands of SMEs across Zimbabwe.</p>
                         </div>
+
+
                     </div>
                 </div>
             </div>

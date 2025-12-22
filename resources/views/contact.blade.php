@@ -217,10 +217,13 @@
                                 </div>
                                 <p style="color: rgba(255, 255, 255, 0.85); font-size: 14px; line-height: 1.7; margin-bottom: 10px; padding-left: 65px;">
                                     <strong>Mon-Fri:</strong> 8:00 AM - 5:00 PM<br>
-                                    <strong>Sat:</strong> 8:00 AM - 1:00 PM
+                                    <strong>Sat:</strong> 8:00 AM - 12:00 PM
                                 </p>
-                                <a href="tel:+263777157102" style="color: #ffffff; font-size: 17px; font-weight: 600; text-decoration: none; transition: all 0.3s; padding-left: 65px; display: block;" onmouseover="this.style.paddingLeft='70px'; this.style.opacity='0.8';" onmouseout="this.style.paddingLeft='65px'; this.style.opacity='1';">
-                                    +263 (777) 157 102
+                                <a href="tel:+263 242 747473" style="color: #ffffff; font-size: 17px; font-weight: 600; text-decoration: none; transition: all 0.3s; padding-left: 65px; display: block;" onmouseover="this.style.paddingLeft='70px'; this.style.opacity='0.8';" onmouseout="this.style.paddingLeft='65px'; this.style.opacity='1';">
+                                    +263 242 747473
+                                </a>
+                                <a href="" style="color: #ffffff; font-size: 17px; font-weight: 600; text-decoration: none; transition: all 0.3s; padding-left: 65px; display: block;" onmouseover="this.style.paddingLeft='70px'; this.style.opacity='0.8';" onmouseout="this.style.paddingLeft='65px'; this.style.opacity='1';">
+                                    +263 771 881631
                                 </a>
                             </div>
 
@@ -249,10 +252,11 @@
                                     <h3 style="color: #ffffff; font-size: 20px; font-weight: 600; margin: 0;">Visit Our Office</h3>
                                 </div>
                                 <p style="color: rgba(255, 255, 255, 0.85); font-size: 14px; line-height: 1.7; margin-bottom: 10px; padding-left: 65px;">
-                                    First Floor, Rezende House<br>
-                                    95 Kwame Nkrumah Avenue, Harare
+                                    9th Floor Michael House<br>
+                                    62 Nelson Mandela Avenue
+                                    Harare, Zimbabwe
                                 </p>
-                                <a href="https://maps.google.com/?q=First+Floor+Rezende+House+95+Kwame+Nkrumah+Avenue+Harare+Zimbabwe" target="_blank" style="color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.3s; padding-left: 65px; display: inline-block;" onmouseover="this.style.paddingLeft='70px'; this.style.opacity='0.8';" onmouseout="this.style.paddingLeft='65px'; this.style.opacity='1';">
+                                <a href="https://maps.app.goo.gl/XKqAHdNGdBBGWia98" target="_blank" style="color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.3s; padding-left: 65px; display: inline-block;" onmouseover="this.style.paddingLeft='70px'; this.style.opacity='0.8';" onmouseout="this.style.paddingLeft='65px'; this.style.opacity='1';">
                                     Get Directions →
                                 </a>
                             </div>

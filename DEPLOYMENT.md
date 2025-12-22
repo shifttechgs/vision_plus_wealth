@@ -6,7 +6,7 @@
 2. **Docker** (version 20.10+)
 3. **Docker Compose** (version 2.0+)
 4. **Git**
-5. **Minimum 2GB RAM, 2 CPU cores**
+5. **Minimum 1GB RAM, 1 CPU core**
 6. **Port 8003 available**
 
 ---
@@ -73,14 +73,6 @@ APP_URL=http://your-server-ip:8003
 
 LOG_CHANNEL=stack
 LOG_LEVEL=error
-
-# Database Configuration
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=vision_plus_wealth
-DB_USERNAME=vision_user
-DB_PASSWORD=CHANGE_THIS_STRONG_PASSWORD
 
 # Redis Configuration
 REDIS_HOST=redis
@@ -184,8 +176,6 @@ docker-compose build app
 
 ### Run Artisan Commands
 ```bash
-docker-compose exec app php artisan migrate
-docker-compose exec app php artisan db:seed
 docker-compose exec app php artisan cache:clear
 docker-compose exec app php artisan config:clear
 docker-compose exec app php artisan route:clear
@@ -195,16 +185,6 @@ docker-compose exec app php artisan view:clear
 ### Access Container Shell
 ```bash
 docker-compose exec app sh
-```
-
-### Database Backup
-```bash
-docker-compose exec db mysqldump -u root -p${DB_PASSWORD} vision_plus_wealth > backup_$(date +%Y%m%d).sql
-```
-
-### Database Restore
-```bash
-docker-compose exec -T db mysql -u root -p${DB_PASSWORD} vision_plus_wealth < backup.sql
 ```
 
 ---
@@ -309,7 +289,7 @@ git pull origin main
 docker-compose logs app
 
 # Check specific service
-docker-compose logs db
+docker-compose logs redis
 ```
 
 ### Permission Issues
@@ -317,16 +297,6 @@ docker-compose logs db
 # Fix storage permissions
 docker-compose exec app chmod -R 775 storage bootstrap/cache
 docker-compose exec app chown -R www-data:www-data storage bootstrap/cache
-```
-
-### Database Connection Issues
-```bash
-# Check database is running
-docker-compose exec db mysql -u root -p${DB_PASSWORD} -e "SHOW DATABASES;"
-
-# Recreate database
-docker-compose exec db mysql -u root -p${DB_PASSWORD} -e "DROP DATABASE IF EXISTS vision_plus_wealth; CREATE DATABASE vision_plus_wealth;"
-docker-compose exec app php artisan migrate --force
 ```
 
 ### Clear All Caches
@@ -345,25 +315,23 @@ docker-compose exec app php artisan optimize:clear
 ### Enable OPcache (Already configured)
 OPcache is pre-configured in `docker/php/opcache.ini`
 
-### Database Optimization
-```bash
-docker-compose exec db mysql -u root -p${DB_PASSWORD} -e "OPTIMIZE TABLE tablename;"
-```
-
 ### Application Optimization
 ```bash
 docker-compose exec app php artisan optimize
 ```
 
+### Redis Optimization
+Redis is configured with AOF persistence for data durability
+
 ---
 
 ## Security Best Practices
 
-1. **Change default passwords** in `.env` file
+1. **Change Redis password** in `.env` file
 2. **Use strong APP_KEY** (generated automatically)
 3. **Disable debug mode** in production (`APP_DEBUG=false`)
 4. **Use HTTPS** with valid SSL certificate
-5. **Regular backups** of database and files
+5. **Regular backups** of storage files
 6. **Keep Docker images updated**
 7. **Monitor logs** for suspicious activity
 8. **Use firewall** to restrict access
@@ -384,14 +352,16 @@ DATE=$(date +%Y%m%d_%H%M%S)
 
 mkdir -p $BACKUP_DIR
 
-# Backup database
-docker-compose -f /var/www/vision_plus_wealth/docker-compose.yml exec -T db mysqldump -u root -p${DB_PASSWORD} vision_plus_wealth | gzip > $BACKUP_DIR/db_$DATE.sql.gz
-
 # Backup storage files
 tar -czf $BACKUP_DIR/storage_$DATE.tar.gz /var/www/vision_plus_wealth/storage
 
+# Backup Redis data (optional)
+docker-compose -f /var/www/vision_plus_wealth/docker-compose.yml exec -T redis redis-cli --no-auth-warning -a ${REDIS_PASSWORD} SAVE
+cp -r /var/www/vision_plus_wealth/redis_data $BACKUP_DIR/redis_$DATE
+
 # Keep only last 7 days
 find $BACKUP_DIR -type f -mtime +7 -delete
+find $BACKUP_DIR -type d -name "redis_*" -mtime +7 -exec rm -rf {} +
 
 echo "Backup completed: $DATE"
 ```
@@ -419,7 +389,6 @@ For deployment issues, contact your DevOps team or refer to:
 ## Production Checklist
 
 - [ ] Environment variables configured
-- [ ] Database password changed from default
 - [ ] Redis password set
 - [ ] APP_DEBUG set to false
 - [ ] APP_ENV set to production

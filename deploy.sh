@@ -69,10 +69,6 @@ start() {
     print_message "Waiting for services to be ready..."
     sleep 10
 
-    # Run migrations
-    print_message "Running database migrations..."
-    docker-compose exec -T app php artisan migrate --force
-
     # Clear and cache config
     print_message "Optimizing application..."
     docker-compose exec -T app php artisan config:cache

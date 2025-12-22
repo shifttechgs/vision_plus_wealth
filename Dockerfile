@@ -8,8 +8,6 @@ RUN apk add --no-cache \
     git \
     nginx \
     supervisor \
-    mysql-client \
-    postgresql-dev \
     libpng-dev \
     libjpeg-turbo-dev \
     freetype-dev \
@@ -23,10 +21,6 @@ RUN apk add --no-cache \
 # Install PHP extensions
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) \
-    pdo \
-    pdo_mysql \
-    pdo_pgsql \
-    mysqli \
     mbstring \
     exif \
     pcntl \

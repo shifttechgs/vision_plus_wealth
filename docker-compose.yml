@@ -18,12 +18,6 @@ services:
     environment:
       - APP_ENV=production
       - APP_DEBUG=false
-      - DB_CONNECTION=mysql
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_DATABASE=${DB_DATABASE:-vision_plus_wealth}
-      - DB_USERNAME=${DB_USERNAME:-root}
-      - DB_PASSWORD=${DB_PASSWORD}
       - CACHE_DRIVER=redis
       - SESSION_DRIVER=redis
       - QUEUE_CONNECTION=redis
@@ -31,33 +25,8 @@ services:
       - REDIS_PASSWORD=${REDIS_PASSWORD:-null}
       - REDIS_PORT=6379
     depends_on:
-      db:
-        condition: service_healthy
       redis:
         condition: service_started
-    networks:
-      - vision_wealth_network
-
-  # MySQL Database
-  db:
-    image: mysql:8.0
-    container_name: vision_plus_wealth_db
-    restart: unless-stopped
-    environment:
-      MYSQL_DATABASE: ${DB_DATABASE:-vision_plus_wealth}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_USER: ${DB_USERNAME:-vision_user}
-    volumes:
-      - db_data:/var/lib/mysql
-      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
-    ports:
-      - "3307:3306"
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_PASSWORD}"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
     networks:
       - vision_wealth_network
 
@@ -94,7 +63,6 @@ services:
     depends_on:
       - app
       - redis
-      - db
     networks:
       - vision_wealth_network
 
@@ -103,7 +71,5 @@ networks:
     driver: bridge
 
 volumes:
-  db_data:
-    driver: local
   redis_data:
     driver: local

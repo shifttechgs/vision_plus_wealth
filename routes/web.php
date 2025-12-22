@@ -22,3 +22,12 @@ Route::get('/loan-application', [LoanApplicationController::class, 'index'])
 Route::post('/loan-application', [LoanApplicationController::class, 'submit'])
     ->middleware('throttle:5,60') // Rate limit: 5 requests per minute per IP
     ->name('loan-application.submit');
+
+
+Route::get('reboot', function() {
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    return '✅ Caches cleared!';
+});

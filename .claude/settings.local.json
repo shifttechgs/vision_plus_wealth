@@ -8,7 +8,10 @@
       "Bash(composer require:*)",
       "Bash(/mnt/c/wamp64_3.3.4/bin/php/php8.3.14/php.exe /mnt/c/ProgramData/ComposerSetup/bin/composer:*)",
       "Bash(/mnt/c/wamp64_3.3.4/bin/php/php8.3.14/php.exe:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd production environment files and update deployment configuration\n\n- Include .env and .env.production files for production deployment\n- Update .gitignore to track environment configuration files\n- Production-ready setup for Linux server deployment on port 8003\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push)"
     ],
     "deny": [],
     "ask": []

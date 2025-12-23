@@ -197,7 +197,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="800">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;">
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
                             <i class="fa-solid fa-briefcase" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -217,7 +217,7 @@
 
                 <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="900">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;" >
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(17, 153, 142, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(17, 153, 142, 0.3);">
                             <i class="fa-solid fa-seedling" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -233,7 +233,7 @@
 
                 <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="1000">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;">
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);">
                             <i class="fa-solid fa-wallet" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -249,7 +249,7 @@
 
                 <div class="col-lg-6 col-md-6" data-aos="zoom-in-up" data-aos-duration="1100">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;">
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);">
                             <i class="fa-solid fa-shield-halved" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -265,7 +265,7 @@
 
                 <div class="col-lg-6 col-md-6" data-aos="zoom-in-up" data-aos-duration="1200">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;">
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);">
                             <i class="fa-solid fa-chart-line" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -374,7 +374,7 @@
 
                 <!-- Progress Line -->
                 <div class="vpw-progress-line" style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 85%; height: 2px; background: rgba(255, 255, 255, 0.1); z-index: 0;">
-                    <div class="vpw-progress-bar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #07294e 0%, #07294e 100%); transition: width 2s ease;"></div>
+                    <div class="vpw-progress-bar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #052b51 0%, #052b51 100%); transition: width 2s ease;"></div>
                 </div>
 
                 <!-- Step 1 -->
@@ -382,10 +382,10 @@
                     <div class="vpw-step-card" style="position: relative; z-index: 1;">
                         <!-- Step Number -->
                         <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #07294e 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #052b51 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px;">
                                 <i class="fas fa-edit" style="font-size: 42px; color: #FFFFFF;"></i>
                             </div>
-                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #07294EFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px">01</span>
+                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #052b51FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px">01</span>
                         </div>
                         <!-- Content -->
                         <div class="text-center">
@@ -400,10 +400,10 @@
                     <div class="vpw-step-card" style="position: relative; z-index: 1;">
                         <!-- Step Number -->
                         <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #07294EFF 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #052b51FF 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
                                 <i class="fas fa-file-alt" style="font-size: 42px; color: #FFFFFF;"></i>
                             </div>
-                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #07294e; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px ">02</span>
+                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #052b51; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px ">02</span>
                         </div>
                         <!-- Content -->
                         <div class="text-center">
@@ -418,10 +418,10 @@
                     <div class="vpw-step-card" style="position: relative; z-index: 1;">
                         <!-- Step Number -->
                         <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #07294EFF 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #052b51FF 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
                                 <i class="fas fa-check-circle" style="font-size: 42px; color: #FFFFFF;"></i>
                             </div>
-                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #07294EFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px ">03</span>
+                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #052b51FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px ">03</span>
                         </div>
                         <!-- Content -->
                         <div class="text-center">
@@ -436,10 +436,10 @@
                     <div class="vpw-step-card" style="position: relative; z-index: 1;">
                         <!-- Step Number -->
                         <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #07294EFF 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #052b51FF 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
                                 <i class="fas fa-hand-holding-usd" style="font-size: 42px; color: #FFFFFF;"></i>
                             </div>
-                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #07294EFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px">04</span>
+                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #052b51FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px">04</span>
                         </div>
                         <!-- Content -->
                         <div class="text-center">
@@ -803,7 +803,7 @@
                 <!-- Farmers -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="700">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-wheat-awn" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Farmers</h4>
@@ -814,7 +814,7 @@
                 <!-- Small Business Owners -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-store" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Small Business Owners</h4>
@@ -825,7 +825,7 @@
                 <!-- Entrepreneurs -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="900">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-lightbulb" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Entrepreneurs</h4>
@@ -836,7 +836,7 @@
                 <!-- Salaried Employees -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1000">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-user-tie" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Salaried Employees</h4>
@@ -847,7 +847,7 @@
                 <!-- SMEs -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1100">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-building" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">SMEs</h4>
@@ -858,7 +858,7 @@
                 <!-- Women in Business -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-briefcase" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Women in Business</h4>
@@ -869,7 +869,7 @@
                 <!-- Market Vendors -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1300">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-cart-shopping" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Market Vendors</h4>
@@ -880,7 +880,7 @@
                 <!-- Cooperatives -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1400">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-users" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Cooperatives</h4>
@@ -896,7 +896,7 @@
 {{--        <div class="container">--}}
 {{--            <div class="row">--}}
 {{--                <div class="col-lg-12">--}}
-{{--                    <div style="background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 16px; padding: 60px 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">--}}
+{{--                    <div style="background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 16px; padding: 60px 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">--}}
 {{--                        <div class="row align-items-center">--}}
 {{--                            <!-- CTA Content -->--}}
 {{--                            <div class="col-lg-8">--}}

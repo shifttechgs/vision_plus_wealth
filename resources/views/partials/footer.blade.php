@@ -5,15 +5,15 @@
             <!-- Company Info Column -->
             <div class="col-lg-3 col-md-6">
                 <div class="footer-logo1">
-                    <img src="assets/img/logo/vpw_logo.png" alt="Vision Plus Wealth Logo" style="max-width: 180px;">
+                    <img src="assets/img/logo/vpw_trans.png" alt="Vision Plus Wealth Logo" style="max-width: 290px;">
                     <div class="space24"></div>
                     <p style="color: #FFFFFF; line-height: 1.6;">Registered Microfinance Institution committed to empowering businesses and individuals.</p>
                     <div class="space24"></div>
                     <ul style="display: flex; gap: 12px; padding: 0; margin: 0; list-style: none;">
 
-                        <li><a href="https://www.facebook.com/visionpluswealth/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(46, 7, 151, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><i class="fa-brands fa-facebook-f" style="color: #fff; font-size: 16px;"></i></a></li>
+                        <li><a href="https://www.facebook.com/visionpluswealth/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(46, 7, 151, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><i class="fa-brands fa-facebook-f" style="color: #fff; font-size: 16px;"></i></a></li>
 
-                        <li><a href="https://www.linkedin.com/company/vision-plus-wealth/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(46, 7, 151, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><i class="fa-brands fa-linkedin-in" style="color: #fff; font-size: 16px;"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/vision-plus-wealth/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(46, 7, 151, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><i class="fa-brands fa-linkedin-in" style="color: #fff; font-size: 16px;"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                     <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">Contact Us</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
                                 <i class="fa-solid fa-phone" style="color: #fff; font-size: 16px;"></i>
                             </div>
                             <div style="padding-top: 6px;">
@@ -50,7 +50,7 @@
                             </div>
                         </li>
                         <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
                                 <i class="fa-solid fa-location-dot" style="color: #fff; font-size: 16px;"></i>
                             </div>
                             <span style="color: #FFFFFF; line-height: 1.6; display: block; padding-top: 2px;">9th Floor Michael House, 62 Nelson Mandela Avenue, Harare, Zimbabwe</span>
@@ -58,7 +58,7 @@
 
 
                         <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
                                 <i class="fa-solid fa-envelope" style="color: #fff; font-size: 16px;"></i>
                             </div>
                             <div style="padding-top: 6px;">
@@ -66,7 +66,7 @@
                             </div>
                         </li>
                         <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
                                 <i class="fa-solid fa-building" style="color: #fff; font-size: 16px;"></i>
                             </div>
                             <div style="padding-top: 6px;">
@@ -84,7 +84,7 @@
                     <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">Branch Contacts</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
                                 <i class="fa-solid fa-building" style="color: #fff; font-size: 16px;"></i>
                             </div>
                             <div style="padding-top: 1px;">
@@ -93,7 +93,7 @@
                             </div>
                         </li>
                         <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
                                 <i class="fa-solid fa-building" style="color: #fff; font-size: 16px;"></i>
                             </div>
                             <div style="padding-top: 1px;">
@@ -102,7 +102,7 @@
                             </div>
                         </li>
                         <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
                                 <i class="fa-solid fa-building" style="color: #fff; font-size: 16px;"></i>
                             </div>
                             <div style="padding-top: 1px;">
@@ -111,7 +111,7 @@
                             </div>
                         </li>
                         <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 8px; min-width: 40px; flex-shrink: 0; margin-top: 2px;">
                                 <i class="fa-solid fa-building" style="color: #fff; font-size: 16px;"></i>
                             </div>
                             <div style="padding-top: 1px;">

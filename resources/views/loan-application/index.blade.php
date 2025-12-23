@@ -39,7 +39,7 @@
         text-align: center;
         margin-bottom: 30px;
         padding-bottom: 20px;
-        border-bottom: 3px solid #07294e;
+        border-bottom: 3px solid #052b51;
     }
 
     .vpw-logo-section h1 {
@@ -82,7 +82,7 @@
         top: 20px;
         left: 0;
         height: 3px;
-        background: #07294e;
+        background: #052b51;
         transition: width 0.3s ease;
         z-index: 1;
     }
@@ -109,7 +109,7 @@
     }
 
     .step-item.active .step-circle {
-        background: #07294e;
+        background: #052b51;
         color: #ffffff;
         transform: scale(1.1);
     }
@@ -121,13 +121,13 @@
 
     .step-label {
         font-size: 18px;
-        color: #07294e;
+        color: #052b51;
         font-weight: 600;
         display: block;
     }
 
     .step-item.active .step-label {
-        color: #07294e;
+        color: #052b51;
     }
 
     /* Form Steps */
@@ -151,7 +151,7 @@
         font-weight: 700;
         margin-bottom: 30px;
         padding-bottom: 12px;
-        border-bottom: 2px solid #07294e;
+        border-bottom: 2px solid #052b51;
     }
 
     .form-label {
@@ -181,7 +181,7 @@
     }
 
     .form-control:focus, .form-select:focus {
-        border-color: #07294e;
+        border-color: #052b51;
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         outline: none;
     }
@@ -233,8 +233,8 @@
     }
 
     .radio-option input[type="radio"]:checked + label {
-        background: #07294e;
-        border-color: #07294e;
+        background: #052b51;
+        border-color: #052b51;
         color: #ffffff;
     }
 
@@ -289,12 +289,12 @@
     }
 
     .btn-next, .btn-submit {
-        background: #07294e;
+        background: #052b51;
         color: #ffffff;
     }
 
     .btn-next:hover, .btn-submit:hover {
-        background: #07294e;
+        background: #052b51;
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
     }
@@ -840,7 +840,7 @@
                     <p style="color: #0a4d8c; margin-bottom: 25px;"><em>Please provide details of TWO people with different addresses</em></p>
 
                     <!-- Person 1 -->
-                    <h4 style="color: #07294e; font-size: 18px; font-weight: 600; margin-bottom: 20px;">Person 1</h4>
+                    <h4 style="color: #052b51; font-size: 18px; font-weight: 600; margin-bottom: 20px;">Person 1</h4>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -885,7 +885,7 @@
                     </div>
 
                     <!-- Person 2 -->
-                    <h4 style="color: #07294e; font-size: 18px; font-weight: 600; margin-bottom: 20px; margin-top: 30px;">Person 2</h4>
+                    <h4 style="color: #052b51; font-size: 18px; font-weight: 600; margin-bottom: 20px; margin-top: 30px;">Person 2</h4>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">

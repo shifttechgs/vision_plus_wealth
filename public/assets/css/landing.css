@@ -6,12 +6,12 @@
 /* ========== CSS Variables ========== */
 :root {
     /* Brand Colors */
-    --primary-color: #07294e;
+    --primary-color: #052b51;
     --primary-dark: #051b33;
     --primary-light: #242a56;
     --accent-color: #4d61d6;
     --accent-light: #6878d6;
-    --gradient-primary: linear-gradient(135deg, #07294e 0%, #4d61d6 100%);
+    --gradient-primary: linear-gradient(135deg, #052b51 0%, #4d61d6 100%);
     --gradient-accent: linear-gradient(135deg, #4d61d6 0%, #6878d6 100%);
 
     /* Neutral Colors */

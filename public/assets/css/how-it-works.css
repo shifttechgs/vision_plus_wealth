@@ -166,12 +166,12 @@
 
 /* Text Selection */
 .vpw-how-it-works ::selection {
-    background: #07294e;
+    background: #052b51;
     color: #FFFFFF;
 }
 
 .vpw-how-it-works ::-moz-selection {
-    background: #07294e;
+    background: #052b51;
     color: #FFFFFF;
 }
 
@@ -217,14 +217,14 @@ html {
 /* Focus States - WCAG Compliant */
 .vpw-how-it-works a:focus,
 .vpw-how-it-works button:focus {
-    outline: 3px solid #07294e;
+    outline: 3px solid #052b51;
     outline-offset: 4px;
     border-radius: 50px;
 }
 
 .vpw-how-it-works a:focus-visible,
 .vpw-how-it-works button:focus-visible {
-    outline: 3px solid #07294e;
+    outline: 3px solid #052b51;
     outline-offset: 4px;
 }
 

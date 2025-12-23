@@ -120,8 +120,8 @@
     }
 
     .step-label {
-        font-size: 11px;
-        color: #0a4d8c;
+        font-size: 18px;
+        color: #07294e;
         font-weight: 600;
         display: block;
     }

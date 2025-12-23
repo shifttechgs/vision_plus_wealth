@@ -10,7 +10,9 @@
                     <p style="color: #FFFFFF; line-height: 1.6;">Registered Microfinance Institution committed to empowering businesses and individuals.</p>
                     <div class="space24"></div>
                     <ul style="display: flex; gap: 12px; padding: 0; margin: 0; list-style: none;">
-                        <li><a href="https://www.facebook.com/visionpluswealth" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(46, 7, 151, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><i class="fa-brands fa-facebook-f" style="color: #fff; font-size: 16px;"></i></a></li>
+
+                        <li><a href="https://www.facebook.com/visionpluswealth/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(46, 7, 151, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><i class="fa-brands fa-facebook-f" style="color: #fff; font-size: 16px;"></i></a></li>
+
                         <li><a href="https://www.linkedin.com/company/vision-plus-wealth/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); border-radius: 8px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(46, 7, 151, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"><i class="fa-brands fa-linkedin-in" style="color: #fff; font-size: 16px;"></i></a></li>
                     </ul>
                 </div>

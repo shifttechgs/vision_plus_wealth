@@ -458,10 +458,11 @@
     <div class="project1-section sp1 bg1" style="padding: 100px 0;">
         <div class="container">
 
+
             <!-- Heading -->
             <div class="row">
                 <div class="col-lg-8 m-auto">
-                    <div class="heading4 text-center" style="margin-bottom: 70px;">
+                    <div class="heading4 text-center space-margin60" >
                         <h5 data-aos="fade-left" data-aos-duration="800" style="letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 20px;">Why Choose US</h5>
                         <h2 class="text-anime-style-3" style="font-size: 2.5rem; line-height: 1.3; font-weight: 700;">Trusted Microfinance Solutions That Put You First</h2>
                     </div>
@@ -592,10 +593,9 @@
     <!--===== WHY CHOOSE US END =======-->
 
     <!--===== TEAM AREA STARTS =======-->
-    <section class="team1-section-area sp1 ">
+    <section class="leadership-section sp2" >
         <div class="container">
-
-            <!-- Heading -->
+            <!-- Section Header -->
             <div class="row">
                 <div class="col-lg-6 m-auto">
                     <div class="heading4 text-center space-margin60">
@@ -606,113 +606,117 @@
                 </div>
             </div>
 
-            <!-- Team Members -->
-            <div class="row g-4">
-
-                <!-- Team Card -->
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="1100">
-                    <div class="team-boxarea premium-team-card">
-                        <div class="img1">
-                            <img src="assets/img/board/naome.png" alt="Cesar Schuster" class="img-fluid rounded-4 shadow-sm">
-{{--                            <ul class="social-links d-flex justify-content-center gap-3 mt-3">--}}
-{{--                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>--}}
-{{--                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>--}}
-
-{{--                            </ul>--}}
+            <!-- Team Grid - Top Row: 2 Members -->
+            <div class="row justify-content-center mb-2" style="gap: 100px;">
+                <!-- Board Member 1 -->
+                <div class="col-auto" style="max-width: 320px; padding: 0;" data-aos="fade-up" data-aos-duration="900">
+                    <div class="leadership-card text-center">
+                        <div class="leadership-image-wrapper">
+                            <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
+                                <img src="assets/img/board/naome.png" alt="Naome Muzvidziwa" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            </div>
                         </div>
-                        <div class="space24"></div>
-                        <div class="content-area text-center">
-                            <a href="" class="team-name">Naome Muzvidziwa</a>
-                            <div class="space8"></div>
-                            <p class="team-role"> Board Chair (Non Executive)</p>
+                        <div class="leadership-content mt-3">
+                            <h3 class="leadership-name" style="font-size: 1.125rem; font-weight: 600; color: #1a202c; margin-bottom: 0.25rem; line-height: 1.4;">Naome Muzvidziwa</h3>
+                            <p class="leadership-role" style="font-size: 0.875rem; color: #718096; margin-bottom: 0.5rem; font-weight: 400;">Board Chair (Non Executive)</p>
+
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="800">
-                    <div class="team-boxarea premium-team-card">
-                        <div class="img1">
-                            <img src="assets/img/board/tinashe.png" alt="Erma Hansen" class="img-fluid rounded-4 shadow-sm">
-                            <ul class="social-links d-flex justify-content-center gap-3 mt-3">
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-
-
-                            </ul>
+                <!-- Board Member 2 -->
+                <div class="col-auto" style="max-width: 320px; padding: 0;" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="leadership-card text-center">
+                        <div class="leadership-image-wrapper">
+                            <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
+                                <img src="assets/img/board/tinashe.png" alt="Tinashe Muchenje" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            </div>
                         </div>
-                        <div class="space24"></div>
-                        <div class="content-area text-center">
-                            <a href="" class="team-name">Tinashe Muchenje</a>
-                            <div class="space8"></div>
-                            <p class="team-role">Managing Director</p>
+                        <div class="leadership-content mt-3">
+                            <h3 class="leadership-name" style="font-size: 1.125rem; font-weight: 600; color: #1a202c; margin-bottom: 0.25rem; line-height: 1.4;">Tinashe Muchenje</h3>
+                            <p class="leadership-role" style="font-size: 0.875rem; color: #718096; margin-bottom: 0.5rem; font-weight: 400;">Managing Director</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Grid - Bottom Row: 3 Members -->
+            <div class="row justify-content-center g-3">
+                <!-- Board Member 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1100">
+                    <div class="leadership-card text-center">
+                        <div class="leadership-image-wrapper">
+                            <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
+                                <img src="assets/img/board/rudo.png" alt="Rudo A.L. Ndoro" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            </div>
+                        </div>
+                        <div class="leadership-content mt-3">
+                            <h3 class="leadership-name" style="font-size: 1.125rem; font-weight: 600; color: #1a202c; margin-bottom: 0.25rem; line-height: 1.4;">Rudo A.L. Ndoro</h3>
+                            <p class="leadership-role" style="font-size: 0.875rem; color: #718096; margin-bottom: 0.5rem; font-weight: 400;">Executive Director</p>
+
                         </div>
                     </div>
                 </div>
 
-                <!-- Repeat for other team members -->
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="900">
-                    <div class="team-boxarea premium-team-card">
-                        <div class="img1">
-                            <img src="assets/img/board/rudo.png" alt="Rudo " class="img-fluid rounded-4 shadow-sm">
-
-{{--                            <ul class="social-links d-flex justify-content-center gap-3 mt-3">--}}
-{{--                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>--}}
-{{--                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>--}}
-
-{{--                            </ul>--}}
+                <!-- Board Member 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="900">
+                    <div class="leadership-card text-center">
+                        <div class="leadership-image-wrapper">
+                            <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
+                                <img src="assets/img/board/Ivony.png" alt="Dr. Ivony K Katsande" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            </div>
                         </div>
-                        <div class="space24"></div>
-                        <div class="content-area text-center">
-                            <a href="" class="team-name">Rudo A.L. Ndoro </a>
-                            <div class="space8"></div>
-                            <p class="team-role"> Executive Director</p>
+                        <div class="leadership-content mt-3">
+                            <h3 class="leadership-name" style="font-size: 1.125rem; font-weight: 600; color: #1a202c; margin-bottom: 0.25rem; line-height: 1.4;">Dr. Ivony K Katsande</h3>
+                            <p class="leadership-role" style="font-size: 0.875rem; color: #718096; margin-bottom: 0.5rem; font-weight: 400;">Non Executive Director</p>
+
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <div class="team-boxarea premium-team-card">
-                        <div class="img1">
-                            <img src="assets/img/board/Ivony.png" alt="Ivony Veum" class="img-fluid rounded-4 shadow-sm">
-
-{{--                            <ul class="social-links d-flex justify-content-center gap-3 mt-3">--}}
-{{--                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>--}}
-{{--                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>--}}
-
-{{--                            </ul>--}}
+                <!-- Board Member 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="leadership-card text-center">
+                        <div class="leadership-image-wrapper">
+                            <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
+                                <img src="assets/img/board/cuthbert.png" alt="Cuthbert M Muchenje" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            </div>
                         </div>
-                        <div class="space24"></div>
-                        <div class="content-area text-center">
-                            <a href="" class="team-name">Dr. Ivony K Katsande </a>
-                            <div class="space8"></div>
-                            <p class="team-role">Non Executive Director</p>
+                        <div class="leadership-content mt-3">
+                            <h3 class="leadership-name" style="font-size: 1.125rem; font-weight: 600; color: #1a202c; margin-bottom: 0.25rem; line-height: 1.4;">Cuthbert M Muchenje</h3>
+                            <p class="leadership-role" style="font-size: 0.875rem; color: #718096; margin-bottom: 0.5rem; font-weight: 400;">Non Executive Director</p>
+
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <div class="team-boxarea premium-team-card">
-                        <div class="img1">
-                            <img src="assets/img/board/cuthbert.png" alt="Cuthbert" class="img-fluid rounded-4 shadow-sm">
-
-{{--                            <ul class="social-links d-flex justify-content-center gap-3 mt-3">--}}
-{{--                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>--}}
-{{--                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>--}}
-
-{{--                            </ul>--}}
-                        </div>
-                        <div class="space24"></div>
-                        <div class="content-area text-center">
-                            <a href="" class="team-name">Cuthbert M Muchenje</a>
-                            <div class="space8"></div>
-                            <p class="team-role"> Non Executive Director</p>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
+
+        <!-- Additional Styles for Hover Effects -->
+        <style>
+            .leadership-image:hover {
+                transform: scale(1.05);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+            }
+
+            @media (max-width: 576px) {
+                .leadership-image-container {
+                    width: 150px !important;
+                    height: 150px !important;
+                }
+                .leadership-card {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                .leadership-image-container {
+                    width: 160px !important;
+                    height: 160px !important;
+                }
+            }
+        </style>
     </section>
     <!--===== TEAM AREA ENDS =======-->
 
@@ -748,7 +752,7 @@
                             <div class="space32"></div>
                             <span></span>
                             <div class="space32"></div>
-                            <a href="">Regional Expansion</a>
+                            <a href="">National Expansion</a>
                             <div class="space12"></div>
                             <p>Expanded our footprint with branches in Bulawayo, Gweru, and Kwekwe, introducing specialized lending solutions for SMEs.</p>
                         </div>

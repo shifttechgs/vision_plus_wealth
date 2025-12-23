@@ -607,13 +607,13 @@
             </div>
 
             <!-- Team Grid - Top Row: 2 Members -->
-            <div class="row justify-content-center mb-2" style="gap: 100px;">
+            <div class="row justify-content-center mb-2" style="gap: 120px;">
                 <!-- Board Member 1 -->
                 <div class="col-auto" style="max-width: 320px; padding: 0;" data-aos="fade-up" data-aos-duration="900">
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/naome.png" alt="Naome Muzvidziwa" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/naome_draft.png" alt="Naome Muzvidziwa" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -629,7 +629,7 @@
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/tinashe.png" alt="Tinashe Muchenje" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/tinashe_draft.png" alt="Tinashe Muchenje" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -642,13 +642,13 @@
             </div>
 
             <!-- Team Grid - Bottom Row: 3 Members -->
-            <div class="row justify-content-center g-3">
+            <div class="row justify-content-center g-3" >
                 <!-- Board Member 3 -->
                 <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1100">
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/rudo.png" alt="Rudo A.L. Ndoro" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/rudo_draft.png" alt="Rudo A.L. Ndoro" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -664,7 +664,7 @@
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/Ivony.png" alt="Dr. Ivony K Katsande" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/Ivony_draft.png" alt="Dr. Ivony K Katsande" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -680,7 +680,7 @@
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/cuthbert.png" alt="Cuthbert M Muchenje" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/cuthbert_draft.png" alt="Cuthbert M Muchenje" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">

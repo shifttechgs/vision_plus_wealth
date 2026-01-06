@@ -278,8 +278,8 @@
 
     <!--===== MAP SECTION STARTS =======-->
     <div style="padding: 0px; border-radius: 10px">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30384.56003023005!2d31.082733!3d-17.835353!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931bb35b1a77bcf%3A0x10b42166da275cc3!2s70%20Hillside%20Rd%2C%20Harare%2C%20Zimbabwe!5e0!3m2!1sen!2sus!4v1765798648991!5m2!1sen!2sus" width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3798.2052840918354!2d31.0468431!3d-17.8290091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a57f27bd20d1%3A0x6f1000d11c361049!2sMichael%20House!5e0!3m2!1sen!2sza!4v1767690997528!5m2!1sen!2sza" width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
+        
     </div>
     <!--===== MAP SECTION ENDS =======-->
 

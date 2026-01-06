@@ -313,7 +313,7 @@
     </div>
 
     <!-- Google Maps JavaScript API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_z7Ofh4HDMdtA4qnF64HV0oxkA_7-i3w"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}"></script>
 
     <script>
         // Branch locations data

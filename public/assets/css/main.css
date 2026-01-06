@@ -4468,7 +4468,7 @@ Location:
 
 .vl-offcanvas {
   position: fixed;
-  background: var(--04-home-page-maincolors, linear-gradient(135deg, #052b51 0%, #0A4D8C 100%));
+  background: #052950;
   width: 450px;
   z-index: 99;
   right: 0;
@@ -4935,7 +4935,7 @@ Location:
 }
 .homepage4-body .vl-offcanvas {
   position: fixed;
-  background: var(--ztc-bg-bg-9);
+  background: #052950;
   width: 450px;
   z-index: 99;
   right: 0;
@@ -12495,7 +12495,7 @@ Location:
   line-height: 16px;
   border-radius: 50%;
   transition: all 0.4s;
-  background: #6956D0;
+  background: #ffffff;
   margin: 0 8px;
   position: relative;
   z-index: 1;

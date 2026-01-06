@@ -106,12 +106,18 @@
 <div class="homepage4-body">
     <div class="vl-offcanvas">
         <div class="vl-offcanvas-wrapper">
-            <div class="vl-offcanvas-header d-flex justify-content-between align-items-center mb-90">
-                <div class="vl-offcanvas-logo">
-                    <a href="index.html"><img src="assets/img/logo/vpw_light_logo.png" alt=""></a>
+
+            <!-- Header Top: Logo + Close Button -->
+            <div class="vl-offcanvas-header d-flex justify-content-between align-items-center mb-3">
+                <div class="vl-logo">
+                    <a href="{{ url('/') }}">
+                        <img src="assets/img/logo/vpw_trans.png" alt="Vision Plus Wealth Logo" class="img-fluid">
+                    </a>
                 </div>
                 <div class="vl-offcanvas-close">
-                    <button class="vl-offcanvas-close-toggle"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="vl-offcanvas-close-toggle" aria-label="Close Menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                 </div>
             </div>
 
@@ -123,20 +129,16 @@
             <div class="vl-offcanvas-info">
                 <h3 class="vl-offcanvas-sm-title">Contact Us</h3>
                 <div class="space20"></div>
-                <span><a href="#"> <i class="fa-regular fa-phone"></i> (+263) 777 157 102</a></span>
-                <span><a href="#"><i class="fa-solid fa-envelope"></i>
-info@visionpluswealth.com</a></span>
-                <span><a href="#"><i class="fa-solid fa-location-dot"></i>
-9th Floor Michael House, 62 Nelson Mandela Avenue, Harare, Zimbabwe</a></span>
+                <span><a href="#"> <i class="fa-solid fa-phone"></i> (+263) 777 157 102</a></span>
+                <span><a href="#"><i class="fa-solid fa-envelope"></i>info@visionpluswealth.com</a></span>
+                <span><a href="#"><i class="fa-solid fa-location-dot"></i>9th Floor Michael House, 62 Nelson Mandela Avenue, Harare, Zimbabwe</a></span>
             </div>
             <div class="space20"></div>
             <div class="vl-offcanvas-social">
                 <h3 class="vl-offcanvas-sm-title">Follow Us</h3>
                 <div class="space20"></div>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/visionpluswealth/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/vision-plus-wealth/"><i class="fab fa-linkedin-in"></i></a>
             </div>
 
         </div>

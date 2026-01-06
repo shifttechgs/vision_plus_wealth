@@ -302,7 +302,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="testimonial4-main-slider owl-carousel">
-                        <div class="testimonial-box-area" style="height: 320px !important;">
+                        <div class="testimonial-box-area" style="height: 365px !important;">
 {{--                            <div class="img1">--}}
 {{--                                <img src="assets/img/all-images/testimonial/testi-img4.png" alt="">--}}
 {{--                            </div>--}}
@@ -318,7 +318,7 @@
 
                             </div>
                         </div>
-                        <div class="testimonial-box-area" style="height: 320px !important;">
+                        <div class="testimonial-box-area" style="height: 365px !important;">
                             {{--                            <div class="img1">--}}
                             {{--                                <img src="assets/img/all-images/testimonial/testi-img4.png" alt="">--}}
                             {{--                            </div>--}}

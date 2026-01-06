@@ -277,10 +277,192 @@
 
 
     <!--===== MAP SECTION STARTS =======-->
-    <div style="padding: 0px; border-radius: 10px">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3798.2052840918354!2d31.0468431!3d-17.8290091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a57f27bd20d1%3A0x6f1000d11c361049!2sMichael%20House!5e0!3m2!1sen!2sza!4v1767690997528!5m2!1sen!2sza" width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
-        
+    <div style="padding: 60px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center" style="margin-bottom: 40px;">
+                        <h2 style="color: #1a1a1a; font-size: 2.2rem; font-weight: 700; margin-bottom: 12px;">Our Branch Network</h2>
+                        <p style="color: #666; font-size: 1.05rem; line-height: 1.7; max-width: 700px; margin: 0 auto;">
+                            Find us across Zimbabwe. Visit any of our branches for personalized financial solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background: #ffffff; padding: 0; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); overflow: hidden;">
+                        <div id="branchMap" style="width: 100%; height: 550px; border-radius: 20px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branch List -->
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-12">
+                    <div style="background: #ffffff; padding: 35px 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);">
+                        <h3 style="color: #1a1a1a; font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; text-align: center;">All Branches</h3>
+                        <div class="row g-3" id="branchList">
+                            <!-- Branch items will be dynamically populated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_z7Ofh4HDMdtA4qnF64HV0oxkA_7-i3w"></script>
+
+    <script>
+        // Branch locations data
+        const branches = [
+            { name: "Kwekwe", lat: -18.9296, lng: 29.8149 },
+            { name: "Mutare", lat: -18.9758, lng: 32.6504 },
+            { name: "Bulawayo", lat: -20.1325, lng: 28.6265 },
+            { name: "Guruve", lat: -16.6700, lng: 30.7050 },
+            { name: "Gweru", lat: -19.4500, lng: 29.8167 },
+            { name: "Masvingo", lat: -20.0637, lng: 30.8277 },
+            { name: "Harare", lat: -17.8252, lng: 31.0335 },
+            { name: "Karoi", lat: -16.8096, lng: 29.6923 },
+            { name: "Chinhoyi", lat: -17.3650, lng: 30.2000 },
+            { name: "Zvishavane", lat: -20.3267, lng: 30.0665 },
+            { name: "Gokwe", lat: -18.2150, lng: 28.9340 },
+            { name: "Gwanda", lat: -20.9363, lng: 29.0060 },
+            { name: "Chipinge", lat: -20.1890, lng: 32.6236 },
+            { name: "Mutoko", lat: -17.3965, lng: 32.2260 },
+            { name: "Mudzi", lat: -16.9590, lng: 32.4150 }
+        ];
+
+        // Initialize map
+        function initMap() {
+            // Center of Zimbabwe (approximate)
+            const zimbabweCenter = { lat: -19.0, lng: 30.0 };
+
+            // Create map
+            const map = new google.maps.Map(document.getElementById('branchMap'), {
+                zoom: 7,
+                center: zimbabweCenter,
+                mapTypeControl: true,
+                streetViewControl: false,
+                fullscreenControl: true,
+                styles: [
+                    {
+                        featureType: "poi",
+                        elementType: "labels",
+                        stylers: [{ visibility: "off" }]
+                    }
+                ]
+            });
+
+            // Create bounds to fit all markers
+            const bounds = new google.maps.LatLngBounds();
+
+            // Add markers for each branch
+            branches.forEach((branch, index) => {
+                const position = { lat: branch.lat, lng: branch.lng };
+
+                // Create marker with location pin icon
+                const marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    title: branch.name,
+                    animation: google.maps.Animation.DROP,
+                    icon: {
+                        path: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z',
+                        fillColor: branch.name === 'Harare' ? '#052b51' : '#052b51',
+                        fillOpacity: 1,
+                        strokeColor: '#ffffff',
+                        strokeWeight: 2,
+                        scale: 1.8,
+                        anchor: new google.maps.Point(12, 22),
+                        labelOrigin: new google.maps.Point(12, 9)
+                    }
+                });
+
+                // Create info window
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `
+                        <div style="padding: 12px; min-width: 200px;">
+                            <h4 style="margin: 0 0 8px 0; color: #052b51; font-size: 1.1rem; font-weight: 700;">
+                                ${branch.name === 'Harare' ? '🏢 ' : '📍 '}${branch.name} Branch
+                            </h4>
+                            ${branch.name === 'Harare' ?
+                                `<p style="margin: 0; color: #666; font-size: 0.9rem; line-height: 1.5;">
+                                    9th Floor Michael House<br>
+                                    62 Nelson Mandela Avenue<br>
+                                    Harare, Zimbabwe
+                                </p>
+                                <a href="https://maps.app.goo.gl/XKqAHdNGdBBGWia98" target="_blank"
+                                   style="display: inline-block; margin-top: 10px; color: #0066cc; text-decoration: none; font-weight: 600; font-size: 0.9rem;">
+                                    Get Directions →
+                                </a>` :
+                                `<p style="margin: 0; color: #666; font-size: 0.9rem;">
+                                    Visit us for personalized financial solutions
+                                </p>`
+                            }
+                        </div>
+                    `
+                });
+
+                // Add click listener to marker
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
+
+                // Extend bounds to include this marker
+                bounds.extend(position);
+
+                // Add slight delay to marker drops for visual effect
+                setTimeout(() => {
+                    marker.setAnimation(null);
+                }, 500 + (index * 50));
+            });
+
+            // Fit map to show all markers with padding
+            map.fitBounds(bounds);
+
+            // Add padding to bounds
+            const listener = google.maps.event.addListener(map, "idle", function() {
+                if (map.getZoom() > 7) map.setZoom(7);
+                google.maps.event.removeListener(listener);
+            });
+        }
+
+        // Populate branch list
+        function populateBranchList() {
+            const branchListContainer = document.getElementById('branchList');
+
+            // Sort branches alphabetically
+            const sortedBranches = [...branches].sort((a, b) => a.name.localeCompare(b.name));
+
+            sortedBranches.forEach(branch => {
+                const branchItem = document.createElement('div');
+                branchItem.className = 'col-md-3 col-sm-6';
+                branchItem.innerHTML = `
+                    <div style="padding: 15px 20px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid ${branch.name === 'Harare' ? '#004d99' : '#052b51'}; transition: all 0.3s ease;"
+                         onmouseover="this.style.background='#e8f4ff'; this.style.transform='translateX(5px)';"
+                         onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)';">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid ${branch.name === 'Harare' ? 'fa-building' : 'fa-location-dot'}"
+                               style="color: ${branch.name === 'Harare' ? '#004d99' : '#052b51'}; font-size: 1.1rem;"></i>
+                            <span style="color: #1a1a1a; font-weight: 600; font-size: 0.95rem;">
+                                ${branch.name}${branch.name === 'Harare' ? ' (HQ)' : ''}
+                            </span>
+                        </div>
+                    </div>
+                `;
+                branchListContainer.appendChild(branchItem);
+            });
+        }
+
+        // Initialize everything when page loads
+        window.addEventListener('load', function() {
+            initMap();
+            populateBranchList();
+        });
+    </script>
     <!--===== MAP SECTION ENDS =======-->
 
 

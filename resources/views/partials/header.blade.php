@@ -77,6 +77,13 @@
                                     </a>
                                 </li>
 
+                                <li class="nav-item">
+                                    <a class="nav-link {{ request()->is('/') && request()->has('board') ? 'active' : '' }}"
+                                       href="{{ url('/') }}#board">
+                                        Our Board
+                                    </a>
+                                </li>
+
                                 <li><a class="nav-link {{ request()->is('contact') ? 'active' : '' }}"
                                          href="{{  url('/contact') }}">
                                         Contact

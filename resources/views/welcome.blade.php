@@ -5,11 +5,11 @@
     <div class="hero4-section-area">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="hero4-heading">
-{{--                        <h5 data-aos="fade-left" data-aos-duration="800"> Trusted Microfinance Solutions for Real Growth</h5>--}}
+                        <h5 data-aos="fade-left" data-aos-duration="800" style="text-transform: none !important;">Different Needs, One Solution</h5>
                         <div class="space20"></div>
-                        <h2 class="text-anime-style-3">Fast, Flexible Loans for Real Growth</h2>
+                        <h2 class="text-anime-style-3">Fast, Flexible Loans for Real Growth.</h2>
                         <div class="space20"></div>
                         <p data-aos="fade-left" data-aos-duration="900">VisionPlus Wealth provides accessible, personalised financing that helps individuals, entrepreneurs, and SMEs grow with confidence.</p>
                         <div class="space32"></div>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <div class="images-area hero-image-wrapper">
                         <!-- Professional Floating Hero Cards -->
                         <div class="hero-floating-cards">
@@ -82,89 +82,6 @@
         </div>
     </div>
     <!--===== HERO AREA ENDS =======-->
-{{--    <!-- Premium Auto-Scrolling Value Banner -->--}}
-{{--    <section class="value-scroll-banner">--}}
-{{--        <div class="scroll-container">--}}
-{{--            <div class="scroll-track">--}}
-{{--                <!-- First set of items -->--}}
-{{--                <div class="scroll-item">--}}
-{{--                    <div class="scroll-icon">--}}
-{{--                        <i class="fas fa-bolt"></i>--}}
-{{--                    </div>--}}
-{{--                    <div class="scroll-content">--}}
-{{--                        <h4>Fast Approvals</h4>--}}
-{{--                        <p>24–48 hours</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="scroll-item">--}}
-{{--                    <div class="scroll-icon">--}}
-{{--                        <i class="fas fa-percentage"></i>--}}
-{{--                    </div>--}}
-{{--                    <div class="scroll-content">--}}
-{{--                        <h4>Flexible Rates</h4>--}}
-{{--                        <p>Competitive options</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="scroll-item">--}}
-{{--                    <div class="scroll-icon">--}}
-{{--                        <i class="fas fa-user-check"></i>--}}
-{{--                    </div>--}}
-{{--                    <div class="scroll-content">--}}
-{{--                        <h4>Personalised Solutions</h4>--}}
-{{--                        <p>Tailored to you</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="scroll-item">--}}
-{{--                    <div class="scroll-icon">--}}
-{{--                        <i class="fas fa-shield"></i>--}}
-{{--                    </div>--}}
-{{--                    <div class="scroll-content">--}}
-{{--                        <h4>Secure & Transparent</h4>--}}
-{{--                        <p>No hidden fees</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--                <!-- Duplicate set for seamless loop -->--}}
-{{--                <div class="scroll-item">--}}
-{{--                    <div class="scroll-icon">--}}
-{{--                        <i class="fas fa-bolt"></i>--}}
-{{--                    </div>--}}
-{{--                    <div class="scroll-content">--}}
-{{--                        <h4>Fast Approvals</h4>--}}
-{{--                        <p>24–48 hours</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="scroll-item">--}}
-{{--                    <div class="scroll-icon">--}}
-{{--                        <i class="fas fa-percentage"></i>--}}
-{{--                    </div>--}}
-{{--                    <div class="scroll-content">--}}
-{{--                        <h4>Flexible Rates</h4>--}}
-{{--                        <p>Competitive options</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="scroll-item">--}}
-{{--                    <div class="scroll-icon">--}}
-{{--                        <i class="fas fa-user-check"></i>--}}
-{{--                    </div>--}}
-{{--                    <div class="scroll-content">--}}
-{{--                        <h4>Personalised Solutions</h4>--}}
-{{--                        <p>Tailored to you</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="scroll-item">--}}
-{{--                    <div class="scroll-icon">--}}
-{{--                        <i class="fas fa-shield-check"></i>--}}
-{{--                    </div>--}}
-{{--                    <div class="scroll-content">--}}
-{{--                        <h4>Secure & Transparent</h4>--}}
-{{--                        <p>No hidden fees</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
-
 
     <div class="service3-section-area sp2" id="services">
         <div class="container">
@@ -593,13 +510,13 @@
     <!--===== WHY CHOOSE US END =======-->
 
     <!--===== TEAM AREA STARTS =======-->
-    <section class="leadership-section sp2" >
+    <section class="leadership-section sp2"  id="board">
         <div class="container">
             <!-- Section Header -->
             <div class="row">
                 <div class="col-lg-6 m-auto">
                     <div class="heading4 text-center space-margin60">
-                        <h5>Our Team</h5>
+                        <h5>Our Board</h5>
                         <div class="space20"></div>
                         <h2 class="text-anime-style-3">Expertise You Can Trust</h2>
                     </div>

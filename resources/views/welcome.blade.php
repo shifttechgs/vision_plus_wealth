@@ -5,62 +5,41 @@
     <div class="hero4-section-area">
         <div class="container">
             <div class="row align-items-center">
-
-                <!-- Hero Text -->
                 <div class="col-lg-7">
                     <div class="hero4-heading">
-
-                        <!-- Motto – H1, prominent -->
-                        <!-- Motto – H1, prominent -->
-                        <h1 class="hero-motto text-anime-style-3"
-                            data-aos="fade-up" data-aos-duration="1000"
-                            style="color: #ffffff; font-size: 36px; font-weight: 400; line-height: 1.1;">
-                            "Different Needs, One Solution"
-                        </h1>
-
+                        <h5 data-aos="fade-left" data-aos-duration="800" style="text-transform: none !important;">Different Needs, One Solution</h5>
                         <div class="space20"></div>
-
-                        <!-- Value Proposition – H2 -->
-                        <h2 class="hero-subheadline" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                            Fast, Flexible Loans Designed for Your Growth
-                        </h2>
+                        <h2 class="text-anime-style-3">Fast, Flexible Loans for Real Growth.</h2>
                         <div class="space20"></div>
-
-                        <!-- Supporting Text -->
-                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                            Vision Plus Wealth empowers individuals, entrepreneurs, and SMEs with financing solutions that are transparent, reliable, and tailored to your unique needs. Grow confidently with a partner you can trust.
-                        </p>
+                        <p data-aos="fade-left" data-aos-duration="900">VisionPlus Wealth provides accessible, personalised financing that helps individuals, entrepreneurs, and SMEs grow with confidence.</p>
                         <div class="space32"></div>
-
-                        <!-- CTA Buttons -->
-                        <div class="btn-area1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                            <a href="{{ url('/loan-application') }}" class="vl-btn4">Apply For a Loan <span><i class="fa-solid fa-arrow-right"></i></span></a>
-                            <a href="{{ url('/contact') }}" class="vl-btn4 btn2">Speak to an Advisor <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                        <div class="btn-area1">
+                            <a href="{{  url('/loan-application') }}" class="vl-btn4">Apply For a Loan <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                            <a href="{{  url('/contact') }}" class="vl-btn4 btn2">Speak to an Advisor <span><i class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
                         <div class="space48"></div>
-
-                        <!-- Trust Indicators -->
-                        <div class="trust-indicators enhanced" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                        <div class="trust-indicators enhanced" data-aos="fade-up" data-aos-duration="800">
                             <div class="trust-item" style="color: white">
                                 <i class="fas fa-users" style="color: white"></i>
                                 <span>Trusted by <strong>1,000+</strong> clients</span>
                             </div>
                             <div class="trust-item" style="color: white">
                                 <i class="fas fa-shield-alt" style="color: white"></i>
-                                <span>Licensed & Compliant</span>
+                                <span>Licensed & compliant</span>
                             </div>
                             <div class="trust-item" style="color: white">
                                 <i class="fas fa-star" style="color: white"></i>
-                                <span><strong>98%</strong> Satisfaction Rate</span>
+                                <span><strong>98%</strong> satisfaction</span>
                             </div>
                         </div>
                         <div class="space16"></div>
+
                     </div>
                 </div>
 
-                <!-- Hero Image + Floating Cards -->
                 <div class="col-lg-5">
                     <div class="images-area hero-image-wrapper">
+                        <!-- Professional Floating Hero Cards -->
                         <div class="hero-floating-cards">
                             <div class="hero-card floating" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                                 <div class="card-icon">
@@ -71,6 +50,7 @@
                                     <p>24-48 hours</p>
                                 </div>
                             </div>
+
                             <div class="hero-card floating floating-delay-1" data-aos="fade-left" data-aos-duration="900" data-aos-delay="400">
                                 <div class="card-icon">
                                     <i class="fas fa-hand-holding-usd"></i>
@@ -80,6 +60,7 @@
                                     <p>Clear & competitive</p>
                                 </div>
                             </div>
+
                             <div class="hero-card floating floating-delay-2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
                                 <div class="card-icon">
                                     <i class="fas fa-lock"></i>
@@ -92,16 +73,15 @@
                         </div>
 
                         <div class="img1 image-anime reveal">
-                            <img src="assets/img/all-images/hero/vpw.avif" alt="Vision Plus Wealth">
+                            <img src="assets/img/all-images/hero/vpw.avif" alt="">
                         </div>
+
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     <!--===== HERO AREA ENDS =======-->
-
 
     <div class="service3-section-area sp2" id="services">
         <div class="container">

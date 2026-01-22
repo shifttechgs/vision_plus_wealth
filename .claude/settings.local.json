@@ -13,7 +13,8 @@
       "Bash(git commit -m \"$(cat <<''EOF''\nAdd production environment files and update deployment configuration\n\n- Include .env and .env.production files for production deployment\n- Update .gitignore to track environment configuration files\n- Production-ready setup for Linux server deployment on port 8003\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git push)",
       "WebFetch(domain:www.facebook.com)",
-      "WebFetch(domain:www.linkedin.com)"
+      "WebFetch(domain:www.linkedin.com)",
+      "Skill(frontend-design)"
     ],
     "deny": [],
     "ask": []

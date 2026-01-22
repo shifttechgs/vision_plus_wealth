@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Hero Enhancements CSS -->
     <link rel="stylesheet" href="assets/css/hero-enhancements.css">
+    <!-- Hero Redesigned - High Converting -->
+    <link rel="stylesheet" href="assets/css/hero-redesigned.css">
     <!-- How It Works Section CSS -->
     <link rel="stylesheet" href="assets/css/how-it-works.css">
     <!-- About Page Premium Styles -->

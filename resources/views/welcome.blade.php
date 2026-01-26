@@ -7,7 +7,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="hero4-heading">
-                        <h5 data-aos="fade-left" data-aos-duration="800" style="text-transform: none !important;">Different Needs, One Solution</h5>
+{{--                        <h5 data-aos="fade-left" data-aos-duration="800" style="text-transform: none !important;">Different Needs, One Solution</h5>--}}
+
+                        <h1 class="hero-motto text-anime-style-3"
+                            data-aos="fade-up" data-aos-duration="1000"
+                            style="color: #ffffff; font-size: 46px; font-weight: 400; line-height: 1.1;">
+                            "Different Needs, One Solution"
+                        </h1>
                         <div class="space20"></div>
                         <h2 class="text-anime-style-3">Fast, Flexible Loans for Real Growth.</h2>
                         <div class="space20"></div>

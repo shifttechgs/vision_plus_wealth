@@ -9,15 +9,19 @@
                     <div class="hero4-heading">
 {{--                        <h5 data-aos="fade-left" data-aos-duration="800" style="text-transform: none !important;">Different Needs, One Solution</h5>--}}
 
-                        <h1 class="hero-motto text-anime-style-3"
-                            data-aos="fade-up" data-aos-duration="1000"
-                            style="color: #ffffff; font-size: 46px; font-weight: 400; line-height: 1.1;">
-                            "Different Needs, One Solution"
-                        </h1>
+{{--                        <h1 class="hero-motto text-anime-style-3"--}}
+{{--                            data-aos="fade-up" data-aos-duration="1000"--}}
+{{--                            style="color: #ffffff; font-size: 46px; font-weight: 400; line-height: 1.1;">--}}
+{{--                            "Different Needs, One Solution"--}}
+{{--                        </h1>--}}
                         <div class="space20"></div>
-                        <h2 class="text-anime-style-3">Fast, Flexible Loans for Real Growth.</h2>
-                        <div class="space20"></div>
-                        <p data-aos="fade-left" data-aos-duration="900">VisionPlus Wealth provides accessible, personalised financing that helps individuals, entrepreneurs, and SMEs grow with confidence.</p>
+                        <h2 class="text-anime-style-3">Different Needs, One Solution.
+                            </h2>
+                       <div class="space20"></div>
+                        <p data-aos="fade-left" data-aos-duration="900"
+                           style="font-size: 1.5rem; line-height: 1.7;">
+                            VisionPlus Wealth provides accessible, personalised financing with fast, flexible loans that help individuals, entrepreneurs, and SMEs grow with confidence.
+                        </p>
                         <div class="space32"></div>
                         <div class="btn-area1">
                             <a href="{{  url('/loan-application') }}" class="vl-btn4">Apply For a Loan <span><i class="fa-solid fa-arrow-right"></i></span></a>

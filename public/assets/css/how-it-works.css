@@ -1,315 +1,328 @@
 /* ========================================
-   VisionPlus Wealth - How It Works Section
-   Production Ready - Polished & Optimized
+   VisionPlus Wealth — How It Works
+   Premium Agency-Level Design
    ======================================== */
 
-/* ===== Core Animations ===== */
-
-/* Progress Bar Animation - Smooth & Natural */
-.vpw-progress-bar {
-    animation: progressFill 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.6s;
+/* ── Section ── */
+.vpw-how-it-works {
+    padding: 110px 0 100px;
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes progressFill {
-    from {
-        width: 0%;
-        opacity: 0.5;
+/* ── Header ── */
+.hiw-header {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.hiw-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #0A4D8C;
+    background: rgba(10, 77, 140, 0.07);
+    padding: 8px 20px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.hiw-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+}
+
+.hiw-subtitle {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ── Steps Container ── */
+.hiw-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+}
+
+/* ── Individual Step ── */
+.hiw-step {
+    position: relative;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.hiw-step-inner {
+    background: #ffffff;
+    border: 1px solid rgba(5, 43, 81, 0.06);
+    border-radius: 20px;
+    padding: 44px 28px 36px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hiw-step-inner:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(5, 43, 81, 0.12);
+    border-color: rgba(10, 77, 140, 0.12);
+}
+
+/* ── Step Number ── */
+.hiw-step-num {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 36px;
+    background: #0a1f3f;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 14px rgba(10, 31, 63, 0.3);
+    z-index: 2;
+}
+
+/* ── Step Icon ── */
+.hiw-step-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, #f0f5fa 0%, #e8eef5 100%);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    margin-top: 8px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hiw-step-icon i {
+    font-size: 28px;
+    color: #0A4D8C;
+    transition: all 0.3s ease;
+}
+
+.hiw-step-inner:hover .hiw-step-icon {
+    background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%);
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(10, 31, 63, 0.2);
+}
+
+.hiw-step-inner:hover .hiw-step-icon i {
+    color: #ffffff;
+}
+
+/* Accent variant for final step */
+.hiw-step-icon--accent {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+}
+
+.hiw-step-icon--accent i {
+    color: #d97706 !important;
+}
+
+.hiw-step-inner:hover .hiw-step-icon--accent {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+}
+
+.hiw-step-inner:hover .hiw-step-icon--accent i {
+    color: #ffffff !important;
+}
+
+/* ── Step Text ── */
+.hiw-step-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.hiw-step-desc {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* ── Time Badge ── */
+.hiw-step-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0A4D8C;
+    background: rgba(10, 77, 140, 0.06);
+    padding: 6px 14px;
+    border-radius: 100px;
+    letter-spacing: 0.2px;
+}
+
+.hiw-step-time i {
+    font-size: 11px;
+}
+
+/* ── Connector Arrow ── */
+.hiw-connector {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .hiw-connector {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -8px;
+        transform: translateY(-50%);
+        z-index: 3;
     }
-    to {
-        width: 100%;
-        opacity: 1;
+
+    .hiw-connector span {
+        display: block;
+        width: 16px;
+        height: 16px;
+        position: relative;
+    }
+
+    .hiw-connector span::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 2px;
+        background: #cbd5e0;
+        transform: translateY(-50%);
+    }
+
+    .hiw-connector span::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #cbd5e0;
+        border-right: 2px solid #cbd5e0;
+        transform: translateY(-50%) rotate(45deg);
     }
 }
 
-/* ===== Card Interactions ===== */
-
-/* Step Card Hover - Subtle Lift */
-.vpw-step-card {
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
+/* ── CTA ── */
+.hiw-cta {
+    text-align: center;
+    margin-top: 60px;
 }
 
-.vpw-step-card:hover {
-    transform: translateY(-12px);
-}
+/* ── Responsive ── */
 
-/* Step Number Hover - Enhanced Depth */
-.vpw-step-number > div {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.vpw-step-card:hover .vpw-step-number > div {
-    transform: scale(1.08);
-    box-shadow: 0 16px 40px rgba(7, 41, 78, 0.3) !important;
-}
-
-/* Icon Hover - Smooth Scale */
-.vpw-step-number i {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.vpw-step-card:hover .vpw-step-number i {
-    transform: scale(1.12) rotate(5deg);
-}
-
-/* Badge Rotation - Playful Detail */
-.vpw-step-number span {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.vpw-step-card:hover .vpw-step-number span {
-    transform: rotate(360deg) scale(1.08);
-}
-
-/* ===== CTA Button ===== */
-
-/* Button Hover - Professional Lift */
-.vpw-how-it-works .vl-btn4:hover {
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 16px 32px rgba(7, 41, 78, 0.35) !important;
-}
-
-.vpw-how-it-works .vl-btn4:hover i {
-    transform: translateX(4px);
-}
-
-.vpw-how-it-works .vl-btn4:active {
-    transform: translateY(-2px) scale(1.01);
-    transition: all 0.1s ease;
-}
-
-/* ===== Responsive Design ===== */
-
-/* Tablet & Below - Hide Progress Line */
+/* Tablet */
 @media (max-width: 991px) {
-    .vpw-progress-line {
-        display: none !important;
-    }
-
     .vpw-how-it-works {
-        padding: 80px 0 60px !important;
+        padding: 80px 0 70px;
     }
 
-    .vpw-step-card {
-        margin-bottom: 60px !important;
+    .hiw-header {
+        margin-bottom: 56px;
+    }
+
+    .hiw-title {
+        font-size: 2rem;
+    }
+
+    .hiw-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+
+    .hiw-step {
+        padding: 0;
     }
 }
 
-/* Mobile Optimization */
-@media (max-width: 767px) {
-    .vpw-how-it-works {
-        padding: 60px 0 50px !important;
-    }
-
-    .vpw-how-it-works .text-center {
-        margin-bottom: 50px !important;
-    }
-
-    .vpw-step-number {
-        width: 100px !important;
-        height: 100px !important;
-        margin-bottom: 24px !important;
-    }
-
-    .vpw-step-number i {
-        font-size: 36px !important;
-    }
-
-    .vpw-step-number span {
-        width: 36px !important;
-        height: 36px !important;
-        font-size: 14px !important;
-        border-width: 3px !important;
-    }
-
-    .vpw-step-card h4 {
-        font-size: 20px !important;
-    }
-
-    .vpw-step-card p {
-        font-size: 14px !important;
-    }
-
-    .vpw-how-it-works .vl-btn4 {
-        padding: 16px 32px !important;
-        font-size: 15px !important;
-    }
-}
-
-/* Extra Small Mobile */
+/* Mobile */
 @media (max-width: 575px) {
     .vpw-how-it-works {
-        padding: 50px 0 40px !important;
+        padding: 60px 0 50px;
     }
 
-    .vpw-step-card {
-        padding: 0 5px !important;
+    .hiw-header {
+        margin-bottom: 44px;
     }
 
-    .vpw-step-card p {
-        padding: 0 5px !important;
+    .hiw-title {
+        font-size: 1.65rem;
+    }
+
+    .hiw-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hiw-steps {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .hiw-step-inner {
+        padding: 40px 24px 30px;
+    }
+
+    .hiw-cta {
+        margin-top: 44px;
     }
 }
 
-/* Large Desktop - Optimize Spacing */
+/* Large Desktop */
 @media (min-width: 1400px) {
     .vpw-how-it-works {
-        padding: 120px 0 100px !important;
+        padding: 130px 0 110px;
     }
 
-    .vpw-step-card {
-        padding: 0 20px !important;
-    }
-}
-
-/* ===== Visual Polish ===== */
-
-/* Text Selection */
-.vpw-how-it-works ::selection {
-    background: #052b51;
-    color: #FFFFFF;
-}
-
-.vpw-how-it-works ::-moz-selection {
-    background: #052b51;
-    color: #FFFFFF;
-}
-
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Loading Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .hiw-step-inner {
+        padding: 48px 32px 40px;
     }
 }
 
-.vpw-how-it-works {
-    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Card Entrance Animation (triggered by JS) */
-.vpw-step-card.in-view {
-    animation: cardAppear 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes cardAppear {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== Accessibility ===== */
-
-/* Focus States - WCAG Compliant */
-.vpw-how-it-works a:focus,
-.vpw-how-it-works button:focus {
-    outline: 3px solid #052b51;
-    outline-offset: 4px;
-    border-radius: 50px;
-}
-
-.vpw-how-it-works a:focus-visible,
-.vpw-how-it-works button:focus-visible {
-    outline: 3px solid #052b51;
-    outline-offset: 4px;
-}
-
-/* Reduced Motion Support */
+/* ── Accessibility ── */
 @media (prefers-reduced-motion: reduce) {
-    .vpw-progress-bar,
-    .vpw-step-card,
-    .vpw-step-number,
-    .vpw-how-it-works .vl-btn4,
-    .vpw-how-it-works {
-        animation: none !important;
+    .hiw-step-inner,
+    .hiw-step-icon {
         transition: none !important;
     }
 
-    .vpw-step-card:hover {
+    .hiw-step-inner:hover {
         transform: none;
     }
 }
 
-/* ===== Print Styles ===== */
-@media print {
-    .vpw-how-it-works {
-        background: white !important;
-        padding: 40px 0 !important;
-    }
-
-    .vpw-progress-line,
-    .vpw-how-it-works .vl-btn4 {
-        display: none !important;
-    }
-
-    .vpw-step-card {
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-
-    .vpw-how-it-works *,
-    .vpw-step-card h4,
-    .vpw-step-card p {
-        color: black !important;
-    }
-
-    .vpw-step-number > div {
-        background: #f0f0f0 !important;
-        box-shadow: none !important;
-    }
-
-    .vpw-step-number i,
-    .vpw-step-number span {
-        color: black !important;
-        background: #e0e0e0 !important;
-    }
-}
-
-/* ===== Performance Optimizations ===== */
-
-/* GPU Acceleration for Smooth Animations */
-.vpw-step-card,
-.vpw-step-number,
-.vpw-progress-bar,
-.vpw-how-it-works .vl-btn4 {
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* Remove will-change after animation completes */
-.vpw-step-card:not(:hover),
-.vpw-how-it-works .vl-btn4:not(:hover) {
-    will-change: auto;
-}
-
-/* ===== Browser-Specific Fixes ===== */
-
-/* Safari Fixes */
-@supports (-webkit-appearance: none) {
-    .vpw-step-number > div {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-    }
-}
-
-/* Firefox Smoothing */
-@-moz-document url-prefix() {
-    .vpw-step-card {
-        image-rendering: -moz-crisp-edges;
-    }
+/* Focus states */
+.hiw-step-inner:focus-within {
+    outline: 3px solid #0A4D8C;
+    outline-offset: 4px;
+    border-radius: 20px;
 }

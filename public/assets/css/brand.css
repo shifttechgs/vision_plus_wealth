@@ -1,0 +1,1515 @@
+/* ════════════════════════════════════════════════════════════════
+   VisionPlus Wealth — Brand Override Layer
+   Derived from logo colors: Navy + Steel Blue + Silver
+
+   TEMPORARY: Remove this file + the <link> in master.blade.php
+   to revert to original styling.
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* Primary — Deep Navy (logo dark V) */
+    --vpw-primary: #0a1f3f;
+    --vpw-primary-dark: #06152b;
+    --vpw-primary-light: #0A4D8C;
+
+    /* Accent — Steel Blue (logo diamond overlap) */
+    --vpw-accent: #4a6fa5;
+    --vpw-accent-dark: #3a5a8a;
+    --vpw-accent-light: #6b8fc0;
+
+    /* Silver (logo gray V-shape) */
+    --vpw-silver: #a8b2c1;
+    --vpw-silver-dark: #8e9bae;
+    --vpw-silver-light: #c5cdd8;
+
+    /* Neutrals */
+    --vpw-white: #ffffff;
+    --vpw-gray-50: #f8f9fb;
+    --vpw-gray-75: #f0f2f5;
+    --vpw-gray-100: #e2e6ed;
+    --vpw-gray-200: #c8cfd9;
+    --vpw-gray-500: #64748b;
+    --vpw-gray-700: #334155;
+    --vpw-gray-900: #0f172a;
+
+    /* Status */
+    --vpw-success: #22c55e;
+    --vpw-warning: #f59e0b;
+    --vpw-error: #ef4444;
+    --vpw-info: #3b82f6;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%);
+    --gradient-accent: linear-gradient(135deg, #4a6fa5 0%, #6b8fc0 100%);
+
+    /* Shadows — navy-tinted */
+    --shadow-sm: 0 2px 8px rgba(10, 31, 63, 0.08);
+    --shadow-md: 0 8px 24px rgba(10, 31, 63, 0.12);
+    --shadow-lg: 0 16px 48px rgba(10, 31, 63, 0.16);
+
+    /* Override template CSS vars */
+    --ztc-text-text-2: #0a1f3f;
+    --ztc-text-text-5: #0a1f3f;
+    --ztc-text-text-13: #0a1f3f;
+    --ztc-bg-bg-2: #0a1f3f;
+    --ztc-bg-bg-3: #0A4D8C;
+    --ztc-bg-bg-4: #0a1f3f;
+    --ztc-bg-bg-9: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%);
+    --ztc-bg-bg-10: #0a1f3f;
+    --04-home-page-maincolors: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%);
+
+    /* Font overrides */
+    --ztc-family-font1: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+/* ════════════════════════════════════════
+   TYPOGRAPHY — Premium Fonts
+   ════════════════════════════════════════ */
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Playfair Display — hero motto only */
+.hero-motto,
+.vpw-display-font {
+    font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+
+/* ════════════════════════════════════════
+   HERO SECTION — Premium Redesign
+   ════════════════════════════════════════ */
+
+/* Hero background */
+.hero4-section-area {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+    padding: 180px 0 0 0 !important;
+    position: relative;
+}
+
+/* Subtle texture overlay */
+.hero4-section-area::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero4-section-area > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero tagline — Playfair Display */
+.hero4-section-area .hero4-heading h2 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: clamp(36px, 5vw, 56px) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1.5px !important;
+    color: #ffffff !important;
+}
+
+/* Hero paragraph */
+.hero4-section-area .hero4-heading p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.1rem !important;
+    line-height: 1.75 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    max-width: 520px;
+}
+
+/* Trust pills — redesigned */
+.trust-indicators.enhanced {
+    gap: 16px !important;
+}
+
+.trust-indicators.enhanced .trust-item {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 8px 16px !important;
+    border-radius: 24px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.trust-indicators.enhanced .trust-item:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.trust-indicators.enhanced .trust-item i {
+    color: var(--vpw-accent-light) !important;
+    font-size: 0.9rem !important;
+}
+
+/* Hero floating cards — brand colors */
+.hero-card .card-icon {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+}
+
+/* Hero stat bar — bottom of hero */
+.vpw-hero-stats {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: 48px;
+}
+
+.vpw-hero-stats .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vpw-hero-stat {
+    text-align: center;
+    flex: 1;
+}
+
+.vpw-hero-stat-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--vpw-silver-light);
+    line-height: 1;
+}
+
+.vpw-hero-stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+    .vpw-hero-stats .container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .vpw-hero-stat {
+        flex: 0 0 45%;
+    }
+}
+
+
+/* ════════════════════════════════════════
+   BODY / PAGE-LEVEL — kill any green bleed
+   ════════════════════════════════════════ */
+
+body {
+    background-color: #ffffff !important;
+}
+
+/* Ensure offer banner wrapper has no stray background */
+.offer-banner-wrapper {
+    background: #0a1f3f !important;
+}
+
+.offer-banner {
+    background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%) !important;
+}
+
+
+/* ════════════════════════════════════════
+   HEADER / NAV
+   ════════════════════════════════════════ */
+
+/* --- Base nav color: always dark (safe default) --- */
+#vl-header-sticky .vl-main-menu ul > li > a {
+    color: #0a1f3f !important;
+}
+
+#vl-header-sticky .vl-main-menu ul > li:hover > a {
+    color: #0A4D8C !important;
+}
+
+#vl-header-sticky .vl-main-menu ul > li > a.active {
+    color: #0A4D8C !important;
+    opacity: 0.8 !important;
+}
+
+/* --- Transparent header (before scroll) — nav sits on white pill (.row-bg) --- */
+/* Nav text stays dark on white pill background */
+
+/* --- Sticky header (after scroll) --- */
+#vl-header-sticky.header-sticky {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e6ed !important;
+    box-shadow: 0 2px 12px rgba(10, 31, 63, 0.06) !important;
+}
+
+/* Nav links: dark on white sticky */
+#vl-header-sticky.header-sticky .vl-main-menu ul > li > a {
+    color: #0a1f3f !important;
+}
+
+#vl-header-sticky.header-sticky .vl-main-menu ul > li:hover > a {
+    color: #0A4D8C !important;
+}
+
+#vl-header-sticky.header-sticky .vl-main-menu ul > li > a.active {
+    color: #0A4D8C !important;
+    opacity: 0.8 !important;
+}
+
+/* CTA button on sticky — keep navy gradient, white text */
+#vl-header-sticky.header-sticky .vl-btn4 {
+    color: #ffffff !important;
+}
+
+#vl-header-sticky.header-sticky .vl-btn4 span {
+    color: #0a1f3f !important;
+}
+
+/* --- Logo handling --- */
+/* Transparent header: show light logo as-is (remove brightness filter) */
+.homepage4-body .vl-transparent-header img#header-logo {
+    filter: none !important;
+}
+
+/* Sticky header: no filter needed — JS swaps to dark logo */
+.homepage4-body .header-sticky img#header-logo {
+    filter: none !important;
+}
+
+/* Mobile menu / sidebar */
+.mobile-menu,
+.homepage4-body .vl-offcanvas {
+    background: #0a1f3f !important;
+}
+
+/* Hero section — hardcoded gradient in main.css */
+.hero4-section-area {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+}
+
+
+/* ════════════════════════════════════════
+   HERO SECTION
+   ════════════════════════════════════════ */
+
+/* Hero backgrounds — override #052b51/#07294e to #0a1f3f */
+.hero3-section-area,
+.hero-section-area,
+.vpw-hero,
+[class*="hero"] {
+    /* Don't force background — let gradients handle it */
+}
+
+/* Offer banner / hero enhancements */
+.vpw-offer-banner {
+    background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%) !important;
+}
+
+.vpw-offer-banner .vpw-offer-tag {
+    background: #e8eefc !important;
+    color: #0A4D8C !important;
+}
+
+/* Trust items in hero */
+.trust-item i {
+    color: #ffffff !important;
+}
+
+/* Progress bar in how-it-works */
+.vpw-progress-bar {
+    background: linear-gradient(90deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+}
+
+
+/* ════════════════════════════════════════
+   BUTTONS — Override all green to Steel Blue
+   ════════════════════════════════════════ */
+
+/* Primary buttons (navy gradient) */
+.btn1,
+.header-btn1 a,
+a.btn1,
+.cta-btn,
+[class*="btn"][style*="052b51"],
+[class*="btn"][style*="07294e"] {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+    border-color: #0a1f3f !important;
+    color: #ffffff !important;
+}
+
+.btn1:hover,
+.header-btn1 a:hover,
+a.btn1:hover {
+    background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%) !important;
+    box-shadow: 0 8px 24px rgba(10, 31, 63, 0.25) !important;
+}
+
+
+/* ════════════════════════════════════════
+   SERVICE CARDS / ICON BOXES
+   ════════════════════════════════════════ */
+
+/* Icon circles with navy gradient */
+.service3-single-boxarea .icons,
+.icons[style*="052b51"],
+.icons[style*="07294e"] {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+}
+
+/* How it works step circles */
+.vpw-step-icon > div:first-child,
+[style*="linear-gradient"][style*="052b51"] {
+    background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%) !important;
+}
+
+/* Step number badges */
+.vpw-step-icon span[style*="background: #052b51"],
+span[style*="background: #052b51"] {
+    background: #0a1f3f !important;
+}
+
+
+/* ════════════════════════════════════════
+   GREEN → STEEL BLUE OVERRIDES
+   (hero-enhancements.css green accents)
+   ════════════════════════════════════════ */
+
+/* Checkmarks, success indicators styled as green */
+[style*="color: #10b981"],
+[style*="color:#10b981"] {
+    color: #4a6fa5 !important;
+}
+
+[style*="background: #10b981"],
+[style*="background:#10b981"] {
+    background: #4a6fa5 !important;
+}
+
+/* Green success backgrounds → steel blue tint */
+[style*="background: #f0fdf4"],
+[style*="background:#f0fdf4"] {
+    background: #eef2f8 !important;
+}
+
+[style*="border"][style*="#86efac"] {
+    border-color: #6b8fc0 !important;
+}
+
+[style*="color: #166534"],
+[style*="color:#166534"] {
+    color: #3a5a8a !important;
+}
+
+/* Loan application green (#48bb78) → Steel Blue */
+[style*="background: #48bb78"],
+[style*="background:#48bb78"],
+[style*="background: linear-gradient"][style*="#48bb78"] {
+    background: #4a6fa5 !important;
+}
+
+[style*="border"][style*="#48bb78"] {
+    border-color: #4a6fa5 !important;
+}
+
+[style*="color: #48bb78"],
+[style*="color:#48bb78"] {
+    color: #4a6fa5 !important;
+}
+
+
+/* ════════════════════════════════════════
+   HERO ENHANCEMENTS CSS OVERRIDES
+   ════════════════════════════════════════ */
+
+/* Stat circles / progress indicators */
+.vpw-stat-circle {
+    border-color: #4a6fa5 !important;
+}
+
+/* Feature check icons */
+.vpw-feature-check {
+    background: #4a6fa5 !important;
+}
+
+/* Quote icons */
+.fa-quote-right[style*="color: #0A4D8C"],
+[style*="color: #0A4D8C"] {
+    color: #0A4D8C !important; /* keep — it's in the logo palette */
+}
+
+/* Testimonial / review cards */
+.vpw-review-highlight {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+}
+
+/* Pagination / tab active states */
+.vpw-tab-active,
+.vpw-pagination .active {
+    background: #0a1f3f !important;
+    color: #ffffff !important;
+}
+
+/* Outline / bordered elements */
+.vpw-outline-btn,
+[style*="border-color: #0A4D8C"] {
+    border-color: #0A4D8C !important;
+    color: #0A4D8C !important;
+}
+
+.vpw-outline-btn:hover {
+    background: #0A4D8C !important;
+    color: #ffffff !important;
+}
+
+
+/* ════════════════════════════════════════
+   LOAN APPLICATION PAGE
+   ════════════════════════════════════════ */
+
+/* Step indicator bar */
+.loan-step-indicator [style*="border-bottom"][style*="052b51"] {
+    border-color: #0a1f3f !important;
+}
+
+/* Active step */
+.loan-step.active,
+[style*="background: #052b51"] {
+    background: #0a1f3f !important;
+}
+
+/* Step text colors */
+[style*="color: #052b51"],
+[style*="color:#052b51"] {
+    color: #0a1f3f !important;
+}
+
+[style*="color: #0a4d8c"],
+[style*="color:#0a4d8c"],
+[style*="color: #0A4D8C"],
+[style*="color:#0A4D8C"] {
+    color: #0A4D8C !important;
+}
+
+/* Loan form submit button green gradient → navy gradient */
+.loan-submit-btn,
+[style*="linear-gradient"][style*="48bb78"][style*="38a169"] {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+}
+
+/* Success step green dashed border → steel blue */
+[style*="border: 2px dashed #48bb78"],
+[style*="border:2px dashed #48bb78"] {
+    border: 2px dashed #4a6fa5 !important;
+}
+
+/* Step completed checkmark green → steel blue */
+.step-completed,
+[style*="background: linear-gradient"][style*="48bb78"] {
+    background: linear-gradient(135deg, #4a6fa5 0%, #6b8fc0 100%) !important;
+}
+
+/* Loan form border accents */
+[style*="border-bottom: 2px solid #052b51"],
+[style*="border-bottom:2px solid #052b51"] {
+    border-bottom-color: #0a1f3f !important;
+}
+
+[style*="border-bottom: 3px solid #052b51"],
+[style*="border-bottom:3px solid #052b51"] {
+    border-bottom-color: #0a1f3f !important;
+}
+
+/* Focus states on inputs */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4a6fa5 !important;
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.15) !important;
+    outline: none !important;
+}
+
+
+/* ════════════════════════════════════════
+   ABOUT PAGE
+   ════════════════════════════════════════ */
+
+/* About premium heading colors */
+.about-premium-title,
+.about-stat-number {
+    color: #0a1f3f !important;
+}
+
+.about-premium-accent {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+}
+
+/* Timeline / feature accent bars */
+.about-timeline-dot {
+    background: #0a1f3f !important;
+}
+
+.about-timeline-line {
+    background: #0A4D8C !important;
+}
+
+
+/* ════════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════════ */
+
+/* Footer background */
+.footer1-section-area,
+.footer-area,
+footer[class*="footer"] {
+    background: #06152b !important;
+}
+
+/* Footer link colors */
+.footer1-section-area a,
+.footer-area a,
+footer a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer1-section-area a:hover,
+.footer-area a:hover,
+footer a:hover {
+    color: var(--vpw-accent-light) !important;
+}
+
+/* Footer social icons */
+.footer-social a,
+.social-icon a {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+.footer-social a:hover,
+.social-icon a:hover {
+    background: #4a6fa5 !important;
+}
+
+/* Footer bottom bar */
+.footer-bottom,
+.copyright-area {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+
+/* ════════════════════════════════════════
+   GLOBAL OVERRIDES
+   ════════════════════════════════════════ */
+
+/* All navy gradients — normalize #052b51/#07294e → #0a1f3f */
+[style*="linear-gradient"][style*="052b51"]:not(.brand-cover):not(.brand-section) {
+    /* Can't fully override inline gradients via CSS without !important on each */
+}
+
+/* Selection color */
+::selection {
+    background: rgba(74, 111, 165, 0.25);
+    color: #0a1f3f;
+}
+
+/* Scrollbar (webkit) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--vpw-gray-50);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--vpw-silver);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--vpw-silver-dark);
+}
+
+/* Links */
+a {
+    color: #0A4D8C;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4a6fa5;
+}
+
+
+/* ════════════════════════════════════════
+   DARK INDIGO OVERRIDE (#6366f1)
+   Found in hero-enhancements dark mode
+   ════════════════════════════════════════ */
+[style*="border-color: #6366f1"],
+[style*="border-color:#6366f1"] {
+    border-color: #4a6fa5 !important;
+}
+
+[style*="color: #6366f1"],
+[style*="color:#6366f1"] {
+    color: #4a6fa5 !important;
+}
+
+
+/* ════════════════════════════════════════
+   SECTION BACKGROUNDS — Alternating shades
+   ════════════════════════════════════════ */
+
+/* Services — white */
+.service3-section-area {
+    background: #ffffff !important;
+}
+
+/* How It Works — light gray */
+.vpw-how-it-works {
+    background: #f4f6f9 !important;
+}
+
+/* Why Choose Us — white */
+.project1-section {
+    background: #ffffff !important;
+}
+
+/* Testimonials — navy gradient (already set via --ztc-bg-bg-9) */
+
+/* Board / Leadership — light gray */
+.leadership-section {
+    background: #f4f6f9 !important;
+}
+
+/* History — navy dark */
+.history1-scetion-area {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0d3566 100%) !important;
+}
+
+.history1-scetion-area .heading4 h5 {
+    color: rgba(255, 255, 255, 0.85) !important;
+    background: none !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.history1-scetion-area .heading4 h2 {
+    color: #ffffff !important;
+}
+
+.history1-scetion-area .history-boxarea h2 {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.history1-scetion-area .history-boxarea a {
+    color: #ffffff !important;
+}
+
+.history1-scetion-area .history-boxarea p {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.history1-scetion-area .history-boxarea span {
+    background: rgba(74, 111, 165, 0.5) !important;
+}
+
+.history1-scetion-area .boredr {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.history1-scetion-area .boredr::after {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Owl carousel nav in history */
+.history1-scetion-area .owl-nav button {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.history1-scetion-area .owl-nav button:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Our Customers — white */
+.brand1-section-area {
+    background: #ffffff !important;
+}
+
+/* FAQ — light gray */
+.faq-inner-section-area {
+    background: #f4f6f9 !important;
+}
+
+/* CTA — white (card inside is navy) */
+.vpw-cta-premium {
+    background: #ffffff !important;
+}
+
+
+/* ════════════════════════════════════════
+   COMPONENTS — Brand System Applied
+   ════════════════════════════════════════ */
+
+/* --- Section Headings --- */
+.heading4 h5 {
+    color: var(--vpw-accent) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    font-size: 0.85rem !important;
+}
+
+.heading4 h2 {
+    color: var(--vpw-gray-900) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* Headings on dark/navy backgrounds must stay white */
+.testimonial4-section-area .heading4 h2,
+.cta1-section-area .heading4 h2,
+[style*="background"][style*="#0a1f3f"] .heading4 h2 {
+    color: #ffffff !important;
+}
+
+.testimonial4-section-area .heading4 h5 {
+    color: rgba(255, 255, 255, 0.85) !important;
+    background: none !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.testimonial4-section-area .heading4 p {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.heading4 p {
+    color: var(--vpw-gray-500) !important;
+}
+
+
+/* --- Service Cards --- */
+.service3-single-boxarea {
+    background: var(--vpw-gray-50) !important;
+    border-radius: 16px !important;
+    border: 1px solid var(--vpw-gray-100) !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: none !important;
+    height: auto !important;
+    min-height: 340px !important;
+    overflow: visible !important;
+}
+
+.service3-single-boxarea:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: var(--vpw-accent-light) !important;
+}
+
+.service3-single-boxarea .icons {
+    background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 16px rgba(10, 31, 63, 0.2) !important;
+}
+
+.service3-single-boxarea .content a:not(.readmore) {
+    color: var(--vpw-gray-900) !important;
+    font-weight: 700 !important;
+    font-family: 'Inter', sans-serif !important;
+    transition: color 0.4s ease !important;
+}
+
+.service3-single-boxarea .content p {
+    color: var(--vpw-gray-500) !important;
+    line-height: 1.7 !important;
+    transition: color 0.4s ease !important;
+}
+
+.service3-single-boxarea .readmore {
+    color: var(--vpw-accent) !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Hover state — all text white on navy overlay */
+.service3-single-boxarea:hover .content a:not(.readmore) {
+    color: #ffffff !important;
+}
+
+.service3-single-boxarea:hover .content p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.service3-single-boxarea:hover .readmore {
+    color: #ffffff !important;
+}
+
+.service3-single-boxarea:hover .icons {
+    background: #ffffff !important;
+}
+
+.service3-single-boxarea:hover .icons i,
+.service3-single-boxarea:hover .icons img {
+    color: #0a1f3f !important;
+    filter: none !important;
+}
+
+.service3-single-boxarea .readmore:hover {
+    color: var(--vpw-accent-dark) !important;
+}
+
+.service3-single-boxarea .readmore i {
+    transition: transform 0.3s ease;
+}
+
+.service3-single-boxarea:hover .readmore i {
+    transform: translateX(4px);
+}
+
+
+/* --- Testimonial Cards --- */
+.testimonial-box-area {
+    background: var(--vpw-white) !important;
+    border-radius: 16px !important;
+    border: 1px solid var(--vpw-gray-100) !important;
+    box-shadow: var(--shadow-sm) !important;
+    padding: 36px !important;
+    transition: all 0.3s ease !important;
+}
+
+.testimonial-box-area:hover {
+    box-shadow: var(--shadow-md) !important;
+}
+
+.testimonial-box-area p {
+    color: var(--vpw-gray-700) !important;
+    font-style: italic !important;
+    line-height: 1.8 !important;
+    font-size: 1rem !important;
+}
+
+.testimonial-box-area .content-area .text a {
+    color: var(--vpw-gray-900) !important;
+    font-weight: 700 !important;
+}
+
+.testimonial-box-area .content-area .text p {
+    color: var(--vpw-gray-500) !important;
+    font-style: normal !important;
+    font-size: 0.875rem !important;
+}
+
+.testimonial-box-area .fa-quote-right {
+    color: var(--vpw-silver) !important;
+}
+
+
+/* --- How It Works Steps --- */
+.vpw-step-card {
+    transition: all 0.3s ease;
+}
+
+.vpw-step-card:hover {
+    transform: translateY(-4px);
+}
+
+.vpw-step-number > div:first-child {
+    background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%) !important;
+    box-shadow: 0 8px 24px rgba(10, 31, 63, 0.2) !important;
+}
+
+.vpw-step-number > span {
+    background: #0a1f3f !important;
+    box-shadow: 0 4px 12px rgba(10, 31, 63, 0.3) !important;
+}
+
+.vpw-step-card h4 {
+    color: var(--vpw-gray-900) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.vpw-step-card p {
+    color: var(--vpw-gray-500) !important;
+}
+
+
+/* --- Why Choose Us / Feature Cards --- */
+.project-boxarea {
+    border-radius: 16px !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    border-left: 4px solid transparent !important;
+}
+
+.project-boxarea:hover {
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-5px) !important;
+    border-left-color: var(--vpw-accent) !important;
+}
+
+/* Override inline #0066cc with brand accent */
+.project-boxarea h5[style*="color: #0066cc"],
+.project-boxarea h5[style*="color:#0066cc"],
+[style*="color: #0066cc"] {
+    color: var(--vpw-accent) !important;
+}
+
+.project-boxarea h2 a[style*="color: #1a1a1a"],
+.project-boxarea h2 a {
+    color: var(--vpw-gray-900) !important;
+}
+
+.project-boxarea h2 a:hover {
+    color: var(--vpw-accent) !important;
+}
+
+
+/* --- Team / Board Section --- */
+.leadership-section {
+    background: var(--vpw-gray-50) !important;
+}
+
+.leadership-section .heading4 h2 {
+    color: var(--vpw-gray-900) !important;
+}
+
+
+/* --- CTA Section — Premium Redesign --- */
+.vpw-cta-premium {
+    background: transparent !important;
+    padding: 80px 0 100px !important;
+    overflow: visible !important;
+}
+
+.vpw-cta-card {
+    position: relative;
+    background: linear-gradient(135deg, #0a1f3f 0%, #0d3566 50%, #0A4D8C 100%);
+    border-radius: 24px;
+    padding: 72px 64px;
+    overflow: hidden;
+    box-shadow:
+        0 24px 64px rgba(10, 31, 63, 0.25),
+        0 8px 24px rgba(10, 31, 63, 0.15);
+}
+
+.vpw-cta-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 80%, rgba(74, 111, 165, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(168, 178, 193, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.vpw-cta-bg-pattern::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.vpw-cta-bg-pattern::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.vpw-cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.vpw-cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(74, 111, 165, 0.2);
+    border: 1px solid rgba(74, 111, 165, 0.3);
+    color: #c5cdd8;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+}
+
+.vpw-cta-badge i {
+    font-size: 0.75rem;
+    color: #6b8fc0;
+}
+
+.vpw-cta-content h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 20px !important;
+}
+
+.vpw-cta-content p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.05rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    line-height: 1.7 !important;
+    margin-bottom: 36px !important;
+    max-width: 480px;
+}
+
+.vpw-cta-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.vpw-cta-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: #ffffff;
+    color: #0a1f3f !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.vpw-cta-btn-primary:hover {
+    background: #f0f2f5;
+    color: #0a1f3f !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.vpw-cta-btn-primary i {
+    transition: transform 0.3s ease;
+}
+
+.vpw-cta-btn-primary:hover i {
+    transform: translateX(4px);
+}
+
+.vpw-cta-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: transparent;
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vpw-cta-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.45);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.vpw-cta-btn-outline i {
+    transition: transform 0.3s ease;
+}
+
+.vpw-cta-btn-outline:hover i {
+    transform: translateX(4px);
+}
+
+/* Trust indicators */
+.vpw-cta-trust {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.vpw-cta-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.vpw-cta-trust-item i {
+    color: #6b8fc0;
+    font-size: 0.9rem;
+}
+
+/* CTA image / visual */
+.vpw-cta-visual {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.vpw-cta-visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.3));
+}
+
+/* CTA Responsive */
+@media (max-width: 991px) {
+    .vpw-cta-card {
+        padding: 48px 36px;
+    }
+
+    .vpw-cta-content h2 {
+        font-size: 2rem !important;
+    }
+
+    .vpw-cta-visual {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .vpw-cta-premium {
+        padding: 50px 0 60px !important;
+    }
+
+    .vpw-cta-card {
+        padding: 40px 24px;
+        border-radius: 18px;
+    }
+
+    .vpw-cta-content h2 {
+        font-size: 1.65rem !important;
+    }
+
+    .vpw-cta-content p {
+        font-size: 0.95rem !important;
+    }
+
+    .vpw-cta-buttons {
+        flex-direction: column;
+    }
+
+    .vpw-cta-btn-primary,
+    .vpw-cta-btn-outline {
+        justify-content: center;
+        padding: 14px 24px;
+    }
+
+    .vpw-cta-visual {
+        margin-top: 32px;
+    }
+}
+
+
+/* --- Form Inputs (Loan Application + Contact) --- */
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    font-family: 'Inter', sans-serif !important;
+    border: 1.5px solid var(--vpw-gray-200) !important;
+    border-radius: 8px !important;
+    transition: all 0.25s ease !important;
+    color: var(--vpw-gray-900) !important;
+}
+
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--vpw-accent) !important;
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.12) !important;
+    outline: none !important;
+}
+
+label {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    color: var(--vpw-gray-700) !important;
+    font-size: 0.875rem !important;
+}
+
+
+/* --- Footer Enhancement --- */
+.footer1-section-area,
+footer[class*="footer"] {
+    background: #06152b !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+footer h3,
+footer .footer-title {
+    color: var(--vpw-white) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: color 0.3s ease !important;
+}
+
+footer a:hover {
+    color: var(--vpw-accent-light) !important;
+}
+
+/* Footer social icons */
+footer .social-icon a,
+footer .footer-social a {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+footer .social-icon a:hover,
+footer .footer-social a:hover {
+    background: var(--vpw-accent) !important;
+    border-color: var(--vpw-accent) !important;
+    color: #ffffff !important;
+}
+
+/* Footer bottom copyright */
+.copyright-area,
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+
+/* --- Owl Carousel Dots (Testimonial Slider) --- */
+.owl-dots .owl-dot span {
+    background: var(--vpw-silver-light) !important;
+    transition: all 0.3s ease !important;
+}
+
+.owl-dots .owl-dot.active span {
+    background: var(--vpw-accent) !important;
+    width: 24px !important;
+}
+
+
+/* --- Scroll Progress Button --- */
+.progress-wrap {
+    background: var(--vpw-accent) !important;
+}
+
+.progress-wrap svg path {
+    stroke: var(--vpw-accent) !important;
+}
+
+
+/* ════════════════════════════════════════
+   SECTION SPACING & PADDING NORMALIZATION
+   ════════════════════════════════════════ */
+
+/* Consistent container padding across all breakpoints */
+.container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+@media (min-width: 576px) {
+    .container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 32px !important;
+        padding-right: 32px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+        max-width: 1200px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1280px !important;
+    }
+}
+
+/* Consistent vertical section spacing */
+.sp1 {
+    padding: 100px 0 !important;
+}
+
+.sp2 {
+    padding: 100px 0 80px !important;
+}
+
+.sp4 {
+    padding: 80px 0 !important;
+}
+
+.sp8 {
+    padding: 80px 0 40px !important;
+}
+
+@media (max-width: 991px) {
+    .sp1 {
+        padding: 70px 0 !important;
+    }
+    .sp2 {
+        padding: 70px 0 60px !important;
+    }
+    .sp4 {
+        padding: 60px 0 !important;
+    }
+    .sp8 {
+        padding: 60px 0 30px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .sp1 {
+        padding: 50px 0 !important;
+    }
+    .sp2 {
+        padding: 50px 0 40px !important;
+    }
+    .sp4 {
+        padding: 40px 0 !important;
+    }
+    .sp8 {
+        padding: 40px 0 20px !important;
+    }
+}
+
+/* Hero section padding */
+.hero4-section-area {
+    padding: 180px 0 0 0 !important;
+}
+
+@media (max-width: 991px) {
+    .hero4-section-area {
+        padding: 140px 0 0 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero4-section-area {
+        padding: 120px 0 0 0 !important;
+    }
+}
+
+/* Inner pages hero (contact, about) */
+.inner-pages-section-area {
+    padding: 180px 0 100px !important;
+}
+
+@media (max-width: 767px) {
+    .inner-pages-section-area {
+        padding: 120px 0 60px !important;
+    }
+}
+
+/* How it works section — inline style override */
+.vpw-how-it-works {
+    padding: 100px 0 !important;
+}
+
+@media (max-width: 767px) {
+    .vpw-how-it-works {
+        padding: 50px 0 !important;
+    }
+}
+
+/* Why Choose Us — inline style override */
+.project1-section {
+    padding: 100px 0 !important;
+}
+
+@media (max-width: 767px) {
+    .project1-section {
+        padding: 50px 0 !important;
+    }
+}
+
+
+/* Footer consistent padding */
+.vl-footer1-section-area {
+    padding: 80px 0 40px !important;
+}
+
+@media (max-width: 767px) {
+    .vl-footer1-section-area {
+        padding: 50px 0 30px !important;
+    }
+}
+
+/* Loan application page spacing */
+.loan-application-wrapper {
+    padding: 140px 0 80px !important;
+}
+
+@media (max-width: 767px) {
+    .loan-application-wrapper {
+        padding: 100px 0 50px !important;
+    }
+}
+
+
+/* --- Selection & Scrollbar --- */
+::selection {
+    background: rgba(74, 111, 165, 0.2);
+    color: #0a1f3f;
+}

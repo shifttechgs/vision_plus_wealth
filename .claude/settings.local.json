@@ -14,7 +14,13 @@
       "Bash(git push)",
       "WebFetch(domain:www.facebook.com)",
       "WebFetch(domain:www.linkedin.com)",
-      "Skill(frontend-design)"
+      "Skill(frontend-design)",
+      "WebFetch(domain:www.brandedagency.com)",
+      "Bash(/tmp/check_usage.txt:*)",
+      "Read(//tmp/**)",
+      "Bash(grep -l 'hero-redesigned\\\\|hero-urgency-badge\\\\|hero-motto-redesigned\\\\|btn-hero-primary\\\\|btn-hero-secondary\\\\|benefit-item\\\\|motto-highlight' /mnt/c/wamp64_3.3.4/www/projects/vision_plus_wealth/resources/views/**/*.blade.php)",
+      "Bash(grep -r LOAN_ADMIN_EMAIL /mnt/c/wamp64_3.3.4/www/projects/vision_plus_wealth --include=*.php --include=*.env*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,4 +1,9 @@
 @extends("layouts.master")
+
+@push('styles')
+    <link rel="stylesheet" href="assets/css/about-premium.css">
+@endpush
+
 @section("content")
 <!--===== HERO AREA STARTS =======-->
 <div class="inner-pages-section-area" style="background-image: url(assets/img/all-images/bg/hero-bg1.png); background-position: center; background-repeat: no-repeat; background-size: cover;">

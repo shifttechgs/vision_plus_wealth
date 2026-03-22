@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionPlus Wealth — Brand System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ════════════════════════════════════════
+           VisionPlus Wealth — Brand Tokens
+           Derived from logo: Navy + Steel Blue + Silver
+           ════════════════════════════════════════ */
+        :root {
+            /* Primary — Deep Navy (logo background, dark V) */
+            --vpw-primary: #0a1f3f;
+            --vpw-primary-dark: #06152b;
+            --vpw-primary-light: #0A4D8C;
+
+            /* Accent — Steel Blue (logo diamond overlap) */
+            --vpw-accent: #4a6fa5;
+            --vpw-accent-dark: #3a5a8a;
+            --vpw-accent-light: #6b8fc0;
+
+            /* Silver (logo gray V-shape) */
+            --vpw-silver: #a8b2c1;
+            --vpw-silver-dark: #8e9bae;
+            --vpw-silver-light: #c5cdd8;
+
+            /* Neutrals */
+            --vpw-white: #ffffff;
+            --vpw-gray-50: #f8f9fb;
+            --vpw-gray-75: #f0f2f5;
+            --vpw-gray-100: #e2e6ed;
+            --vpw-gray-200: #c8cfd9;
+            --vpw-gray-500: #64748b;
+            --vpw-gray-700: #334155;
+            --vpw-gray-900: #0f172a;
+
+            /* Status */
+            --vpw-success: #22c55e;
+            --vpw-warning: #f59e0b;
+            --vpw-error: #ef4444;
+            --vpw-info: #3b82f6;
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%);
+            --gradient-accent: linear-gradient(135deg, #4a6fa5 0%, #6b8fc0 100%);
+
+            /* Shadows — navy-tinted */
+            --shadow-sm: 0 2px 8px rgba(10, 31, 63, 0.08);
+            --shadow-md: 0 8px 24px rgba(10, 31, 63, 0.12);
+            --shadow-lg: 0 16px 48px rgba(10, 31, 63, 0.16);
+
+            /* Typography */
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            /* Radii */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--vpw-gray-700);
+            background: var(--vpw-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ── Cover ── */
+        .brand-cover {
+            min-height: 100vh;
+            background: var(--vpw-primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-cover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(10, 77, 140, 0.3) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 50% at 20% 80%, rgba(74, 111, 165, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .brand-cover::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .cover-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: coverReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        @keyframes coverReveal {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cover-logo {
+            width: 280px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+
+        .cover-rule {
+            width: 64px;
+            height: 3px;
+            background: var(--gradient-accent);
+            margin: 0 auto 32px;
+            border-radius: 2px;
+        }
+
+        .cover-label {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--vpw-accent-light);
+            margin-bottom: 24px;
+        }
+
+        .cover-title {
+            font-family: var(--font-display);
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 800;
+            color: var(--vpw-white);
+            line-height: 0.95;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .cover-title span {
+            display: block;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cover-subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.45);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .cover-year {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.2);
+            margin-top: 48px;
+            letter-spacing: 2px;
+        }
+
+        /* ── Navigation ── */
+        .brand-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--vpw-gray-100);
+            padding: 0 48px;
+        }
+
+        .brand-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .brand-nav-inner::-webkit-scrollbar { display: none; }
+
+        .brand-nav a {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--vpw-gray-500);
+            text-decoration: none;
+            padding: 20px 24px;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .brand-nav a:hover {
+            color: var(--vpw-primary);
+            border-bottom-color: var(--vpw-accent);
+        }
+
+        /* ── Sections ── */
+        .brand-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 48px;
+        }
+
+        .section-header { margin-bottom: 64px; }
+
+        .section-number {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--vpw-accent);
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            color: var(--vpw-primary);
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .section-desc {
+            margin-top: 16px;
+            font-size: 16px;
+            color: var(--vpw-gray-500);
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        .section-divider {
+            border: none;
+            height: 1px;
+            background: var(--vpw-gray-100);
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* ── Color Palette ── */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .color-card {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--vpw-white);
+        }
+
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .color-swatch {
+            height: 120px;
+            position: relative;
+        }
+
+        .color-swatch::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.05), transparent);
+        }
+
+        .color-info { padding: 16px 18px; }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--vpw-gray-900);
+            margin-bottom: 4px;
+        }
+
+        .color-hex {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--vpw-gray-500);
+        }
+
+        .color-group-label {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--vpw-gray-500);
+            margin-bottom: 20px;
+            margin-top: 48px;
+        }
+
+        .color-group-label:first-child { margin-top: 0; }
+
+        /* ── Typography ── */
+        .type-specimen {
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--vpw-gray-100);
+        }
+
+        .type-specimen:last-child { border-bottom: none; }
+
+        .type-meta {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .type-tag {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--vpw-white);
+            background: var(--vpw-primary);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .type-tag.accent {
+            background: var(--vpw-accent);
+            color: var(--vpw-white);
+        }
+
+        .type-detail {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--vpw-gray-500);
+        }
+
+        .type-sample-h1 {
+            font-family: var(--font-body);
+            font-size: 54px;
+            font-weight: 700;
+            color: var(--vpw-gray-900);
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+
+        .type-sample-h2 {
+            font-family: var(--font-body);
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--vpw-gray-900);
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .type-sample-h3 {
+            font-family: var(--font-body);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--vpw-gray-900);
+            line-height: 1.25;
+        }
+
+        .type-sample-h4 {
+            font-family: var(--font-body);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--vpw-gray-900);
+            line-height: 1.35;
+        }
+
+        .type-sample-body {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--vpw-gray-700);
+            line-height: 1.7;
+            max-width: 640px;
+        }
+
+        .type-sample-small {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--vpw-gray-500);
+            line-height: 1.6;
+        }
+
+        .type-sample-display {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--vpw-primary);
+            line-height: 1.1;
+            letter-spacing: -1px;
+            font-style: italic;
+        }
+
+        /* ── Gradients ── */
+        .gradient-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .gradient-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .gradient-preview {
+            height: 200px;
+            display: flex;
+            align-items: flex-end;
+            padding: 24px;
+        }
+
+        .gradient-preview span {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.2);
+            padding: 6px 14px;
+            border-radius: 6px;
+            backdrop-filter: blur(8px);
+        }
+
+        .gradient-info {
+            padding: 20px 24px;
+            background: var(--vpw-white);
+        }
+
+        .gradient-label {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--vpw-gray-900);
+            margin-bottom: 6px;
+        }
+
+        .gradient-css {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--vpw-gray-500);
+            word-break: break-all;
+        }
+
+        /* ── Shadows ── */
+        .shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .shadow-demo { text-align: center; }
+
+        .shadow-box {
+            width: 100%;
+            height: 140px;
+            background: var(--vpw-white);
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .shadow-box:hover { transform: scale(1.03); }
+
+        .shadow-box .shadow-icon {
+            font-size: 32px;
+            opacity: 0.12;
+            color: var(--vpw-primary);
+        }
+
+        .shadow-label {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--vpw-gray-900);
+            margin-bottom: 4px;
+        }
+
+        .shadow-value {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--vpw-gray-500);
+            line-height: 1.5;
+        }
+
+        /* ── Buttons ── */
+        .button-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .state-label {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--vpw-gray-500);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--vpw-white);
+            box-shadow: 0 4px 16px rgba(10, 31, 63, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(10, 31, 63, 0.35);
+        }
+
+        .btn-accent {
+            background: var(--gradient-accent);
+            color: var(--vpw-white);
+            box-shadow: 0 4px 16px rgba(74, 111, 165, 0.3);
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(74, 111, 165, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--vpw-primary);
+            border-color: var(--vpw-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--vpw-primary);
+            color: var(--vpw-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--vpw-primary);
+            border-color: transparent;
+        }
+
+        .btn-ghost:hover {
+            background: var(--vpw-gray-50);
+            color: var(--vpw-primary-light);
+        }
+
+        .btn-silver {
+            background: linear-gradient(135deg, var(--vpw-silver) 0%, var(--vpw-silver-light) 100%);
+            color: var(--vpw-primary);
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(168, 178, 193, 0.3);
+        }
+
+        .btn-silver:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(168, 178, 193, 0.4);
+        }
+
+        .btn-sm {
+            padding: 10px 22px;
+            font-size: 13px;
+        }
+
+        /* ── Components ── */
+        .component-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        /* Card */
+        .sample-card {
+            background: var(--vpw-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+        }
+
+        .sample-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-image {
+            height: 200px;
+            background: var(--gradient-primary);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .card-image-icon {
+            font-size: 48px;
+            color: rgba(255, 255, 255, 0.12);
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--vpw-silver-light);
+            color: var(--vpw-primary);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .card-body { padding: 28px; }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--vpw-gray-900);
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: var(--vpw-gray-500);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-amount {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--vpw-primary);
+        }
+
+        .card-amount small {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--vpw-gray-500);
+        }
+
+        /* Form */
+        .sample-form {
+            background: var(--vpw-gray-50);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            border: 1px solid var(--vpw-gray-100);
+        }
+
+        .form-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--vpw-gray-900);
+            margin-bottom: 24px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--vpw-gray-700);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1.5px solid var(--vpw-gray-200);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 15px;
+            color: var(--vpw-gray-900);
+            background: var(--vpw-white);
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+        .form-input::placeholder { color: var(--vpw-gray-200); }
+
+        .form-input:focus {
+            border-color: var(--vpw-accent);
+            box-shadow: 0 0 0 4px rgba(74, 111, 165, 0.12);
+        }
+
+        .form-input.error {
+            border-color: var(--vpw-error);
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+        }
+
+        .form-error {
+            font-size: 12px;
+            color: var(--vpw-error);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .form-hint {
+            font-size: 12px;
+            color: var(--vpw-gray-500);
+            margin-top: 6px;
+        }
+
+        /* Trust Badges */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .trust-badge {
+            text-align: center;
+            padding: 32px 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--vpw-gray-100);
+            background: var(--vpw-white);
+            transition: all 0.3s ease;
+        }
+
+        .trust-badge:hover {
+            border-color: var(--vpw-accent-light);
+            box-shadow: var(--shadow-sm);
+            transform: translateY(-2px);
+        }
+
+        .trust-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 22px;
+            color: var(--vpw-white);
+        }
+
+        .trust-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--vpw-gray-900);
+            margin-bottom: 6px;
+        }
+
+        .trust-desc {
+            font-size: 13px;
+            color: var(--vpw-gray-500);
+            line-height: 1.5;
+        }
+
+        /* ── Hero Mockup ── */
+        .hero-mockup-wrapper {
+            background: var(--vpw-gray-50);
+            padding: 100px 48px;
+        }
+
+        .hero-mockup-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-mockup {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background: var(--vpw-primary-dark);
+        }
+
+        .hero-mockup-browser {
+            background: var(--vpw-gray-900);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .browser-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .browser-dot:first-child { background: #ef4444; }
+        .browser-dot:nth-child(2) { background: #f59e0b; }
+        .browser-dot:nth-child(3) { background: #22c55e; }
+
+        .browser-url {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-left: 12px;
+        }
+
+        .hero-mockup-content {
+            padding: 80px 72px;
+            position: relative;
+            overflow: hidden;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-mockup-content::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 75% 30%, rgba(10, 77, 140, 0.35) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 40% at 25% 70%, rgba(74, 111, 165, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-mockup-content::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+
+        .hero-trust-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .hero-trust-pill {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-trust-pill .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--vpw-accent-light);
+        }
+
+        .hero-tagline {
+            font-family: var(--font-display);
+            font-size: 52px;
+            font-weight: 700;
+            color: var(--vpw-white);
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero-tagline em {
+            font-style: italic;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-stat-bar {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
+            padding: 20px 72px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .hero-stat { text-align: center; }
+
+        .hero-stat-value {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--vpw-silver-light);
+        }
+
+        .hero-stat-label {
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 2px;
+        }
+
+        /* ── Usage Rules ── */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .rule-card {
+            padding: 32px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--vpw-gray-100);
+        }
+
+        .rule-card.do { border-left: 4px solid var(--vpw-success); }
+        .rule-card.dont { border-left: 4px solid var(--vpw-error); }
+
+        .rule-label {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .rule-card.do .rule-label { color: var(--vpw-success); }
+        .rule-card.dont .rule-label { color: var(--vpw-error); }
+
+        .rule-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .rule-list li {
+            font-size: 14px;
+            color: var(--vpw-gray-700);
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .rule-list li::before {
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .rule-card.do .rule-list li::before {
+            content: '\2713';
+            color: var(--vpw-success);
+        }
+
+        .rule-card.dont .rule-list li::before {
+            content: '\2717';
+            color: var(--vpw-error);
+        }
+
+        /* ── CSS Reference ── */
+        .ref-table-wrapper {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--vpw-gray-100);
+        }
+
+        .ref-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .ref-table thead { background: var(--vpw-primary); }
+
+        .ref-table th {
+            padding: 14px 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: left;
+        }
+
+        .ref-table td {
+            padding: 14px 20px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--vpw-gray-100);
+        }
+
+        .ref-table tr:last-child td { border-bottom: none; }
+        .ref-table tbody tr:nth-child(even) { background: var(--vpw-gray-50); }
+
+        .ref-table .token {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--vpw-accent-dark);
+            background: rgba(74, 111, 165, 0.08);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .ref-table .val {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--vpw-gray-500);
+        }
+
+        .ref-swatch {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-right: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        /* ── Status Colors ── */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .status-pill {
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+        }
+
+        .status-pill .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .status-pill .status-name {
+            display: block;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .status-pill .status-hex {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            opacity: 0.7;
+        }
+
+        /* ── Logo Breakdown ── */
+        .logo-breakdown {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-top: 48px;
+        }
+
+        .logo-display {
+            background: var(--vpw-primary-dark);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-display img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .logo-colors {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .logo-color-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-color-swatch {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .logo-color-info {
+            flex: 1;
+        }
+
+        .logo-color-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--vpw-gray-900);
+        }
+
+        .logo-color-usage {
+            font-size: 12px;
+            color: var(--vpw-gray-500);
+            margin-top: 2px;
+        }
+
+        .logo-color-hex {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--vpw-accent);
+        }
+
+        /* ── Footer ── */
+        .brand-footer {
+            background: var(--vpw-primary-dark);
+            padding: 48px;
+            text-align: center;
+        }
+
+        .brand-footer p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .brand-section { padding: 64px 24px; }
+            .hero-mockup-wrapper { padding: 64px 24px; }
+            .color-grid { grid-template-columns: repeat(2, 1fr); }
+            .gradient-grid { grid-template-columns: 1fr; }
+            .shadow-grid { grid-template-columns: 1fr; }
+            .component-showcase { grid-template-columns: 1fr; }
+            .trust-grid { grid-template-columns: 1fr; }
+            .rules-grid { grid-template-columns: 1fr; }
+            .status-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-mockup-content { padding: 48px 32px; }
+            .hero-tagline { font-size: 32px; }
+            .hero-stat-bar { padding: 16px 32px; flex-wrap: wrap; gap: 16px; }
+            .brand-nav { padding: 0 16px; }
+            .logo-breakdown { grid-template-columns: 1fr; }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════ COVER ═══════════════ -->
+    <section class="brand-cover">
+        <div class="cover-content">
+            <img src="assets/img/logo/vpw_dark_logo.png" alt="VisionPlus Wealth Logo" class="cover-logo">
+            <div class="cover-rule"></div>
+            <div class="cover-label">Brand System</div>
+            <h1 class="cover-title">
+                VisionPlus<br><span>Wealth</span>
+            </h1>
+            <p class="cover-subtitle">Identity &amp; Design Language</p>
+            <p class="cover-year">2026 EDITION</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════ NAV ═══════════════ -->
+    <nav class="brand-nav">
+        <div class="brand-nav-inner">
+            <a href="#logo">Logo</a>
+            <a href="#colors">Colors</a>
+            <a href="#typography">Typography</a>
+            <a href="#gradients">Gradients</a>
+            <a href="#shadows">Shadows</a>
+            <a href="#buttons">Buttons</a>
+            <a href="#components">Components</a>
+            <a href="#hero">Hero Mockup</a>
+            <a href="#rules">Usage</a>
+            <a href="#reference">Reference</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ LOGO BREAKDOWN ═══════════════ -->
+    <section class="brand-section" id="logo">
+        <div class="section-header">
+            <span class="section-number">00</span>
+            <h2 class="section-title">Logo &amp; Brand Colors</h2>
+            <p class="section-desc">The VisionPlus Wealth logo uses three core colors: Deep Navy, Steel Blue, and Silver. All brand elements derive from these logo colors.</p>
+        </div>
+
+        <div class="logo-breakdown">
+            <div class="logo-display">
+                <img src="assets/img/logo/vpw_dark_logo.png" alt="VisionPlus Wealth Logo on dark background">
+            </div>
+            <div class="logo-colors">
+                <div class="logo-color-row">
+                    <div class="logo-color-swatch" style="background: #0a1f3f;"></div>
+                    <div class="logo-color-info">
+                        <div class="logo-color-name">Deep Navy</div>
+                        <div class="logo-color-usage">Dark V-shape, backgrounds, primary text</div>
+                        <div class="logo-color-hex">#0a1f3f</div>
+                    </div>
+                </div>
+                <div class="logo-color-row">
+                    <div class="logo-color-swatch" style="background: #0A4D8C;"></div>
+                    <div class="logo-color-info">
+                        <div class="logo-color-name">Royal Blue</div>
+                        <div class="logo-color-usage">Diamond intersection, links, interactive elements</div>
+                        <div class="logo-color-hex">#0A4D8C</div>
+                    </div>
+                </div>
+                <div class="logo-color-row">
+                    <div class="logo-color-swatch" style="background: #4a6fa5;"></div>
+                    <div class="logo-color-info">
+                        <div class="logo-color-name">Steel Blue</div>
+                        <div class="logo-color-usage">Accent elements, secondary buttons, highlights</div>
+                        <div class="logo-color-hex">#4a6fa5</div>
+                    </div>
+                </div>
+                <div class="logo-color-row">
+                    <div class="logo-color-swatch" style="background: #a8b2c1;"></div>
+                    <div class="logo-color-info">
+                        <div class="logo-color-name">Silver</div>
+                        <div class="logo-color-usage">Gray V-shape, tagline bar, subtle accents</div>
+                        <div class="logo-color-hex">#a8b2c1</div>
+                    </div>
+                </div>
+                <div class="logo-color-row">
+                    <div class="logo-color-swatch" style="background: #ffffff; border: 1px solid #e2e6ed;"></div>
+                    <div class="logo-color-info">
+                        <div class="logo-color-name">White</div>
+                        <div class="logo-color-usage">Text on dark, backgrounds, clean space</div>
+                        <div class="logo-color-hex">#ffffff</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════ COLORS ═══════════════ -->
+    <section class="brand-section" id="colors">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Color Palette</h2>
+            <p class="section-desc">A cool-toned, authoritative palette derived from the logo. Navy conveys trust, steel blue adds sophistication, and silver provides elegant contrast.</p>
+        </div>
+
+        <div class="color-group-label">Primary</div>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #0a1f3f;"></div>
+                <div class="color-info">
+                    <div class="color-name">Primary (Deep Navy)</div>
+                    <div class="color-hex">#0a1f3f</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #06152b;"></div>
+                <div class="color-info">
+                    <div class="color-name">Primary Dark</div>
+                    <div class="color-hex">#06152b</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #0A4D8C;"></div>
+                <div class="color-info">
+                    <div class="color-name">Primary Light (Royal)</div>
+                    <div class="color-hex">#0A4D8C</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-group-label">Accent</div>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #4a6fa5;"></div>
+                <div class="color-info">
+                    <div class="color-name">Accent (Steel Blue)</div>
+                    <div class="color-hex">#4a6fa5</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #3a5a8a;"></div>
+                <div class="color-info">
+                    <div class="color-name">Accent Dark</div>
+                    <div class="color-hex">#3a5a8a</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #6b8fc0;"></div>
+                <div class="color-info">
+                    <div class="color-name">Accent Light</div>
+                    <div class="color-hex">#6b8fc0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-group-label">Silver</div>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #a8b2c1;"></div>
+                <div class="color-info">
+                    <div class="color-name">Silver</div>
+                    <div class="color-hex">#a8b2c1</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #8e9bae;"></div>
+                <div class="color-info">
+                    <div class="color-name">Silver Dark</div>
+                    <div class="color-hex">#8e9bae</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #c5cdd8;"></div>
+                <div class="color-info">
+                    <div class="color-name">Silver Light</div>
+                    <div class="color-hex">#c5cdd8</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-group-label">Neutrals</div>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #ffffff; border: 1px solid #e2e6ed;"></div>
+                <div class="color-info">
+                    <div class="color-name">White</div>
+                    <div class="color-hex">#ffffff</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #f8f9fb;"></div>
+                <div class="color-info">
+                    <div class="color-name">Gray 50</div>
+                    <div class="color-hex">#f8f9fb</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #f0f2f5;"></div>
+                <div class="color-info">
+                    <div class="color-name">Gray 75</div>
+                    <div class="color-hex">#f0f2f5</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #e2e6ed;"></div>
+                <div class="color-info">
+                    <div class="color-name">Gray 100</div>
+                    <div class="color-hex">#e2e6ed</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #c8cfd9;"></div>
+                <div class="color-info">
+                    <div class="color-name">Gray 200</div>
+                    <div class="color-hex">#c8cfd9</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #64748b;"></div>
+                <div class="color-info">
+                    <div class="color-name">Gray 500</div>
+                    <div class="color-hex">#64748b</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #334155;"></div>
+                <div class="color-info">
+                    <div class="color-name">Gray 700</div>
+                    <div class="color-hex">#334155</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #0f172a;"></div>
+                <div class="color-info">
+                    <div class="color-name">Gray 900</div>
+                    <div class="color-hex">#0f172a</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-group-label">Status</div>
+        <div class="status-grid">
+            <div class="status-pill" style="background: rgba(34, 197, 94, 0.08);">
+                <span class="status-dot" style="background: #22c55e;"></span>
+                <span class="status-name" style="color: #16a34a;">Success</span>
+                <span class="status-hex" style="color: #16a34a;">#22c55e</span>
+            </div>
+            <div class="status-pill" style="background: rgba(245, 158, 11, 0.08);">
+                <span class="status-dot" style="background: #f59e0b;"></span>
+                <span class="status-name" style="color: #d97706;">Warning</span>
+                <span class="status-hex" style="color: #d97706;">#f59e0b</span>
+            </div>
+            <div class="status-pill" style="background: rgba(239, 68, 68, 0.08);">
+                <span class="status-dot" style="background: #ef4444;"></span>
+                <span class="status-name" style="color: #dc2626;">Error</span>
+                <span class="status-hex" style="color: #dc2626;">#ef4444</span>
+            </div>
+            <div class="status-pill" style="background: rgba(59, 130, 246, 0.08);">
+                <span class="status-dot" style="background: #3b82f6;"></span>
+                <span class="status-name" style="color: #2563eb;">Info</span>
+                <span class="status-hex" style="color: #2563eb;">#3b82f6</span>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════ TYPOGRAPHY ═══════════════ -->
+    <section class="brand-section" id="typography">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Typography</h2>
+            <p class="section-desc">Inter for clarity and professionalism across headings and body text. Playfair Display reserved exclusively for hero taglines to add editorial gravitas.</p>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-meta">
+                <span class="type-tag">H1</span>
+                <span class="type-detail">Inter &middot; 54px &middot; 700 &middot; -1.5px tracking</span>
+            </div>
+            <div class="type-sample-h1">Empowering Your Financial Future</div>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-meta">
+                <span class="type-tag">H2</span>
+                <span class="type-detail">Inter &middot; 40px &middot; 700 &middot; -1px tracking</span>
+            </div>
+            <div class="type-sample-h2">Accessible Loans, Real Growth</div>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-meta">
+                <span class="type-tag">H3</span>
+                <span class="type-detail">Inter &middot; 28px &middot; 600</span>
+            </div>
+            <div class="type-sample-h3">Business &amp; Agricultural Loans</div>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-meta">
+                <span class="type-tag">H4</span>
+                <span class="type-detail">Inter &middot; 20px &middot; 600</span>
+            </div>
+            <div class="type-sample-h4">Application Requirements &amp; Eligibility</div>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-meta">
+                <span class="type-tag">Body</span>
+                <span class="type-detail">Inter &middot; 16px &middot; 400 &middot; 1.7 leading</span>
+            </div>
+            <div class="type-sample-body">VisionPlus Wealth is a registered microfinance institution committed to empowering businesses and individuals across Zimbabwe with accessible loans and investment opportunities. We believe financial growth should be within everyone's reach.</div>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-meta">
+                <span class="type-tag">Small</span>
+                <span class="type-detail">Inter &middot; 14px &middot; 400</span>
+            </div>
+            <div class="type-sample-small">Licensed and regulated. Terms and conditions apply. All loan applications are subject to credit assessment and approval.</div>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-meta">
+                <span class="type-tag accent">Display / Motto</span>
+                <span class="type-detail">Playfair Display &middot; 48px &middot; 700 italic</span>
+            </div>
+            <div class="type-sample-display">Different Needs,<br>One Solution</div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════ GRADIENTS ═══════════════ -->
+    <section class="brand-section" id="gradients">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Gradients</h2>
+            <p class="section-desc">Only two gradients. Used sparingly for depth and emphasis on hero sections, buttons, and featured cards.</p>
+        </div>
+
+        <div class="gradient-grid">
+            <div class="gradient-card">
+                <div class="gradient-preview" style="background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%);">
+                    <span>135&deg;</span>
+                </div>
+                <div class="gradient-info">
+                    <div class="gradient-label">Primary Gradient</div>
+                    <div class="gradient-css">linear-gradient(135deg, #0a1f3f, #0A4D8C)</div>
+                </div>
+            </div>
+            <div class="gradient-card">
+                <div class="gradient-preview" style="background: linear-gradient(135deg, #4a6fa5 0%, #6b8fc0 100%);">
+                    <span>135&deg;</span>
+                </div>
+                <div class="gradient-info">
+                    <div class="gradient-label">Accent Gradient</div>
+                    <div class="gradient-css">linear-gradient(135deg, #4a6fa5, #6b8fc0)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════ SHADOWS ═══════════════ -->
+    <section class="brand-section" id="shadows">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">Elevation &amp; Shadows</h2>
+            <p class="section-desc">Three levels of elevation using navy-tinted shadows for warmth and cohesion. Cards rest at sm, lift to md on hover.</p>
+        </div>
+
+        <div class="shadow-grid">
+            <div class="shadow-demo">
+                <div class="shadow-box" style="box-shadow: 0 2px 8px rgba(10, 31, 63, 0.08);">
+                    <span class="shadow-icon">&#9632;</span>
+                </div>
+                <div class="shadow-label">Small</div>
+                <div class="shadow-value">0 2px 8px<br>rgba(10, 31, 63, 0.08)</div>
+            </div>
+            <div class="shadow-demo">
+                <div class="shadow-box" style="box-shadow: 0 8px 24px rgba(10, 31, 63, 0.12);">
+                    <span class="shadow-icon">&#9632;</span>
+                </div>
+                <div class="shadow-label">Medium</div>
+                <div class="shadow-value">0 8px 24px<br>rgba(10, 31, 63, 0.12)</div>
+            </div>
+            <div class="shadow-demo">
+                <div class="shadow-box" style="box-shadow: 0 16px 48px rgba(10, 31, 63, 0.16);">
+                    <span class="shadow-icon">&#9632;</span>
+                </div>
+                <div class="shadow-label">Large</div>
+                <div class="shadow-value">0 16px 48px<br>rgba(10, 31, 63, 0.16)</div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════ BUTTONS ═══════════════ -->
+    <section class="brand-section" id="buttons">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">Buttons</h2>
+            <p class="section-desc">Five button variants. Primary for main actions, Accent for secondary emphasis, Silver for soft CTAs, Outline and Ghost for tertiary actions.</p>
+        </div>
+
+        <div>
+            <span class="state-label">Default</span>
+            <div class="button-row">
+                <button class="btn btn-primary">Apply Now</button>
+                <button class="btn btn-accent">Learn More</button>
+                <button class="btn btn-silver">Get Started</button>
+                <button class="btn btn-outline">View Details</button>
+                <button class="btn btn-ghost">Contact Us</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 32px;">
+            <span class="state-label">Small</span>
+            <div class="button-row">
+                <button class="btn btn-primary btn-sm">Apply Now</button>
+                <button class="btn btn-accent btn-sm">Learn More</button>
+                <button class="btn btn-silver btn-sm">Get Started</button>
+                <button class="btn btn-outline btn-sm">View Details</button>
+                <button class="btn btn-ghost btn-sm">Contact Us</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 32px; background: var(--vpw-primary-dark); padding: 40px; border-radius: var(--radius-md);">
+            <span class="state-label" style="color: rgba(255,255,255,0.35);">On Dark Background</span>
+            <div class="button-row">
+                <button class="btn btn-silver">Get Started</button>
+                <button class="btn btn-accent">Learn More</button>
+                <button class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.3);">View Details</button>
+                <button class="btn btn-ghost" style="color: rgba(255,255,255,0.7);">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════ COMPONENTS ═══════════════ -->
+    <section class="brand-section" id="components">
+        <div class="section-header">
+            <span class="section-number">06</span>
+            <h2 class="section-title">Components</h2>
+            <p class="section-desc">Sample UI elements demonstrating the brand system in practice. Cards, form inputs, and trust indicators.</p>
+        </div>
+
+        <div class="component-showcase">
+            <!-- Card -->
+            <div>
+                <span class="state-label">Service Card</span>
+                <div class="sample-card">
+                    <div class="card-image">
+                        <span class="card-image-icon">&#9733;</span>
+                        <span class="card-badge">Popular</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">Business Growth Loan</div>
+                        <div class="card-text">Fuel your business expansion with flexible repayment terms tailored for Zimbabwean entrepreneurs. Competitive rates with fast approval.</div>
+                        <div class="card-footer">
+                            <div class="card-amount">$5,000 <small>up to</small></div>
+                            <button class="btn btn-accent btn-sm">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div>
+                <span class="state-label">Form Inputs</span>
+                <div class="sample-form">
+                    <div class="form-title">Quick Loan Enquiry</div>
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input class="form-input" type="text" placeholder="e.g. Tendai Moyo">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Loan Amount (USD)</label>
+                        <input class="form-input" type="text" placeholder="e.g. 2,500">
+                        <div class="form-hint">Minimum loan amount is $100</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input class="form-input error" type="email" value="tendai@" placeholder="e.g. tendai@email.co.zw">
+                        <div class="form-error">Please enter a valid email address</div>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 8px;">Submit Enquiry</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-grid">
+            <div class="trust-badge">
+                <div class="trust-icon">&#9878;</div>
+                <div class="trust-title">Licensed &amp; Regulated</div>
+                <div class="trust-desc">Registered microfinance institution operating under Zimbabwe's financial regulations</div>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">&#9733;</div>
+                <div class="trust-title">500+ Clients Served</div>
+                <div class="trust-desc">Trusted by businesses and individuals across Zimbabwe since 2022</div>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">&#8635;</div>
+                <div class="trust-title">Fast Approval</div>
+                <div class="trust-desc">Loan applications processed and approved within 24&#8211;48 hours</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ HERO MOCKUP ═══════════════ -->
+    <div class="hero-mockup-wrapper" id="hero">
+        <div class="hero-mockup-inner">
+            <div class="section-header" style="margin-bottom: 48px;">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Hero Mockup</h2>
+                <p class="section-desc">How the brand system comes together in a hero section. Navy backdrop, steel blue accents, Playfair Display tagline, Inter body copy.</p>
+            </div>
+
+            <div class="hero-mockup">
+                <div class="hero-mockup-browser">
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-url">visionpluswealth.com</span>
+                </div>
+                <div class="hero-mockup-content">
+                    <div class="hero-text">
+                        <div class="hero-trust-row">
+                            <span class="hero-trust-pill"><span class="dot"></span> Licensed MFI</span>
+                            <span class="hero-trust-pill"><span class="dot"></span> Est. 2022</span>
+                        </div>
+                        <h2 class="hero-tagline">Different Needs,<br><em>One Solution</em></h2>
+                        <p class="hero-desc">Zimbabwe's trusted microfinance partner. Access business loans, agricultural financing, and salary-based loans with competitive rates and fast approval.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-silver">Apply for a Loan</button>
+                            <button class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.3);">Our Services</button>
+                        </div>
+                    </div>
+                    <div class="hero-stat-bar">
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">500+</div>
+                            <div class="hero-stat-label">Clients Served</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">$2M+</div>
+                            <div class="hero-stat-label">Loans Disbursed</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">24hrs</div>
+                            <div class="hero-stat-label">Fast Approval</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">98%</div>
+                            <div class="hero-stat-label">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════ USAGE RULES ═══════════════ -->
+    <section class="brand-section" id="rules">
+        <div class="section-header">
+            <span class="section-number">08</span>
+            <h2 class="section-title">Usage Rules</h2>
+            <p class="section-desc">Maintain consistency across all touchpoints. These guidelines ensure the brand remains premium and trustworthy.</p>
+        </div>
+
+        <div class="rules-grid">
+            <div class="rule-card do">
+                <div class="rule-label">Do</div>
+                <ul class="rule-list">
+                    <li>Use the navy gradient for hero sections and primary CTAs</li>
+                    <li>Reserve Playfair Display for hero taglines only</li>
+                    <li>Use steel blue as the primary accent for interactive elements</li>
+                    <li>Use silver for badges, tags, and soft highlights</li>
+                    <li>Maintain generous whitespace between sections</li>
+                    <li>Use navy-tinted shadows (not pure black)</li>
+                    <li>Keep body text in Inter at 16px for readability</li>
+                </ul>
+            </div>
+            <div class="rule-card dont">
+                <div class="rule-label">Don't</div>
+                <ul class="rule-list">
+                    <li>Don't use Playfair Display for body text or small labels</li>
+                    <li>Don't introduce off-brand colors (green, purple, orange, pink)</li>
+                    <li>Don't use pure black (#000) for text &mdash; use Gray 900 (#0f172a)</li>
+                    <li>Don't apply the accent gradient to large background areas</li>
+                    <li>Don't use more than two gradients on a single page</li>
+                    <li>Don't mix navy shades inconsistently &mdash; pick one per element</li>
+                    <li>Don't use font weights below 400 for any visible text</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════ CSS REFERENCE ═══════════════ -->
+    <section class="brand-section" id="reference">
+        <div class="section-header">
+            <span class="section-number">09</span>
+            <h2 class="section-title">CSS Variable Reference</h2>
+            <p class="section-desc">Copy these variables into your stylesheet. All brand tokens in one place for consistent implementation.</p>
+        </div>
+
+        <div class="ref-table-wrapper">
+            <table class="ref-table">
+                <thead>
+                    <tr>
+                        <th>Token</th>
+                        <th>Value</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="token">--vpw-primary</span></td>
+                        <td><span class="val">#0a1f3f</span></td>
+                        <td><span class="ref-swatch" style="background:#0a1f3f"></span>Deep Navy</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-primary-dark</span></td>
+                        <td><span class="val">#06152b</span></td>
+                        <td><span class="ref-swatch" style="background:#06152b"></span>Darkest Navy</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-primary-light</span></td>
+                        <td><span class="val">#0A4D8C</span></td>
+                        <td><span class="ref-swatch" style="background:#0A4D8C"></span>Royal Blue</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-accent</span></td>
+                        <td><span class="val">#4a6fa5</span></td>
+                        <td><span class="ref-swatch" style="background:#4a6fa5"></span>Steel Blue</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-accent-dark</span></td>
+                        <td><span class="val">#3a5a8a</span></td>
+                        <td><span class="ref-swatch" style="background:#3a5a8a"></span>Dark Steel</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-accent-light</span></td>
+                        <td><span class="val">#6b8fc0</span></td>
+                        <td><span class="ref-swatch" style="background:#6b8fc0"></span>Light Steel</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-silver</span></td>
+                        <td><span class="val">#a8b2c1</span></td>
+                        <td><span class="ref-swatch" style="background:#a8b2c1"></span>Silver</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-silver-dark</span></td>
+                        <td><span class="val">#8e9bae</span></td>
+                        <td><span class="ref-swatch" style="background:#8e9bae"></span>Dark Silver</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-silver-light</span></td>
+                        <td><span class="val">#c5cdd8</span></td>
+                        <td><span class="ref-swatch" style="background:#c5cdd8"></span>Light Silver</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-gray-50</span></td>
+                        <td><span class="val">#f8f9fb</span></td>
+                        <td><span class="ref-swatch" style="background:#f8f9fb;border:1px solid #e2e6ed"></span>Background</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-gray-500</span></td>
+                        <td><span class="val">#64748b</span></td>
+                        <td><span class="ref-swatch" style="background:#64748b"></span>Muted Text</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--vpw-gray-900</span></td>
+                        <td><span class="val">#0f172a</span></td>
+                        <td><span class="ref-swatch" style="background:#0f172a"></span>Headings</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--gradient-primary</span></td>
+                        <td><span class="val">135deg, #0a1f3f &rarr; #0A4D8C</span></td>
+                        <td><span class="ref-swatch" style="background:linear-gradient(135deg,#0a1f3f,#0A4D8C)"></span>Navy Gradient</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--gradient-accent</span></td>
+                        <td><span class="val">135deg, #4a6fa5 &rarr; #6b8fc0</span></td>
+                        <td><span class="ref-swatch" style="background:linear-gradient(135deg,#4a6fa5,#6b8fc0)"></span>Steel Gradient</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--shadow-sm</span></td>
+                        <td><span class="val">0 2px 8px rgba(10,31,63,0.08)</span></td>
+                        <td>Subtle lift</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--shadow-md</span></td>
+                        <td><span class="val">0 8px 24px rgba(10,31,63,0.12)</span></td>
+                        <td>Card hover</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--shadow-lg</span></td>
+                        <td><span class="val">0 16px 48px rgba(10,31,63,0.16)</span></td>
+                        <td>Modal / Hero</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--font-display</span></td>
+                        <td><span class="val">'Playfair Display', Georgia, serif</span></td>
+                        <td>Hero taglines only</td>
+                    </tr>
+                    <tr>
+                        <td><span class="token">--font-body</span></td>
+                        <td><span class="val">'Inter', system-ui, sans-serif</span></td>
+                        <td>All other text</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="brand-footer">
+        <p>VisionPlus Wealth Brand System &middot; 2026 &middot; Internal Use</p>
+    </footer>
+
+</body>
+</html>

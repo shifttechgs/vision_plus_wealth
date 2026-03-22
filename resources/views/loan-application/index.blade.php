@@ -39,7 +39,7 @@
         text-align: center;
         margin-bottom: 30px;
         padding-bottom: 20px;
-        border-bottom: 3px solid #052b51;
+        border-bottom: 3px solid #0a1f3f;
     }
 
     .vpw-logo-section h1 {
@@ -82,7 +82,7 @@
         top: 20px;
         left: 0;
         height: 3px;
-        background: #052b51;
+        background: #0a1f3f;
         transition: width 0.3s ease;
         z-index: 1;
     }
@@ -109,25 +109,25 @@
     }
 
     .step-item.active .step-circle {
-        background: #052b51;
+        background: #0a1f3f;
         color: #ffffff;
         transform: scale(1.1);
     }
 
     .step-item.completed .step-circle {
-        background: #48bb78;
+        background: #4a6fa5;
         color: #ffffff;
     }
 
     .step-label {
         font-size: 18px;
-        color: #052b51;
+        color: #0a1f3f;
         font-weight: 600;
         display: block;
     }
 
     .step-item.active .step-label {
-        color: #052b51;
+        color: #0a1f3f;
     }
 
     /* Form Steps */
@@ -151,7 +151,7 @@
         font-weight: 700;
         margin-bottom: 30px;
         padding-bottom: 12px;
-        border-bottom: 2px solid #052b51;
+        border-bottom: 2px solid #0a1f3f;
     }
 
     .form-label {
@@ -181,7 +181,7 @@
     }
 
     .form-control:focus, .form-select:focus {
-        border-color: #052b51;
+        border-color: #0a1f3f;
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         outline: none;
     }
@@ -233,8 +233,8 @@
     }
 
     .radio-option input[type="radio"]:checked + label {
-        background: #052b51;
-        border-color: #052b51;
+        background: #0a1f3f;
+        border-color: #0a1f3f;
         color: #ffffff;
     }
 
@@ -289,22 +289,22 @@
     }
 
     .btn-next, .btn-submit {
-        background: #052b51;
+        background: #0a1f3f;
         color: #ffffff;
     }
 
     .btn-next:hover, .btn-submit:hover {
-        background: #052b51;
+        background: #0a1f3f;
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
     }
 
     .btn-submit {
-        background: #48bb78;
+        background: #4a6fa5;
     }
 
     .btn-submit:hover {
-        background: #38a169;
+        background: #6b8fc0;
         box-shadow: 0 5px 15px rgba(72, 187, 120, 0.3);
     }
 
@@ -420,7 +420,7 @@
     .success-icon-wrapper {
         width: 100px;
         height: 100px;
-        background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+        background: linear-gradient(135deg, #4a6fa5 0%, #6b8fc0 100%);
         border-radius: 50%;
         margin: 0 auto 25px;
         display: flex;
@@ -475,7 +475,7 @@
 
     .success-modal-app-number {
         background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-        border: 2px dashed #48bb78;
+        border: 2px dashed #4a6fa5;
         border-radius: 10px;
         padding: 15px;
         margin: 20px 0;
@@ -491,7 +491,7 @@
     }
 
     .success-modal-app-number-value {
-        color: #48bb78;
+        color: #4a6fa5;
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 1px;
@@ -590,11 +590,19 @@
                 </div>
             </div>
 
-            <!-- Error Display -->
-            @if($errors->any())
-                <div class="alert alert-danger">
-                    <strong>Please correct the following errors:</strong>
-                    <ul class="mb-0 mt-2">
+            <!-- Submission Error (email/PDF/system failure) -->
+            @if($errors->has('submission'))
+                <div class="alert alert-danger" style="border-left: 4px solid #e53e3e;">
+                    <strong><i class="fa-solid fa-triangle-exclamation"></i> Submission Failed</strong>
+                    <p class="mb-0 mt-2">{{ $errors->first('submission') }}</p>
+                </div>
+            @endif
+
+            <!-- Validation Errors (field-level) -->
+            @if($errors->any() && !$errors->has('submission'))
+                <div class="alert alert-danger" style="border-left: 4px solid #e53e3e;">
+                    <strong><i class="fa-solid fa-circle-exclamation"></i> Please correct the following errors:</strong>
+                    <ul class="mb-0 mt-2" style="padding-left: 20px;">
                         @foreach($errors->all() as $error)
                             <li>{{ $error }}</li>
                         @endforeach
@@ -603,7 +611,7 @@
             @endif
 
             <!-- Multi-Step Form -->
-            <form action="{{ route('loan-application.index') }}" method="POST" id="loanApplicationForm" novalidate>
+            <form action="{{ route('loan-application.submit') }}" method="POST" id="loanApplicationForm" novalidate>
                 @csrf
 
                 <!-- Step 1: Personal & Contact Details -->
@@ -612,23 +620,23 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Surname</label>
-                            <input type="text" name="surname" class="form-control @error('surname') is-invalid @enderror"
-                                   value="{{ old('surname') }}" required>
+                            <label for="surname" class="form-label required-field">Surname</label>
+                            <input type="text" name="surname" id="surname" class="form-control @error('surname') is-invalid @enderror"
+                                   value="{{ old('surname') }}" placeholder="e.g. Moyo" required>
                             @error('surname')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">First Names</label>
-                            <input type="text" name="first_names" class="form-control @error('first_names') is-invalid @enderror"
-                                   value="{{ old('first_names') }}" required>
+                            <label for="first_names" class="form-label required-field">First Names</label>
+                            <input type="text" name="first_names" id="first_names" class="form-control @error('first_names') is-invalid @enderror"
+                                   value="{{ old('first_names') }}" placeholder="e.g. Tatenda John" required>
                             @error('first_names')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Title (Mr./Mrs./Ms./Dr.)</label>
-                            <select name="title" class="form-select @error('title') is-invalid @enderror" required>
+                            <label for="title" class="form-label required-field">Title (Mr./Mrs./Ms./Dr.)</label>
+                            <select name="title" id="title" class="form-select @error('title') is-invalid @enderror" required>
                                 <option value="">Select Title</option>
                                 <option value="Mr." {{ old('title') == 'Mr.' ? 'selected' : '' }}>Mr.</option>
                                 <option value="Mrs." {{ old('title') == 'Mrs.' ? 'selected' : '' }}>Mrs.</option>
@@ -638,8 +646,8 @@
                             @error('title')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Gender</label>
-                            <select name="gender" class="form-select @error('gender') is-invalid @enderror" required>
+                            <label for="gender" class="form-label required-field">Gender</label>
+                            <select name="gender" id="gender" class="form-select @error('gender') is-invalid @enderror" required>
                                 <option value="">Select Gender</option>
                                 <option value="Male" {{ old('gender') == 'Male' ? 'selected' : '' }}>Male</option>
                                 <option value="Female" {{ old('gender') == 'Female' ? 'selected' : '' }}>Female</option>
@@ -651,29 +659,29 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Date of Birth</label>
-                            <input type="date" name="date_of_birth" class="form-control @error('date_of_birth') is-invalid @enderror"
+                            <label for="date_of_birth" class="form-label required-field">Date of Birth</label>
+                            <input type="date" name="date_of_birth" id="date_of_birth" class="form-control @error('date_of_birth') is-invalid @enderror"
                                    value="{{ old('date_of_birth') }}" required>
                             @error('date_of_birth')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Nationality</label>
-                            <input type="text" name="nationality" class="form-control @error('nationality') is-invalid @enderror"
-                                   value="{{ old('nationality') }}" required>
+                            <label for="nationality" class="form-label required-field">Nationality</label>
+                            <input type="text" name="nationality" id="nationality" class="form-control @error('nationality') is-invalid @enderror"
+                                   value="{{ old('nationality') }}" placeholder="e.g. Zimbabwean" required>
                             @error('nationality')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Identity Number</label>
-                            <input type="text" name="identity_number" class="form-control @error('identity_number') is-invalid @enderror"
-                                   value="{{ old('identity_number') }}" required>
+                            <label for="identity_number" class="form-label required-field">Identity Number</label>
+                            <input type="text" name="identity_number" id="identity_number" class="form-control @error('identity_number') is-invalid @enderror"
+                                   value="{{ old('identity_number') }}" placeholder="e.g. 63-123456-A-78" required>
                             @error('identity_number')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Marital Status</label>
-                            <select name="marital_status" class="form-select @error('marital_status') is-invalid @enderror" required>
+                            <label for="marital_status" class="form-label required-field">Marital Status</label>
+                            <select name="marital_status" id="marital_status" class="form-select @error('marital_status') is-invalid @enderror" required>
                                 <option value="">Select Status</option>
                                 <option value="Single" {{ old('marital_status') == 'Single' ? 'selected' : '' }}>Single</option>
                                 <option value="Married" {{ old('marital_status') == 'Married' ? 'selected' : '' }}>Married</option>
@@ -688,42 +696,42 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Residential Address</label>
-                            <textarea name="residential_address" rows="3" class="form-control @error('residential_address') is-invalid @enderror" required>{{ old('residential_address') }}</textarea>
+                            <label for="residential_address" class="form-label required-field">Residential Address</label>
+                            <textarea name="residential_address" id="residential_address" rows="3" class="form-control @error('residential_address') is-invalid @enderror" placeholder="e.g. 12 Main Street, Avondale, Harare" required>{{ old('residential_address') }}</textarea>
                             @error('residential_address')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Postal Address</label>
-                            <textarea name="postal_address" rows="3" class="form-control @error('postal_address') is-invalid @enderror">{{ old('postal_address') }}</textarea>
+                            <label for="postal_address" class="form-label">Postal Address</label>
+                            <textarea name="postal_address" id="postal_address" rows="3" class="form-control @error('postal_address') is-invalid @enderror" placeholder="e.g. P.O. Box 1234, Harare">{{ old('postal_address') }}</textarea>
                             @error('postal_address')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Home Phone</label>
-                            <input type="text" name="contact_home" class="form-control @error('contact_home') is-invalid @enderror"
-                                   value="{{ old('contact_home') }}">
+                            <label for="contact_home" class="form-label">Home Phone</label>
+                            <input type="text" name="contact_home" id="contact_home" class="form-control @error('contact_home') is-invalid @enderror"
+                                   value="{{ old('contact_home') }}" placeholder="e.g. 0242 123456">
                             @error('contact_home')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Business Phone</label>
-                            <input type="text" name="contact_business" class="form-control @error('contact_business') is-invalid @enderror"
-                                   value="{{ old('contact_business') }}">
+                            <label for="contact_business" class="form-label">Business Phone</label>
+                            <input type="text" name="contact_business" id="contact_business" class="form-control @error('contact_business') is-invalid @enderror"
+                                   value="{{ old('contact_business') }}" placeholder="e.g. 0242 789012">
                             @error('contact_business')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label class="form-label required-field">Cell Phone</label>
-                            <input type="text" name="contact_cell" class="form-control @error('contact_cell') is-invalid @enderror"
-                                   value="{{ old('contact_cell') }}" required>
+                            <label for="contact_cell" class="form-label required-field">Cell Phone</label>
+                            <input type="text" name="contact_cell" id="contact_cell" class="form-control @error('contact_cell') is-invalid @enderror"
+                                   value="{{ old('contact_cell') }}" placeholder="e.g. 0771 234 567" required>
                             @error('contact_cell')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Email Address</label>
-                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                               value="{{ old('email') }}" required>
+                        <label for="email" class="form-label required-field">Email Address</label>
+                        <input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror"
+                               value="{{ old('email') }}" placeholder="e.g. john@example.com" required>
                         @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
                 </div>
@@ -733,29 +741,29 @@
                     <h3 class="section-title">Employment Details</h3>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Employer's Name</label>
-                        <input type="text" name="employer_name" class="form-control @error('employer_name') is-invalid @enderror"
-                               value="{{ old('employer_name') }}" required>
+                        <label for="employer_name" class="form-label required-field">Employer's Name</label>
+                        <input type="text" name="employer_name" id="employer_name" class="form-control @error('employer_name') is-invalid @enderror"
+                               value="{{ old('employer_name') }}" placeholder="e.g. ABC Holdings Pvt Ltd" required>
                         @error('employer_name')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Employer's Physical Address</label>
-                        <textarea name="employer_address" rows="2" class="form-control @error('employer_address') is-invalid @enderror" required>{{ old('employer_address') }}</textarea>
+                        <label for="employer_address" class="form-label required-field">Employer's Physical Address</label>
+                        <textarea name="employer_address" id="employer_address" rows="2" class="form-control @error('employer_address') is-invalid @enderror" placeholder="e.g. 10 Samora Machel Ave, Harare" required>{{ old('employer_address') }}</textarea>
                         @error('employer_address')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Occupation and Department</label>
-                        <input type="text" name="occupation_department" class="form-control @error('occupation_department') is-invalid @enderror"
-                               value="{{ old('occupation_department') }}" required>
+                        <label for="occupation_department" class="form-label required-field">Occupation and Department</label>
+                        <input type="text" name="occupation_department" id="occupation_department" class="form-control @error('occupation_department') is-invalid @enderror"
+                               value="{{ old('occupation_department') }}" placeholder="e.g. Accountant, Finance Department" required>
                         @error('occupation_department')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Name of Immediate Manager and Contact Phone Number</label>
-                        <input type="text" name="manager_name_contact" class="form-control @error('manager_name_contact') is-invalid @enderror"
-                               value="{{ old('manager_name_contact') }}" required>
+                        <label for="manager_name_contact" class="form-label required-field">Name of Immediate Manager and Contact Phone Number</label>
+                        <input type="text" name="manager_name_contact" id="manager_name_contact" class="form-control @error('manager_name_contact') is-invalid @enderror"
+                               value="{{ old('manager_name_contact') }}" placeholder="e.g. Jane Doe, 0772 345 678" required>
                         @error('manager_name_contact')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
@@ -783,14 +791,14 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Date of Employment</label>
-                            <input type="date" name="date_of_employment" class="form-control @error('date_of_employment') is-invalid @enderror"
+                            <label for="date_of_employment" class="form-label required-field">Date of Employment</label>
+                            <input type="date" name="date_of_employment" id="date_of_employment" class="form-control @error('date_of_employment') is-invalid @enderror"
                                    value="{{ old('date_of_employment') }}" required>
                             @error('date_of_employment')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Date Contract Expires <small>(if applicable)</small></label>
-                            <input type="date" name="date_contract_expires" class="form-control @error('date_contract_expires') is-invalid @enderror"
+                            <label for="date_contract_expires" class="form-label">Date Contract Expires <small>(if applicable)</small></label>
+                            <input type="date" name="date_contract_expires" id="date_contract_expires" class="form-control @error('date_contract_expires') is-invalid @enderror"
                                    value="{{ old('date_contract_expires') }}">
                             @error('date_contract_expires')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
@@ -798,37 +806,37 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Employee Number</label>
-                            <input type="text" name="employee_number" class="form-control @error('employee_number') is-invalid @enderror"
-                                   value="{{ old('employee_number') }}" required>
+                            <label for="employee_number" class="form-label required-field">Employee Number</label>
+                            <input type="text" name="employee_number" id="employee_number" class="form-control @error('employee_number') is-invalid @enderror"
+                                   value="{{ old('employee_number') }}" placeholder="e.g. EMP-001234" required>
                             @error('employee_number')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Leave Days on Payslip</label>
-                            <input type="text" name="leave_days_payslip" class="form-control @error('leave_days_payslip') is-invalid @enderror"
-                                   value="{{ old('leave_days_payslip') }}">
+                            <label for="leave_days_payslip" class="form-label">Leave Days on Payslip</label>
+                            <input type="text" name="leave_days_payslip" id="leave_days_payslip" class="form-control @error('leave_days_payslip') is-invalid @enderror"
+                                   value="{{ old('leave_days_payslip') }}" placeholder="e.g. 15">
                             @error('leave_days_payslip')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Gross Monthly Income (US$)</label>
-                            <input type="number" step="0.01" name="gross_monthly_income" class="form-control @error('gross_monthly_income') is-invalid @enderror"
-                                   value="{{ old('gross_monthly_income') }}" required>
+                            <label for="gross_monthly_income" class="form-label required-field">Gross Monthly Income (US$)</label>
+                            <input type="number" step="0.01" name="gross_monthly_income" id="gross_monthly_income" class="form-control @error('gross_monthly_income') is-invalid @enderror"
+                                   value="{{ old('gross_monthly_income') }}" placeholder="e.g. 1500.00" required>
                             @error('gross_monthly_income')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Net Monthly Income (US$)</label>
-                            <input type="number" step="0.01" name="net_monthly_income" class="form-control @error('net_monthly_income') is-invalid @enderror"
-                                   value="{{ old('net_monthly_income') }}" required>
+                            <label for="net_monthly_income" class="form-label required-field">Net Monthly Income (US$)</label>
+                            <input type="number" step="0.01" name="net_monthly_income" id="net_monthly_income" class="form-control @error('net_monthly_income') is-invalid @enderror"
+                                   value="{{ old('net_monthly_income') }}" placeholder="e.g. 1200.00" required>
                             @error('net_monthly_income')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Next Pay Date</label>
-                        <input type="date" name="next_pay_date" class="form-control @error('next_pay_date') is-invalid @enderror"
+                        <label for="next_pay_date" class="form-label required-field">Next Pay Date</label>
+                        <input type="date" name="next_pay_date" id="next_pay_date" class="form-control @error('next_pay_date') is-invalid @enderror"
                                value="{{ old('next_pay_date') }}" required>
                         @error('next_pay_date')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
@@ -840,92 +848,92 @@
                     <p style="color: #0a4d8c; margin-bottom: 25px;"><em>Please provide details of TWO people with different addresses</em></p>
 
                     <!-- Person 1 -->
-                    <h4 style="color: #052b51; font-size: 18px; font-weight: 600; margin-bottom: 20px;">Person 1</h4>
+                    <h4 style="color: #0a1f3f; font-size: 18px; font-weight: 600; margin-bottom: 20px;">Person 1</h4>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Full Name</label>
-                            <input type="text" name="nok1_full_name" class="form-control @error('nok1_full_name') is-invalid @enderror"
-                                   value="{{ old('nok1_full_name') }}" required>
+                            <label for="nok1_full_name" class="form-label required-field">Full Name</label>
+                            <input type="text" name="nok1_full_name" id="nok1_full_name" class="form-control @error('nok1_full_name') is-invalid @enderror"
+                                   value="{{ old('nok1_full_name') }}" placeholder="e.g. Grace Moyo" required>
                             @error('nok1_full_name')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Relationship</label>
-                            <input type="text" name="nok1_relationship" class="form-control @error('nok1_relationship') is-invalid @enderror"
-                                   value="{{ old('nok1_relationship') }}" required>
+                            <label for="nok1_relationship" class="form-label required-field">Relationship</label>
+                            <input type="text" name="nok1_relationship" id="nok1_relationship" class="form-control @error('nok1_relationship') is-invalid @enderror"
+                                   value="{{ old('nok1_relationship') }}" placeholder="e.g. Spouse, Sibling, Parent" required>
                             @error('nok1_relationship')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Home Phone</label>
-                            <input type="text" name="nok1_phone_home" class="form-control @error('nok1_phone_home') is-invalid @enderror"
-                                   value="{{ old('nok1_phone_home') }}">
+                            <label for="nok1_phone_home" class="form-label">Home Phone</label>
+                            <input type="text" name="nok1_phone_home" id="nok1_phone_home" class="form-control @error('nok1_phone_home') is-invalid @enderror"
+                                   value="{{ old('nok1_phone_home') }}" placeholder="e.g. 0242 123456">
                             @error('nok1_phone_home')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Business Phone</label>
-                            <input type="text" name="nok1_phone_business" class="form-control @error('nok1_phone_business') is-invalid @enderror"
-                                   value="{{ old('nok1_phone_business') }}">
+                            <label for="nok1_phone_business" class="form-label">Business Phone</label>
+                            <input type="text" name="nok1_phone_business" id="nok1_phone_business" class="form-control @error('nok1_phone_business') is-invalid @enderror"
+                                   value="{{ old('nok1_phone_business') }}" placeholder="e.g. 0242 789012">
                             @error('nok1_phone_business')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label class="form-label required-field">Cell Phone</label>
-                            <input type="text" name="nok1_phone_cell" class="form-control @error('nok1_phone_cell') is-invalid @enderror"
-                                   value="{{ old('nok1_phone_cell') }}" required>
+                            <label for="nok1_phone_cell" class="form-label required-field">Cell Phone</label>
+                            <input type="text" name="nok1_phone_cell" id="nok1_phone_cell" class="form-control @error('nok1_phone_cell') is-invalid @enderror"
+                                   value="{{ old('nok1_phone_cell') }}" placeholder="e.g. 0771 234 567" required>
                             @error('nok1_phone_cell')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label required-field">Employer Name and Address</label>
-                        <textarea name="nok1_employer_address" rows="2" class="form-control @error('nok1_employer_address') is-invalid @enderror" required>{{ old('nok1_employer_address') }}</textarea>
+                        <label for="nok1_employer_address" class="form-label required-field">Employer Name and Address</label>
+                        <textarea name="nok1_employer_address" id="nok1_employer_address" rows="2" class="form-control @error('nok1_employer_address') is-invalid @enderror" placeholder="e.g. XYZ Company, 5 Park Lane, Harare" required>{{ old('nok1_employer_address') }}</textarea>
                         @error('nok1_employer_address')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
                     <!-- Person 2 -->
-                    <h4 style="color: #052b51; font-size: 18px; font-weight: 600; margin-bottom: 20px; margin-top: 30px;">Person 2</h4>
+                    <h4 style="color: #0a1f3f; font-size: 18px; font-weight: 600; margin-bottom: 20px; margin-top: 30px;">Person 2</h4>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Full Name</label>
-                            <input type="text" name="nok2_full_name" class="form-control @error('nok2_full_name') is-invalid @enderror"
-                                   value="{{ old('nok2_full_name') }}" required>
+                            <label for="nok2_full_name" class="form-label required-field">Full Name</label>
+                            <input type="text" name="nok2_full_name" id="nok2_full_name" class="form-control @error('nok2_full_name') is-invalid @enderror"
+                                   value="{{ old('nok2_full_name') }}" placeholder="e.g. Peter Ncube" required>
                             @error('nok2_full_name')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Relationship</label>
-                            <input type="text" name="nok2_relationship" class="form-control @error('nok2_relationship') is-invalid @enderror"
-                                   value="{{ old('nok2_relationship') }}" required>
+                            <label for="nok2_relationship" class="form-label required-field">Relationship</label>
+                            <input type="text" name="nok2_relationship" id="nok2_relationship" class="form-control @error('nok2_relationship') is-invalid @enderror"
+                                   value="{{ old('nok2_relationship') }}" placeholder="e.g. Friend, Colleague, Relative" required>
                             @error('nok2_relationship')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Home Phone</label>
-                            <input type="text" name="nok2_phone_home" class="form-control @error('nok2_phone_home') is-invalid @enderror"
-                                   value="{{ old('nok2_phone_home') }}">
+                            <label for="nok2_phone_home" class="form-label">Home Phone</label>
+                            <input type="text" name="nok2_phone_home" id="nok2_phone_home" class="form-control @error('nok2_phone_home') is-invalid @enderror"
+                                   value="{{ old('nok2_phone_home') }}" placeholder="e.g. 0242 123456">
                             @error('nok2_phone_home')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Business Phone</label>
-                            <input type="text" name="nok2_phone_business" class="form-control @error('nok2_phone_business') is-invalid @enderror"
-                                   value="{{ old('nok2_phone_business') }}">
+                            <label for="nok2_phone_business" class="form-label">Business Phone</label>
+                            <input type="text" name="nok2_phone_business" id="nok2_phone_business" class="form-control @error('nok2_phone_business') is-invalid @enderror"
+                                   value="{{ old('nok2_phone_business') }}" placeholder="e.g. 0242 789012">
                             @error('nok2_phone_business')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label class="form-label required-field">Cell Phone</label>
-                            <input type="text" name="nok2_phone_cell" class="form-control @error('nok2_phone_cell') is-invalid @enderror"
-                                   value="{{ old('nok2_phone_cell') }}" required>
+                            <label for="nok2_phone_cell" class="form-label required-field">Cell Phone</label>
+                            <input type="text" name="nok2_phone_cell" id="nok2_phone_cell" class="form-control @error('nok2_phone_cell') is-invalid @enderror"
+                                   value="{{ old('nok2_phone_cell') }}" placeholder="e.g. 0773 456 789" required>
                             @error('nok2_phone_cell')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Employer Name and Address</label>
-                        <textarea name="nok2_employer_address" rows="2" class="form-control @error('nok2_employer_address') is-invalid @enderror" required>{{ old('nok2_employer_address') }}</textarea>
+                        <label for="nok2_employer_address" class="form-label required-field">Employer Name and Address</label>
+                        <textarea name="nok2_employer_address" id="nok2_employer_address" rows="2" class="form-control @error('nok2_employer_address') is-invalid @enderror" placeholder="e.g. DEF Industries, 20 Robert Mugabe Rd, Bulawayo" required>{{ old('nok2_employer_address') }}</textarea>
                         @error('nok2_employer_address')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
                 </div>
@@ -936,9 +944,9 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Required Loan Amount (US$)</label>
-                            <input type="number" step="0.01" name="loan_amount" class="form-control @error('loan_amount') is-invalid @enderror"
-                                   value="{{ old('loan_amount') }}" required>
+                            <label for="loan_amount" class="form-label required-field">Required Loan Amount (US$)</label>
+                            <input type="number" step="0.01" name="loan_amount" id="loan_amount" class="form-control @error('loan_amount') is-invalid @enderror"
+                                   value="{{ old('loan_amount') }}" placeholder="e.g. 5000" required>
                             @error('loan_amount')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
@@ -968,17 +976,17 @@
                             @error('repayment_period')<div class="invalid-feedback d-block">{{ $message }}</div>@enderror
 
                             <div class="mt-2">
-                                <label class="form-label">Other (specify months)</label>
-                                <input type="number" name="repayment_period_other" class="form-control @error('repayment_period_other') is-invalid @enderror"
-                                       value="{{ old('repayment_period_other') }}" min="1">
+                                <label for="repayment_period_other" class="form-label">Other (specify months)</label>
+                                <input type="number" name="repayment_period_other" id="repayment_period_other" class="form-control @error('repayment_period_other') is-invalid @enderror"
+                                       value="{{ old('repayment_period_other') }}" placeholder="e.g. 6" min="1">
                                 @error('repayment_period_other')<div class="invalid-feedback">{{ $message }}</div>@enderror
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Reason for Loan</label>
-                        <textarea name="reason_for_loan" rows="3" class="form-control @error('reason_for_loan') is-invalid @enderror" required>{{ old('reason_for_loan') }}</textarea>
+                        <label for="reason_for_loan" class="form-label required-field">Reason for Loan</label>
+                        <textarea name="reason_for_loan" id="reason_for_loan" rows="3" class="form-control @error('reason_for_loan') is-invalid @enderror" placeholder="e.g. Business stock replenishment, school fees, vehicle purchase" required>{{ old('reason_for_loan') }}</textarea>
                         @error('reason_for_loan')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
@@ -986,21 +994,21 @@
 
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Bank/Institution</label>
-                            <input type="text" name="existing_loan_institution" class="form-control @error('existing_loan_institution') is-invalid @enderror"
-                                   value="{{ old('existing_loan_institution') }}">
+                            <label for="existing_loan_institution" class="form-label">Bank/Institution</label>
+                            <input type="text" name="existing_loan_institution" id="existing_loan_institution" class="form-control @error('existing_loan_institution') is-invalid @enderror"
+                                   value="{{ old('existing_loan_institution') }}" placeholder="e.g. CBZ Bank">
                             @error('existing_loan_institution')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Branch</label>
-                            <input type="text" name="existing_loan_branch" class="form-control @error('existing_loan_branch') is-invalid @enderror"
-                                   value="{{ old('existing_loan_branch') }}">
+                            <label for="existing_loan_branch" class="form-label">Branch</label>
+                            <input type="text" name="existing_loan_branch" id="existing_loan_branch" class="form-control @error('existing_loan_branch') is-invalid @enderror"
+                                   value="{{ old('existing_loan_branch') }}" placeholder="e.g. Harare Main">
                             @error('existing_loan_branch')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Loan Amount (US$)</label>
-                            <input type="number" step="0.01" name="existing_loan_amount" class="form-control @error('existing_loan_amount') is-invalid @enderror"
-                                   value="{{ old('existing_loan_amount') }}">
+                            <label for="existing_loan_amount" class="form-label">Loan Amount (US$)</label>
+                            <input type="number" step="0.01" name="existing_loan_amount" id="existing_loan_amount" class="form-control @error('existing_loan_amount') is-invalid @enderror"
+                                   value="{{ old('existing_loan_amount') }}" placeholder="e.g. 2000">
                             @error('existing_loan_amount')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
@@ -1012,23 +1020,23 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Bank</label>
-                            <input type="text" name="bank_name" class="form-control @error('bank_name') is-invalid @enderror"
-                                   value="{{ old('bank_name') }}" required>
+                            <label for="bank_name" class="form-label required-field">Bank</label>
+                            <input type="text" name="bank_name" id="bank_name" class="form-control @error('bank_name') is-invalid @enderror"
+                                   value="{{ old('bank_name') }}" placeholder="e.g. FBC Bank, Stanbic, CBZ" required>
                             @error('bank_name')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label required-field">Branch</label>
-                            <input type="text" name="bank_branch" class="form-control @error('bank_branch') is-invalid @enderror"
-                                   value="{{ old('bank_branch') }}" required>
+                            <label for="bank_branch" class="form-label required-field">Branch</label>
+                            <input type="text" name="bank_branch" id="bank_branch" class="form-control @error('bank_branch') is-invalid @enderror"
+                                   value="{{ old('bank_branch') }}" placeholder="e.g. Harare Main Branch" required>
                             @error('bank_branch')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label required-field">Account Number</label>
-                        <input type="text" name="account_number" class="form-control @error('account_number') is-invalid @enderror"
-                               value="{{ old('account_number') }}" required>
+                        <label for="account_number" class="form-label required-field">Account Number</label>
+                        <input type="text" name="account_number" id="account_number" class="form-control @error('account_number') is-invalid @enderror"
+                               value="{{ old('account_number') }}" placeholder="e.g. 1234567890" required>
                         @error('account_number')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
@@ -1036,45 +1044,45 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Referral 1 - Name</label>
-                            <input type="text" name="referral1_name" class="form-control @error('referral1_name') is-invalid @enderror"
-                                   value="{{ old('referral1_name') }}">
+                            <label for="referral1_name" class="form-label">Referral 1 - Name</label>
+                            <input type="text" name="referral1_name" id="referral1_name" class="form-control @error('referral1_name') is-invalid @enderror"
+                                   value="{{ old('referral1_name') }}" placeholder="Full name">
                             @error('referral1_name')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Contact Number</label>
-                            <input type="text" name="referral1_contact" class="form-control @error('referral1_contact') is-invalid @enderror"
-                                   value="{{ old('referral1_contact') }}">
+                            <label for="referral1_contact" class="form-label">Contact Number</label>
+                            <input type="text" name="referral1_contact" id="referral1_contact" class="form-control @error('referral1_contact') is-invalid @enderror"
+                                   value="{{ old('referral1_contact') }}" placeholder="e.g. 0771 234 567">
                             @error('referral1_contact')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Referral 2 - Name</label>
-                            <input type="text" name="referral2_name" class="form-control @error('referral2_name') is-invalid @enderror"
-                                   value="{{ old('referral2_name') }}">
+                            <label for="referral2_name" class="form-label">Referral 2 - Name</label>
+                            <input type="text" name="referral2_name" id="referral2_name" class="form-control @error('referral2_name') is-invalid @enderror"
+                                   value="{{ old('referral2_name') }}" placeholder="Full name">
                             @error('referral2_name')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Contact Number</label>
-                            <input type="text" name="referral2_contact" class="form-control @error('referral2_contact') is-invalid @enderror"
-                                   value="{{ old('referral2_contact') }}">
+                            <label for="referral2_contact" class="form-label">Contact Number</label>
+                            <input type="text" name="referral2_contact" id="referral2_contact" class="form-control @error('referral2_contact') is-invalid @enderror"
+                                   value="{{ old('referral2_contact') }}" placeholder="e.g. 0772 345 678">
                             @error('referral2_contact')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Referral 3 - Name</label>
-                            <input type="text" name="referral3_name" class="form-control @error('referral3_name') is-invalid @enderror"
-                                   value="{{ old('referral3_name') }}">
+                            <label for="referral3_name" class="form-label">Referral 3 - Name</label>
+                            <input type="text" name="referral3_name" id="referral3_name" class="form-control @error('referral3_name') is-invalid @enderror"
+                                   value="{{ old('referral3_name') }}" placeholder="Full name">
                             @error('referral3_name')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Contact Number</label>
-                            <input type="text" name="referral3_contact" class="form-control @error('referral3_contact') is-invalid @enderror"
-                                   value="{{ old('referral3_contact') }}">
+                            <label for="referral3_contact" class="form-label">Contact Number</label>
+                            <input type="text" name="referral3_contact" id="referral3_contact" class="form-control @error('referral3_contact') is-invalid @enderror"
+                                   value="{{ old('referral3_contact') }}" placeholder="e.g. 0773 456 789">
                             @error('referral3_contact')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
@@ -1370,12 +1378,28 @@
         }, 1000);
     }
 
-    // Check for success message on page load
+    // Check for success/error messages on page load
     document.addEventListener('DOMContentLoaded', function() {
         @if(session('success'))
             setTimeout(function() {
                 showSuccessModal("{{ session('success') }}");
             }, 300);
+        @endif
+
+        // Auto-navigate to the first step that has validation errors
+        @if($errors->any() && !$errors->has('submission'))
+            const errorFields = document.querySelectorAll('.is-invalid');
+            if (errorFields.length > 0) {
+                const firstErrorStep = errorFields[0].closest('.form-step');
+                if (firstErrorStep) {
+                    const stepNum = parseInt(firstErrorStep.getAttribute('data-step'));
+                    currentStep = stepNum;
+                    showStep(currentStep);
+                    setTimeout(function() {
+                        errorFields[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                }
+            }
         @endif
     });
 

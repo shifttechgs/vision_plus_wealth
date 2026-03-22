@@ -41,14 +41,14 @@
             <div class="row align-items-center row-bg">
                 <div class="col-lg-2 col-md-6 col-6">
                     <div class="">
-                        <a href="{{'/'}}"><img src="assets/img/logo/vpw_light_logo.png" alt=""></a>
+                        <a href="{{'/'}}"><img id="header-logo" src="assets/img/logo/vpw_light_logo.png" data-light="assets/img/logo/vpw_light_logo.png" data-dark="assets/img/logo/vpw_logo.png" alt="VisionPlus Wealth Logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-7 d-none d-lg-block">
                     <div class="vl-main-menu text-center">
                         <nav class="vl-mobile-menu-active">
                             <ul>
-                                <li><a href="{{ url('/') }}">Home</a></li>
+{{--                                <li><a href="{{ url('/') }}">Home</a></li>--}}
 
 
 {{--                                <li><a href="#">Services <span><i class="fa-solid fa-angle-down d-lg-inline d-none"></i></span></a>--}}

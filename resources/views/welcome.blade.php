@@ -1,4 +1,13 @@
 @extends("layouts.master")
+
+@push('styles')
+    <link rel="stylesheet" href="assets/css/how-it-works.css">
+@endpush
+
+@push('scripts')
+    <script src="assets/js/how-it-works.js"></script>
+@endpush
+
 @section("content")
 
     <!--===== HERO AREA STARTS =======-->
@@ -7,40 +16,30 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="hero4-heading">
-{{--                        <h5 data-aos="fade-left" data-aos-duration="800" style="text-transform: none !important;">Different Needs, One Solution</h5>--}}
+                        <!-- Trust pills -->
+                        <div class="trust-indicators enhanced" data-aos="fade-up" data-aos-duration="600">
+                            <div class="trust-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Licensed MFI</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Est. 2022</span>
+                            </div>
+                        </div>
+                        <div class="space24"></div>
 
-{{--                        <h1 class="hero-motto text-anime-style-3"--}}
-{{--                            data-aos="fade-up" data-aos-duration="1000"--}}
-{{--                            style="color: #ffffff; font-size: 46px; font-weight: 400; line-height: 1.1;">--}}
-{{--                            "Different Needs, One Solution"--}}
-{{--                        </h1>--}}
+                        <!-- Hero tagline — Playfair Display -->
+                        <h2 class="hero-motto text-anime-style-3">Different Needs,<br>One Solution.</h2>
+
                         <div class="space20"></div>
-                        <h2 class="text-anime-style-3">Different Needs, One Solution.
-                            </h2>
-                       <div class="space20"></div>
-                        <p data-aos="fade-left" data-aos-duration="900"
-                           style="font-size: 1.5rem; line-height: 1.7;">
-                            VisionPlus Wealth provides accessible, personalised financing with fast, flexible loans that help individuals, entrepreneurs, and SMEs grow with confidence.
+                        <p data-aos="fade-left" data-aos-duration="900">
+                            Zimbabwe's trusted microfinance partner. Access business loans, agricultural financing, and salary-based loans with competitive rates and fast approval.
                         </p>
                         <div class="space32"></div>
                         <div class="btn-area1">
                             <a href="{{  url('/loan-application') }}" class="vl-btn4">Apply For a Loan <span><i class="fa-solid fa-arrow-right"></i></span></a>
                             <a href="{{  url('/contact') }}" class="vl-btn4 btn2">Speak to an Advisor <span><i class="fa-solid fa-arrow-right"></i></span></a>
-                        </div>
-                        <div class="space48"></div>
-                        <div class="trust-indicators enhanced" data-aos="fade-up" data-aos-duration="800">
-                            <div class="trust-item" style="color: white">
-                                <i class="fas fa-users" style="color: white"></i>
-                                <span>Trusted by <strong>1,000+</strong> clients</span>
-                            </div>
-                            <div class="trust-item" style="color: white">
-                                <i class="fas fa-shield-alt" style="color: white"></i>
-                                <span>Licensed & compliant</span>
-                            </div>
-                            <div class="trust-item" style="color: white">
-                                <i class="fas fa-star" style="color: white"></i>
-                                <span><strong>98%</strong> satisfaction</span>
-                            </div>
                         </div>
                         <div class="space16"></div>
 
@@ -83,10 +82,32 @@
                         </div>
 
                         <div class="img1 image-anime reveal">
-                            <img src="assets/img/all-images/hero/vpw.avif" alt="">
+                            <img src="assets/img/all-images/hero/vpw.avif" alt="VisionPlus Wealth financial services" loading="lazy">
                         </div>
 
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Stat Bar -->
+        <div class="vpw-hero-stats" data-aos="fade-up" data-aos-duration="800">
+            <div class="container">
+                <div class="vpw-hero-stat">
+                    <div class="vpw-hero-stat-value">500+</div>
+                    <div class="vpw-hero-stat-label">Clients Served</div>
+                </div>
+                <div class="vpw-hero-stat">
+                    <div class="vpw-hero-stat-value">$2M+</div>
+                    <div class="vpw-hero-stat-label">Loans Disbursed</div>
+                </div>
+                <div class="vpw-hero-stat">
+                    <div class="vpw-hero-stat-value">24hrs</div>
+                    <div class="vpw-hero-stat-label">Fast Approval</div>
+                </div>
+                <div class="vpw-hero-stat">
+                    <div class="vpw-hero-stat-value">98%</div>
+                    <div class="vpw-hero-stat-label">Satisfaction</div>
                 </div>
             </div>
         </div>
@@ -115,7 +136,7 @@
                         {{--                        <img src="assets/img/elements/elements32.png" alt="" class="elements32 aniamtion-key-1">--}}
                         {{--                        <img src="assets/img/elements/elements33.png" alt="" class="elements33 keyframe5">--}}
                         <div class="img1 image-anime reveal">
-                            <img style="border-radius: 10px" src="assets/img/all-images/loans.jpg" alt="">
+                            <img style="border-radius: 10px" src="assets/img/all-images/loans.jpg" alt="VisionPlus Wealth loan services" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -124,7 +145,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="800">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;">
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
                             <i class="fa-solid fa-briefcase" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -144,7 +165,7 @@
 
                 <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="900">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;" >
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(17, 153, 142, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(17, 153, 142, 0.3);">
                             <i class="fa-solid fa-seedling" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -160,7 +181,7 @@
 
                 <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="1000">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;">
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);">
                             <i class="fa-solid fa-wallet" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -176,7 +197,7 @@
 
                 <div class="col-lg-6 col-md-6" data-aos="zoom-in-up" data-aos-duration="1100">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;">
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);">
                             <i class="fa-solid fa-shield-halved" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -192,7 +213,7 @@
 
                 <div class="col-lg-6 col-md-6" data-aos="zoom-in-up" data-aos-duration="1200">
                     <div class="service3-single-boxarea" style="background-color: #F5F7FA; padding: 30px; border-radius: 12px;">
-                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);">
+                        <div class="icons" style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);">
                             <i class="fa-solid fa-chart-line" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <div class="space24"></div>
@@ -213,6 +234,244 @@
     <!--===== SERVICE AREA ENDS =======-->
 
 
+    <!-- How It Works - Modern Design -->
+    <section class="vpw-how-it-works sp1" style="position: relative; overflow: hidden;">
+
+        <!-- Subtle Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; background-image: radial-gradient(circle, #0a1f3f 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <!-- Section Header -->
+
+            <div class="row">
+                <div class="col-lg-6 m-auto">
+                    <div class="heading4 text-center space-margin60">
+                        <h5 data-aos="fade-left" data-aos-duration="800">How It Works</h5>
+                        <div class="space16"></div>
+                        <h2 class="text-anime-style-3" >Your Path to Financial Empowerment</h2>
+                        <p >Four simple steps to access the funding you need. Fast, transparent, secure.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Steps -->
+            <div class="row position-relative" style="margin-top: 60px;">
+
+                <!-- Progress Line -->
+                <div class="vpw-progress-line" style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 85%; height: 2px; background: rgba(10, 31, 63, 0.08); z-index: 0;">
+                    <div class="vpw-progress-bar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #0a1f3f 0%, #0A4D8C 100%); transition: width 2s ease;"></div>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+                    <div class="vpw-step-card" style="position: relative; z-index: 1;">
+                        <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(10, 31, 63, 0.2);">
+                                <i class="fas fa-edit" style="font-size: 42px; color: #FFFFFF;"></i>
+                            </div>
+                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #0a1f3f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px rgba(10, 31, 63, 0.3);">01</span>
+                        </div>
+                        <div class="text-center">
+                            <h4 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 14px;">Apply Online</h4>
+                            <p>Submit your application via our website, WhatsApp, or visit any branch.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vpw-step-card" style="position: relative; z-index: 1;">
+                        <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(10, 31, 63, 0.2);">
+                                <i class="fas fa-file-alt" style="font-size: 42px; color: #FFFFFF;"></i>
+                            </div>
+                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #0a1f3f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px rgba(10, 31, 63, 0.3);">02</span>
+                        </div>
+                        <div class="text-center">
+                            <h4 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 14px;">Submit Documents</h4>
+                            <p>Provide your latest payslip, ID, and relevant business documents.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vpw-step-card" style="position: relative; z-index: 1;">
+                        <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(10, 31, 63, 0.2);">
+                                <i class="fas fa-check-circle" style="font-size: 42px; color: #FFFFFF;"></i>
+                            </div>
+                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #0a1f3f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px rgba(10, 31, 63, 0.3);">03</span>
+                        </div>
+                        <div class="text-center">
+                            <h4 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 14px;">Get Approved</h4>
+                            <p>Fast processing with a clear, transparent decision in 24-48 hours.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="vpw-step-card" style="position: relative; z-index: 1;">
+                        <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #0a1f3f 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(10, 31, 63, 0.2);">
+                                <i class="fas fa-hand-holding-usd" style="font-size: 42px; color: #FFFFFF;"></i>
+                            </div>
+                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #0a1f3f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px rgba(10, 31, 63, 0.3);">04</span>
+                        </div>
+                        <div class="text-center">
+                            <h4 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 14px;">Receive Funds</h4>
+                            <p>Instant cash disbursement—no long waits, just results.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!--===== HOW IT WORKS ENDS =======-->
+
+
+    <!--===== WHY CHOOSE US START =======-->
+    <div class="project1-section sp1" style="padding: 100px 0;">
+        <div class="container">
+
+
+            <!-- Heading -->
+            <div class="row">
+                <div class="col-lg-8 m-auto">
+                    <div class="heading4 text-center space-margin60" >
+                        <h5 data-aos="fade-left" data-aos-duration="800" style="letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 20px;">Why Choose US</h5>
+                        <h2 class="text-anime-style-3" style="font-size: 2.5rem; line-height: 1.3; font-weight: 700;">Trusted Microfinance Solutions That Put You First</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center" style="gap: 40px 0;">
+
+                <!-- Left Content Box -->
+                <div class="col-lg-6">
+                    <div class="project-single-boxarea" style="padding-right: 30px;">
+
+                        <!-- Feature 1 -->
+                        <div class="project-boxarea heading4" style="background: #f8f9fb; padding: 35px 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04); margin-bottom: 30px; transition: all 0.4s ease; border-left: 4px solid transparent;"
+                             onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.1)'; this.style.transform='translateY(-5px)'; this.style.borderLeftColor='#4a6fa5';"
+                             onmouseout="this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'; this.style.borderLeftColor='transparent';">
+
+                            <h5 style="color: #4a6fa5; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Fast & Easy Loan Approval</h5>
+
+                            <h2 style="margin-bottom: 18px; font-size: 1.75rem; line-height: 1.4;">
+                                <a href="#" style="color: #0f172a; text-decoration: none; transition: color 0.3s ease;"
+                                   onmouseover="this.style.color='#4a6fa5';"
+                                   onmouseout="this.style.color='#0f172a';">
+                                    Quick, Hassle-Free Processing
+                                </a>
+                            </h2>
+
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 28px; font-size: 1rem;">Our streamlined application process ensures you get approved fast with minimal paperwork and maximum convenience.</p>
+
+                            <div class="vl-hero-btn">
+                                <a href="{{ url('/loan-application') }}" class="vl-btn4" style="color: white; display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                                    Apply for a loan <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Feature 2 -->
+                        <div class="project-boxarea heading4" style="background: #f8f9fb; padding: 35px 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04); margin-bottom: 30px; transition: all 0.4s ease; border-left: 4px solid transparent;"
+                             onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.1)'; this.style.transform='translateY(-5px)'; this.style.borderLeftColor='#4a6fa5';"
+                             onmouseout="this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'; this.style.borderLeftColor='transparent';">
+
+                            <h5 style="color: #4a6fa5; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Flexible Loan Options</h5>
+
+                            <h2 style="margin-bottom: 18px; font-size: 1.75rem; line-height: 1.4;">
+                                <a href="#" style="color: #0f172a; text-decoration: none; transition: color 0.3s ease;"
+                                   onmouseover="this.style.color='#4a6fa5';"
+                                   onmouseout="this.style.color='#0f172a';">
+                                    Tailored Financing for Every Need
+                                </a>
+                            </h2>
+
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 28px; font-size: 1rem;">Whether you're an individual, entrepreneur, or SME—we offer personalised lending solutions that match your financial goals.</p>
+
+                            <div class="vl-hero-btn">
+                                <a href="{{ url('/loan-application') }}" class="vl-btn4" style="color: white; display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                                    Apply for a loan <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="project-boxarea heading4" style="background: #f8f9fb; padding: 35px 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04); margin-bottom: 30px; transition: all 0.4s ease; border-left: 4px solid transparent;"
+                             onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.1)'; this.style.transform='translateY(-5px)'; this.style.borderLeftColor='#4a6fa5';"
+                             onmouseout="this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'; this.style.borderLeftColor='transparent';">
+
+                            <h5 style="color: #4a6fa5; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Affordable & Transparent</h5>
+
+                            <h2 style="margin-bottom: 18px; font-size: 1.75rem; line-height: 1.4;">
+                                <a href="#" style="color: #0f172a; text-decoration: none; transition: color 0.3s ease;"
+                                   onmouseover="this.style.color='#4a6fa5';"
+                                   onmouseout="this.style.color='#0f172a';">
+                                    No Hidden Fees. No Surprises.
+                                </a>
+                            </h2>
+
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 28px; font-size: 1rem;">Enjoy competitive interest rates, clear terms, and honest communication—designed to empower, not burden.</p>
+
+                            <div class="vl-hero-btn">
+                                <a href="{{ url('/loan-application') }}" class="vl-btn4" style="color: white; display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                                    Apply for a loan <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="project-boxarea heading4" style="background: #f8f9fb; padding: 35px 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04); transition: all 0.4s ease; border-left: 4px solid transparent;"
+                             onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.1)'; this.style.transform='translateY(-5px)'; this.style.borderLeftColor='#4a6fa5';"
+                             onmouseout="this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'; this.style.borderLeftColor='transparent';">
+
+                            <h5 style="color: #4a6fa5; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Dedicated Client Support</h5>
+
+                            <h2 style="margin-bottom: 18px; font-size: 1.75rem; line-height: 1.4;">
+                                <a href="#" style="color: #0f172a; text-decoration: none; transition: color 0.3s ease;"
+                                   onmouseover="this.style.color='#4a6fa5';"
+                                   onmouseout="this.style.color='#0f172a';">
+                                    Guidance Every Step of the Way
+                                </a>
+                            </h2>
+
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 28px; font-size: 1rem;">Our financial advisors are here to support you—from application to repayment—ensuring a smooth and stress-free experience.</p>
+
+                            <div class="vl-hero-btn">
+                                <a href="{{ url('/loan-application') }}" class="vl-btn4" style="color: white; display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                                    Apply for a loan <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-6">
+                    <div class="all-images" style="padding-left: 30px;">
+                        <div class="images-area" style="position: relative;">
+                            <div class="img1 reveal" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
+                                <img src="assets/img/all-images/happyLoans.jpg" alt="Happy VisionPlus Wealth customer" loading="lazy" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--===== WHY CHOOSE US END =======-->
+
+
     <!--===== TESTIMONIAL AREA STARTS =======-->
     <div class="testimonial4-section-area sp1">
         <div class="container">
@@ -221,7 +480,7 @@
                     <div class="heading4 text-center space-margin60">
                         <h5 data-aos="fade-left" data-aos-duration="800">Testimonial</h5>
                         <div class="space16"></div>
-                        <h2 class="text-anime-style-3">Why Clients Choose Us</h2>
+                        <h2 class="text-anime-style-3">What Our Clients Say About Us</h2>
                     </div>
                 </div>
             </div>
@@ -275,252 +534,8 @@
     </div>
     <!--===== TESTIMONIAL AREA ENDS =======-->
 
-    <!-- How It Works - Modern Design -->
-    <section class="vpw-how-it-works sp1" style="background: #FFFFFF; position: relative; overflow: hidden;">
-
-        <!-- Subtle Background Pattern -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
-
-        <div class="container" style="position: relative; z-index: 1;">
-            <!-- Section Header -->
-
-            <div class="row">
-                <div class="col-lg-6 m-auto">
-                    <div class="heading4 text-center space-margin60">
-                        <h5 data-aos="fade-left" data-aos-duration="800">How It Works</h5>
-                        <div class="space16"></div>
-                        <h2 class="text-anime-style-3" >Your Path to Financial Empowerment</h2>
-                        <p >Four simple steps to access the funding you need. Fast, transparent, secure.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Timeline Steps -->
-            <div class="row position-relative" style="margin-top: 60px;">
-
-                <!-- Progress Line -->
-                <div class="vpw-progress-line" style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 85%; height: 2px; background: rgba(255, 255, 255, 0.1); z-index: 0;">
-                    <div class="vpw-progress-bar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #052b51 0%, #052b51 100%); transition: width 2s ease;"></div>
-                </div>
-
-                <!-- Step 1 -->
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
-                    <div class="vpw-step-card" style="position: relative; z-index: 1;">
-                        <!-- Step Number -->
-                        <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #052b51 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px;">
-                                <i class="fas fa-edit" style="font-size: 42px; color: #FFFFFF;"></i>
-                            </div>
-                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #052b51FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px">01</span>
-                        </div>
-                        <!-- Content -->
-                        <div class="text-center">
-                            <h4 style="font-size: 20px; font-weight: 700; color: #100235; margin-bottom: 14px;">Apply Online</h4>
-                            <p >Submit your application via our website, WhatsApp, or visit any branch.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-                    <div class="vpw-step-card" style="position: relative; z-index: 1;">
-                        <!-- Step Number -->
-                        <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #052b51FF 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
-                                <i class="fas fa-file-alt" style="font-size: 42px; color: #FFFFFF;"></i>
-                            </div>
-                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #052b51; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px ">02</span>
-                        </div>
-                        <!-- Content -->
-                        <div class="text-center">
-                            <h4 style="font-size: 20px; font-weight: 700; color: #100235; margin-bottom: 14px;">Submit Documents</h4>
-                            <p >Provide your latest payslip, ID, and relevant business documents.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
-                    <div class="vpw-step-card" style="position: relative; z-index: 1;">
-                        <!-- Step Number -->
-                        <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #052b51FF 100%);  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
-                                <i class="fas fa-check-circle" style="font-size: 42px; color: #FFFFFF;"></i>
-                            </div>
-                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #052b51FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px ">03</span>
-                        </div>
-                        <!-- Content -->
-                        <div class="text-center">
-                            <h4 style="font-size: 20px; font-weight: 700; color: #100235; margin-bottom: 14px;">Get Approved</h4>
-                            <p >Fast processing with a clear, transparent decision in 24-48 hours.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
-                    <div class="vpw-step-card" style="position: relative; z-index: 1;">
-                        <!-- Step Number -->
-                        <div class="vpw-step-number" style="width: 120px; height: 120px; margin: 0 auto 28px; position: relative;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #0A4D8C 0%, #052b51FF 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px ;">
-                                <i class="fas fa-hand-holding-usd" style="font-size: 42px; color: #FFFFFF;"></i>
-                            </div>
-                            <span style="position: absolute; top: -10px; right: -10px; width: 36px; height: 36px; background: #052b51FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFFFFF; font-size: 15px; box-shadow: 0 4px 12px">04</span>
-                        </div>
-                        <!-- Content -->
-                        <div class="text-center">
-                            <h4 style="font-size: 20px; font-weight: 700; color: #100235; margin-bottom: 14px;">Receive Funds</h4>
-                            <p >Instant cash disbursement—no long waits, just results.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!--===== WHY CHOOSE US START =======-->
-    <div class="project1-section sp1 bg1" style="padding: 100px 0;">
-        <div class="container">
-
-
-            <!-- Heading -->
-            <div class="row">
-                <div class="col-lg-8 m-auto">
-                    <div class="heading4 text-center space-margin60" >
-                        <h5 data-aos="fade-left" data-aos-duration="800" style="letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 20px;">Why Choose US</h5>
-                        <h2 class="text-anime-style-3" style="font-size: 2.5rem; line-height: 1.3; font-weight: 700;">Trusted Microfinance Solutions That Put You First</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-center" style="gap: 40px 0;">
-
-                <!-- Left Content Box -->
-                <div class="col-lg-6">
-                    <div class="project-single-boxarea" style="padding-right: 30px;">
-
-                        <!-- Feature 1 -->
-                        <div class="project-boxarea heading4" style="background: #ffffff; padding: 35px 30px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); margin-bottom: 30px; transition: all 0.4s ease; border-left: 4px solid transparent;"
-                             onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.1)'; this.style.transform='translateY(-5px)'; this.style.borderLeftColor='var(--primary-color, #0066cc)';"
-                             onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.06)'; this.style.transform='translateY(0)'; this.style.borderLeftColor='transparent';">
-
-                            <h5 style="color: #0066cc; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Fast & Easy Loan Approval</h5>
-
-                            <h2 style="margin-bottom: 18px; font-size: 1.75rem; line-height: 1.4;">
-                                <a href="#" style="color: #1a1a1a; text-decoration: none; transition: color 0.3s ease;"
-                                   onmouseover="this.style.color='#0066cc';"
-                                   onmouseout="this.style.color='#1a1a1a';">
-                                    Quick, Hassle-Free Processing
-                                </a>
-                            </h2>
-
-                            <p style="color: #666; line-height: 1.8; margin-bottom: 28px; font-size: 1rem;">Our streamlined application process ensures you get approved fast with minimal paperwork and maximum convenience.</p>
-
-                            <div class="vl-hero-btn">
-                                <a href="" class="vl-btn4" style="color: white; display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
-                                    Apply for a loan <span><i class="fa-solid fa-arrow-right"></i></span>
-                                </a>
-                            </div>
-                        </div>
-
-
-                        <!-- Feature 2 -->
-                        <div class="project-boxarea heading4" style="background: #ffffff; padding: 35px 30px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); margin-bottom: 30px; transition: all 0.4s ease; border-left: 4px solid transparent;"
-                             onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.1)'; this.style.transform='translateY(-5px)'; this.style.borderLeftColor='var(--primary-color, #0066cc)';"
-                             onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.06)'; this.style.transform='translateY(0)'; this.style.borderLeftColor='transparent';">
-
-                            <h5 style="color: #0066cc; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Flexible Loan Options</h5>
-
-                            <h2 style="margin-bottom: 18px; font-size: 1.75rem; line-height: 1.4;">
-                                <a href="#" style="color: #1a1a1a; text-decoration: none; transition: color 0.3s ease;"
-                                   onmouseover="this.style.color='#0066cc';"
-                                   onmouseout="this.style.color='#1a1a1a';">
-                                    Tailored Financing for Every Need
-                                </a>
-                            </h2>
-
-                            <p style="color: #666; line-height: 1.8; margin-bottom: 28px; font-size: 1rem;">Whether you're an individual, entrepreneur, or SME—we offer personalised lending solutions that match your financial goals.</p>
-
-                            <div class="vl-hero-btn">
-                                <a href="" class="vl-btn4" style="color: white; display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
-                                    Apply for a loan <span><i class="fa-solid fa-arrow-right"></i></span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Feature 3 -->
-                        <div class="project-boxarea heading4" style="background: #ffffff; padding: 35px 30px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); margin-bottom: 30px; transition: all 0.4s ease; border-left: 4px solid transparent;"
-                             onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.1)'; this.style.transform='translateY(-5px)'; this.style.borderLeftColor='var(--primary-color, #0066cc)';"
-                             onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.06)'; this.style.transform='translateY(0)'; this.style.borderLeftColor='transparent';">
-
-                            <h5 style="color: #0066cc; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Affordable & Transparent</h5>
-
-                            <h2 style="margin-bottom: 18px; font-size: 1.75rem; line-height: 1.4;">
-                                <a href="#" style="color: #1a1a1a; text-decoration: none; transition: color 0.3s ease;"
-                                   onmouseover="this.style.color='#0066cc';"
-                                   onmouseout="this.style.color='#1a1a1a';">
-                                    No Hidden Fees. No Surprises.
-                                </a>
-                            </h2>
-
-                            <p style="color: #666; line-height: 1.8; margin-bottom: 28px; font-size: 1rem;">Enjoy competitive interest rates, clear terms, and honest communication—designed to empower, not burden.</p>
-
-                            <div class="vl-hero-btn">
-                                <a href="" class="vl-btn4" style="color: white; display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
-                                    Apply for a loan <span><i class="fa-solid fa-arrow-right"></i></span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Feature 4 -->
-                        <div class="project-boxarea heading4" style="background: #ffffff; padding: 35px 30px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); transition: all 0.4s ease; border-left: 4px solid transparent;"
-                             onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.1)'; this.style.transform='translateY(-5px)'; this.style.borderLeftColor='var(--primary-color, #0066cc)';"
-                             onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.06)'; this.style.transform='translateY(0)'; this.style.borderLeftColor='transparent';">
-
-                            <h5 style="color: #0066cc; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Dedicated Client Support</h5>
-
-                            <h2 style="margin-bottom: 18px; font-size: 1.75rem; line-height: 1.4;">
-                                <a href="#" style="color: #1a1a1a; text-decoration: none; transition: color 0.3s ease;"
-                                   onmouseover="this.style.color='#0066cc';"
-                                   onmouseout="this.style.color='#1a1a1a';">
-                                    Guidance Every Step of the Way
-                                </a>
-                            </h2>
-
-                            <p style="color: #666; line-height: 1.8; margin-bottom: 28px; font-size: 1rem;">Our financial advisors are here to support you—from application to repayment—ensuring a smooth and stress-free experience.</p>
-
-                            <div class="vl-hero-btn">
-                                <a href="" class="vl-btn4" style="color: white; display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
-                                    Apply for a loan <span><i class="fa-solid fa-arrow-right"></i></span>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Right Image -->
-                <div class="col-lg-6">
-                    <div class="all-images" style="padding-left: 30px;">
-                        <div class="images-area" style="position: relative;">
-                            <div class="img1 reveal" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
-                                <img src="assets/img/all-images/happyLoans.jpg" alt="Happy Loans Customer" style="width: 100%; height: auto; display: block; object-fit: cover;">
-                            </div>
-{{--                            <img src="assets/img/elements/elements7.png" alt="" class="elements7 aniamtion-key-1">--}}
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!--===== WHY CHOOSE US END =======-->
-
     <!--===== TEAM AREA STARTS =======-->
-    <section class="leadership-section sp2"  id="board">
+    <section class="leadership-section sp2"  id="board" style="position: relative; overflow: hidden;">
         <div class="container">
             <!-- Section Header -->
             <div class="row">
@@ -540,7 +555,7 @@
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/naome_draft.png" alt="Naome Muzvidziwa" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/naome_draft.png" alt="Naome Muzvidziwa - Board Chair" loading="lazy" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -556,7 +571,7 @@
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/tinashe_draft.png" alt="Tinashe Muchenje" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/tinashe_draft.png" alt="Tinashe Muchenje - Managing Director" loading="lazy" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -575,7 +590,7 @@
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/rudo_draft.png" alt="Rudo A.L. Ndoro" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/rudo_draft.png" alt="Rudo A.L. Ndoro - Executive Director" loading="lazy" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -591,7 +606,7 @@
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/Ivony_draft.png" alt="Dr. Ivony K Katsande" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/Ivony_draft.png" alt="Dr. Ivony K Katsande - Non Executive Director" loading="lazy" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -607,7 +622,7 @@
                     <div class="leadership-card text-center">
                         <div class="leadership-image-wrapper">
                             <div class="leadership-image-container" style="width: 220px; height: 220px; margin: 0 auto; position: relative;">
-                                <img src="assets/img/board/cuthbert_draft.png" alt="Cuthbert M Muchenje" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <img src="assets/img/board/cuthbert_draft.png" alt="Cuthbert M Muchenje - Non Executive Director" loading="lazy" class="leadership-image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             </div>
                         </div>
                         <div class="leadership-content mt-3">
@@ -648,7 +663,7 @@
     <!--===== TEAM AREA ENDS =======-->
 
     <!--===== CASE AREA STARTS =======-->
-    <div class="history1-scetion-area sp1 bg1 ">
+    <div class="history1-scetion-area sp1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -730,7 +745,7 @@
                 <!-- Farmers -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="700">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-wheat-awn" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Farmers</h4>
@@ -741,7 +756,7 @@
                 <!-- Small Business Owners -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-store" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Small Business Owners</h4>
@@ -752,7 +767,7 @@
                 <!-- Entrepreneurs -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="900">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-lightbulb" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Entrepreneurs</h4>
@@ -763,7 +778,7 @@
                 <!-- Salaried Employees -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1000">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-user-tie" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Salaried Employees</h4>
@@ -774,7 +789,7 @@
                 <!-- SMEs -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1100">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-building" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">SMEs</h4>
@@ -785,7 +800,7 @@
                 <!-- Women in Business -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-briefcase" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Women in Business</h4>
@@ -796,7 +811,7 @@
                 <!-- Market Vendors -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1300">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-cart-shopping" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Market Vendors</h4>
@@ -807,7 +822,7 @@
                 <!-- Cooperatives -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1400">
                     <div class="customer-card" style="background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(46, 7, 151, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
                             <i class="fa-solid fa-users" style="font-size: 32px; color: #ffffff;"></i>
                         </div>
                         <h4 style="color: #041b6c; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Cooperatives</h4>
@@ -823,7 +838,7 @@
 {{--        <div class="container">--}}
 {{--            <div class="row">--}}
 {{--                <div class="col-lg-12">--}}
-{{--                    <div style="background: linear-gradient(135deg, #052b51 0%, #0A4D8C 100%); border-radius: 16px; padding: 60px 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">--}}
+{{--                    <div style="background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border-radius: 16px; padding: 60px 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">--}}
 {{--                        <div class="row align-items-center">--}}
 {{--                            <!-- CTA Content -->--}}
 {{--                            <div class="col-lg-8">--}}
@@ -881,7 +896,7 @@
 {{--    <!--===== CTA AREA ENDS =======-->--}}
 
     <!--===== FAQ AREA STARTS =======-->
-    <div class="faq-inner-section-area sp4" style="background: #F5F7FA;">
+    <div class="faq-inner-section-area sp4">
         <div class="container">
             <div class="row">
                 <div class="heading4 text-center space-margin60">
@@ -903,7 +918,7 @@
                                             <div class="all-images">
                                                 <div class="images-area">
                                                     <div class=" ">
-                                                        <img src="assets/img/all-images/loans2.jpg" alt="" style="border-radius: 5px">
+                                                        <img src="assets/img/all-images/loans2.jpg" alt="VisionPlus Wealth loan options" loading="lazy" style="border-radius: 5px">
                                                     </div>
                                                     {{--                            <img src="assets/img/elements/elements7.png" alt="" class="elements7 aniamtion-key-1">--}}
                                                 </div>
@@ -1387,42 +1402,102 @@
 {{--    <!--===== CONTACT AREA ENDS =======-->--}}
 
     <!--===== CTA AREA STARTS =======-->
-    <!--===== CTA AREA STARTS =======-->
-    <section class="cta1-section-area sp4">
-        <div class="cta-inner">
-            <div class="row align-items-center">
-
-                <!-- CTA Content -->
-                <div class="col-lg-5">
-                    <div class="cta-header">
-                        <h2>Ready to Transform Your Financial Future?</h2>
-
-                        <div class="space32"></div>
-
-                        <div class="btn-area1">
-                            <a href="{{  url('/loan-application') }}" class="vl-btn4">
-                                Apply For a Loan
-                                <span><i class="fa-solid fa-arrow-right"></i></span>
-                            </a>
-
-                            <a href="{{  url('/contact') }}" class="vl-btn4 btn2">
-                                Speak to an Advisor
-                                <span><i class="fa-solid fa-arrow-right"></i></span>
-                            </a>
+    <section class="cta1-section-area vpw-cta-premium">
+        <div class="container">
+            <div class="vpw-cta-card">
+                <div class="vpw-cta-bg-pattern"></div>
+                <div class="row align-items-center">
+                    <!-- CTA Content -->
+                    <div class="col-lg-6">
+                        <div class="vpw-cta-content">
+                            <span class="vpw-cta-badge">
+                                <i class="fa-solid fa-rocket"></i> Start Your Journey
+                            </span>
+                            <h2>Ready to Transform Your Financial Future?</h2>
+                            <p>Join thousands of Zimbabweans who have unlocked growth with tailored financing solutions designed for your unique needs.</p>
+                            <div class="vpw-cta-buttons">
+                                <a href="{{ url('/loan-application') }}" class="vpw-cta-btn-primary">
+                                    Apply For a Loan
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="{{ url('/contact') }}" class="vpw-cta-btn-outline">
+                                    Speak to an Advisor
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="vpw-cta-trust">
+                                <div class="vpw-cta-trust-item">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span>Licensed & Regulated</span>
+                                </div>
+                                <div class="vpw-cta-trust-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>24hr Approval</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CTA Image -->
+                    <div class="col-lg-6">
+                        <div class="vpw-cta-visual">
+                            <img src="assets/img/all-images/cta.png" alt="Vision Plus Wealth - Apply for a loan today" loading="lazy">
                         </div>
                     </div>
                 </div>
-
-                <!-- CTA Image -->
-                <div class="col-lg-7">
-                    <div class="cta-img">
-                        <img src="assets/img/all-images/cta.png" alt="Vision Plus Wealth CTA">
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
     <!--===== CTA AREA ENDS =======-->
 
 @endsection
+
+@push('schema')
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@@type": "Question",
+                "name": "I own a micro business and have no substantial collateral. Do I qualify to access any of your services?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Most definitely. Our products are financially inclusive and flexible to meet you at your point of need."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "How do I get started?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Leave us a message through the numbers provided or via the contact form and we will do the rest."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "I\u0027m risk averse. I want to know my exact loan repayment options before I get started.",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "We\u0027ve built an in-house and specialised calculator to help you stay in charge of your finances."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "How legit are you?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "We\u0027re registered with the central bank, the Reserve Bank of Zimbabwe and operate under the strict terms of our licensing."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "I\u0027m looking to build financial capacity, what options are available to me apart from loans?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "We have a wide range of products that empower our clients through a discipline of consistent and deliberate savings to achieve both short term and long term goals."
+                }
+            }
+        ]
+    }
+    </script>
+@endpush

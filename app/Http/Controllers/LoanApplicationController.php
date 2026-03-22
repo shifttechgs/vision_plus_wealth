@@ -145,12 +145,29 @@ class LoanApplicationController extends Controller
                 ->with('success', 'Your loan application has been submitted successfully! Application Number: ' . $sanitized['application_number'] . '. You will receive a confirmation email shortly. Our team will contact you within 24-48 hours.');
 
         } catch (\Exception $e) {
-            // Log error and return with error message
-            \Log::error('Loan Application Error: ' . $e->getMessage());
+            // Log full error for debugging
+            \Log::error('Loan Application Error: ' . $e->getMessage(), [
+                'trace' => $e->getTraceAsString(),
+                'applicant' => $sanitized['surname'] ?? 'unknown',
+                'application_number' => $sanitized['application_number'] ?? 'not generated',
+            ]);
+
+            // Provide a meaningful error message to the user
+            $userMessage = 'We could not process your application. ';
+
+            if (str_contains($e->getMessage(), 'mail') || str_contains($e->getMessage(), 'Mail') || str_contains($e->getMessage(), 'SMTP') || str_contains($e->getMessage(), 'email')) {
+                $userMessage .= 'Our email service is temporarily unavailable. Your application data is correct — please try again in a few minutes, or contact us directly at (+263) 242 778532.';
+            } elseif (str_contains($e->getMessage(), 'PDF') || str_contains($e->getMessage(), 'pdf') || str_contains($e->getMessage(), 'DomPDF')) {
+                $userMessage .= 'There was an issue generating your application document. Please try again or contact us directly at (+263) 242 778532.';
+            } elseif (str_contains($e->getMessage(), 'Admin email not configured')) {
+                $userMessage .= 'Our system is being configured. Please contact us directly at (+263) 242 778532 or email info@visionpluswealth.com to submit your application.';
+            } else {
+                $userMessage .= 'An unexpected error occurred (Ref: ' . now()->format('YmdHis') . '). Please try again or contact us at (+263) 242 778532.';
+            }
 
             return back()
                 ->withInput()
-                ->withErrors(['error' => 'An error occurred while processing your application. Please try again.']);
+                ->withErrors(['submission' => $userMessage]);
         }
     }
 

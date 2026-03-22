@@ -200,7 +200,7 @@
 
                 <!-- Right Column - Contact Information -->
                 <div class="col-lg-5">
-                    <div style="background: linear-gradient(135deg, #07294e 0%, #0A4D8C 100%); padding: 45px 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(7, 41, 78, 0.3); height: 100%; display: flex; flex-direction: column;">
+                    <div style="background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); padding: 45px 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(7, 41, 78, 0.3); height: 100%; display: flex; flex-direction: column;">
                         <div style="margin-bottom: 25px;">
                             <h2 style="color: #ffffff; font-size: 32px; font-weight: 700; margin-bottom: 16px;">Contact Information</h2>
                             <p style="color: rgba(255, 255, 255, 0.9); font-size: 16px; line-height: 1.6; margin-bottom: 0;">Our dedicated support team is here to assist you with any inquiries or concerns you may have.</p>
@@ -372,7 +372,7 @@
                     animation: google.maps.Animation.DROP,
                     icon: {
                         path: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z',
-                        fillColor: branch.name === 'Harare' ? '#052b51' : '#052b51',
+                        fillColor: branch.name === 'Harare' ? '#0a1f3f' : '#0a1f3f',
                         fillOpacity: 1,
                         strokeColor: '#ffffff',
                         strokeWeight: 2,
@@ -386,7 +386,7 @@
                 const infoWindow = new google.maps.InfoWindow({
                     content: `
                         <div style="padding: 12px; min-width: 200px;">
-                            <h4 style="margin: 0 0 8px 0; color: #052b51; font-size: 1.1rem; font-weight: 700;">
+                            <h4 style="margin: 0 0 8px 0; color: #0a1f3f; font-size: 1.1rem; font-weight: 700;">
                                 ${branch.name === 'Harare' ? '🏢 ' : '📍 '}${branch.name} Branch
                             </h4>
                             ${branch.name === 'Harare' ?
@@ -442,12 +442,12 @@
                 const branchItem = document.createElement('div');
                 branchItem.className = 'col-md-3 col-sm-6';
                 branchItem.innerHTML = `
-                    <div style="padding: 15px 20px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid ${branch.name === 'Harare' ? '#004d99' : '#052b51'}; transition: all 0.3s ease;"
+                    <div style="padding: 15px 20px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid ${branch.name === 'Harare' ? '#004d99' : '#0a1f3f'}; transition: all 0.3s ease;"
                          onmouseover="this.style.background='#e8f4ff'; this.style.transform='translateX(5px)';"
                          onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)';">
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid ${branch.name === 'Harare' ? 'fa-building' : 'fa-location-dot'}"
-                               style="color: ${branch.name === 'Harare' ? '#004d99' : '#052b51'}; font-size: 1.1rem;"></i>
+                               style="color: ${branch.name === 'Harare' ? '#004d99' : '#0a1f3f'}; font-size: 1.1rem;"></i>
                             <span style="color: #1a1a1a; font-weight: 600; font-size: 0.95rem;">
                                 ${branch.name}${branch.name === 'Harare' ? ' (HQ)' : ''}
                             </span>

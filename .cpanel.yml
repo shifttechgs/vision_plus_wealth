@@ -1,0 +1,30 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/seatafri/visionpluswealth.com/vision_plus_wealth
+
+    # Put site in maintenance mode (optional but pro)
+    - php $DEPLOYPATH/artisan down || true
+
+    # Copy project files
+    - /bin/cp -R app $DEPLOYPATH
+    - /bin/cp -R bootstrap $DEPLOYPATH
+    - /bin/cp -R config $DEPLOYPATH
+    - /bin/cp -R database $DEPLOYPATH
+    - /bin/cp -R resources $DEPLOYPATH
+    - /bin/cp -R routes $DEPLOYPATH
+    - /bin/cp -R vendor $DEPLOYPATH
+    - /bin/cp -R public/build $DEPLOYPATH/public || true
+
+    - /bin/cp artisan $DEPLOYPATH
+
+    # Clear Laravel caches
+    - php $DEPLOYPATH/artisan config:clear
+    - php $DEPLOYPATH/artisan cache:clear
+    - php $DEPLOYPATH/artisan view:clear
+    - php $DEPLOYPATH/artisan route:clear
+
+    # Run migrations (safe for prod)
+    - php $DEPLOYPATH/artisan migrate --force
+
+    # Bring site back up
+    - php $DEPLOYPATH/artisan up || true

@@ -276,38 +276,48 @@
 
 
 <!--===== CTA AREA STARTS =======-->
-<section class="cta1-section-area sp1">
-    <div class="cta-inner">
-        <div class="row align-items-center">
-
-            <!-- CTA Content -->
-            <div class="col-lg-5">
-                <div class="cta-header">
-                    <h2>Ready to Transform Your Financial Future?</h2>
-
-                    <div class="space32"></div>
-
-                    <div class="btn-area1">
-                        <a href="#" class="vl-btn4">
-                            Apply For a Loan
-                            <span><i class="fa-solid fa-arrow-right"></i></span>
-                        </a>
-
-                        <a href="{{  url('/contact') }}" class="vl-btn4 btn2">
-                            Speak to an Advisor
-                            <span><i class="fa-solid fa-arrow-right"></i></span>
-                        </a>
+<section class="cta1-section-area vpw-cta-premium">
+    <div class="container">
+        <div class="vpw-cta-card">
+            <div class="vpw-cta-bg-pattern"></div>
+            <div class="row align-items-center">
+                <!-- CTA Content -->
+                <div class="col-lg-6">
+                    <div class="vpw-cta-content">
+                        <span class="vpw-cta-badge">
+                            <i class="fa-solid fa-rocket"></i> Start Your Journey
+                        </span>
+                        <h2>Ready to Transform Your Financial Future?</h2>
+                        <p>Join thousands of Zimbabweans who have unlocked growth with tailored financing solutions designed for your unique needs.</p>
+                        <div class="vpw-cta-buttons">
+                            <a href="{{ url('/loan-application') }}" class="vpw-cta-btn-primary">
+                                Apply For a Loan
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="{{ url('/contact') }}" class="vpw-cta-btn-outline">
+                                Speak to an Advisor
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="vpw-cta-trust">
+                            <div class="vpw-cta-trust-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Licensed & Regulated</span>
+                            </div>
+                            <div class="vpw-cta-trust-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>24hr Approval</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CTA Image -->
+                <div class="col-lg-6">
+                    <div class="vpw-cta-visual">
+                        <img src="assets/img/all-images/cta.png" alt="Vision Plus Wealth - Apply for a loan today" loading="lazy">
                     </div>
                 </div>
             </div>
-
-            <!-- CTA Image -->
-            <div class="col-lg-7">
-                <div class="cta-img">
-                    <img src="assets/img/all-images/cta.png" alt="Vision Plus Wealth CTA">
-                </div>
-            </div>
-
         </div>
     </div>
 </section>

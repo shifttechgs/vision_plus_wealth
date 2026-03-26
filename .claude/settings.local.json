@@ -78,7 +78,8 @@
       "Bash(curl -sL -o /mnt/c/wamp64_3.3.4/www/projects/vision_plus_wealth/public/assets/img/stock/hero-u3.jpg \"https://unsplash.com/photos/GJao3ZTX9gU/download?w=1200\")",
       "Bash(curl -sL -o /mnt/c/wamp64_3.3.4/www/projects/vision_plus_wealth/public/assets/img/stock/hero-p1.jpg \"https://images.pexels.com/photos/7433848/pexels-photo-7433848.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
       "Bash(curl -sL -o /mnt/c/wamp64_3.3.4/www/projects/vision_plus_wealth/public/assets/img/stock/hero-p2.jpg \"https://images.pexels.com/photos/9301291/pexels-photo-9301291.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
-      "Bash(curl -sL -o /mnt/c/wamp64_3.3.4/www/projects/vision_plus_wealth/public/assets/img/stock/hero-p3.jpg \"https://images.pexels.com/photos/30688593/pexels-photo-30688593.jpeg?auto=compress&cs=tinysrgb&w=1200\")"
+      "Bash(curl -sL -o /mnt/c/wamp64_3.3.4/www/projects/vision_plus_wealth/public/assets/img/stock/hero-p3.jpg \"https://images.pexels.com/photos/30688593/pexels-photo-30688593.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []

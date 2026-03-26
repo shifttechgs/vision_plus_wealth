@@ -38,7 +38,7 @@
                         <div class="space12"></div>
 
                         <!-- Tagline -->
-                        <p class="hero-tagline" data-aos="fade-up" data-aos-duration="750"><em>Different Needs, One Solutions.</em></p>
+                        <p class="hero-tagline" data-aos="fade-up" data-aos-duration="750"><em>Different Needs, One Solution.</em></p>
 
                         <div class="space20"></div>
 

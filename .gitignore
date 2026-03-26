@@ -16,9 +16,11 @@
 /public/build
 /public/hot
 /public/storage
-/storage/*.key
-/storage/pail
+/storage/*
+!/storage/.gitignore
 /vendor
 Homestead.json
 Homestead.yaml
 Thumbs.db
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore

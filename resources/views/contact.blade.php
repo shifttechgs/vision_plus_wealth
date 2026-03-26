@@ -1,4 +1,12 @@
 @extends("layouts.master")
+
+@section('title', 'Contact Us — Vision Plus Wealth | Zimbabwe Microfinance')
+@section('meta_description', 'Contact Vision Plus Wealth. Visit Suite EF05-09 Lonrho Building, 90 Nelson Mandela Avenue, Harare. Call +263 242 747473 or submit an inquiry online. Response within 24 hours.')
+@section('canonical', url('/contact'))
+@section('og_title', 'Contact Vision Plus Wealth')
+@section('og_description', 'Reach our team for loan inquiries, financial advice, or any questions. Office in Harare, Zimbabwe. We respond within 24 hours.')
+@section('og_url', url('/contact'))
+
 @section("content")
     <!--===== BREADCRUMB & HEADER STARTS =======-->
     <!--===== HERO AREA STARTS =======-->
@@ -7,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-12 m-auto">
                     <div class="inner-header text-center">
-                        <h2>Contact Us</h2>
+                        <h1>Contact Us</h1>
                         <div class="space24"></div>
                         <a href="index.html">Home <i class="fa-solid fa-angle-right"></i> <span>Contact Us</span></a>
                     </div>
@@ -75,7 +83,7 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ url('/contact') }}" >
+                        <form method="POST" action="{{ url('/contact') }}" id="contact-form">
                             @csrf
                             <div class="row g-4 " >
                                 <!-- Full Name -->
@@ -179,11 +187,11 @@
 
                                 <!-- Submit Button -->
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary w-100" style="padding: 16px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 10px; background: linear-gradient(135deg, #004d99 0%, #004d99 100%); border: none; box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 10px;"
-                                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0, 102, 204, 0.4)';"
-                                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 102, 204, 0.3)';">
-                                        <i class="fa-solid fa-paper-plane"></i>
-                                        Send Message
+                                    <button type="submit" id="submit-btn" class="w-100" style="padding: 16px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 10px; background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%); border: none; color: #ffffff; cursor: pointer; box-shadow: 0 4px 15px rgba(10, 31, 63, 0.3); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 10px;"
+                                            onmouseover="if(!this.disabled){ this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(10, 31, 63, 0.4)'; }"
+                                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(10, 31, 63, 0.3)';">
+                                        <i id="btn-icon" class="fa-solid fa-paper-plane"></i>
+                                        <span id="btn-text">Send Message</span>
                                     </button>
                                     <p style="text-align: center; color: #666; font-size: 0.875rem; margin-top: 16px; margin-bottom: 0;">
                                         <i class="fa-solid fa-info-circle" style="margin-right: 5px;"></i>
@@ -466,5 +474,18 @@
     </script>
     <!--===== MAP SECTION ENDS =======-->
 
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function () {
+            var btn  = document.getElementById('submit-btn');
+            var icon = document.getElementById('btn-icon');
+            var text = document.getElementById('btn-text');
+
+            btn.disabled = true;
+            btn.style.opacity = '0.75';
+            btn.style.cursor  = 'not-allowed';
+            icon.className    = 'fa-solid fa-spinner fa-spin';
+            text.textContent  = 'Sending…';
+        });
+    </script>
 
 @endsection

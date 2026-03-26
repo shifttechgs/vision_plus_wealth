@@ -4,10 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision Plus Wealth</title>
+    <title>@yield('title', 'Vision Plus Wealth — Fast Loans in Zimbabwe')</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="@yield('meta_description', 'Vision Plus Wealth is a registered microfinance institution in Zimbabwe offering business loans, agricultural loans, and salary-based loans. RBZ licensed and regulated.')">
+    <meta name="robots" content="@yield('robots', 'index, follow')">
+    <link rel="canonical" href="@yield('canonical', url()->current())">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:site_name" content="Vision Plus Wealth">
+    <meta property="og:title" content="@yield('og_title', 'Vision Plus Wealth — Fast Loans in Zimbabwe')">
+    <meta property="og:description" content="@yield('og_description', 'RBZ licensed microfinance institution. Business, agricultural and salary-based loans across Zimbabwe. Apply online today.')">
+    <meta property="og:url" content="@yield('og_url', url()->current())">
+    <meta property="og:image" content="@yield('og_image', url('assets/img/logo/vpw_dark_logo.png'))">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('og_title', 'Vision Plus Wealth — Fast Loans in Zimbabwe')">
+    <meta name="twitter:description" content="@yield('og_description', 'RBZ licensed microfinance institution. Business, agricultural and salary-based loans across Zimbabwe.')">
+    <meta name="twitter:image" content="@yield('og_image', url('assets/img/logo/vpw_dark_logo.png'))">
 
     <!--=====FAB ICON=======-->
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo/fav-logo1.png" type="image/png">
 
     <!-- Brand Fonts (TEMPORARY — remove with brand.css) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +69,7 @@
         "foundingDate": "2022",
         "address": {
             "@@type": "PostalAddress",
-            "streetAddress": "9th Floor Michael House, 62 Nelson Mandela Avenue",
+            "streetAddress": "Suite EF05-09 Lonrho Building, 90 Nelson Mandela Avenue",
             "addressLocality": "Harare",
             "addressCountry": "ZW"
         },

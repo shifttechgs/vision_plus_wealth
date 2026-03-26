@@ -72,8 +72,8 @@
 
 
 
-                                <li><a class="nav-link {{ request()->is('about') ? 'active' : '' }}"
-                                       href="{{  url('/aboutUs') }}">Company
+                                <li><a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}"
+                                       href="{{ url('/about-us') }}">Company
                                     </a>
                                 </li>
 

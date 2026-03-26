@@ -1,5 +1,10 @@
 @extends('layouts.master')
 
+@section('title', 'Apply for a Loan Online — Vision Plus Wealth')
+@section('meta_description', 'Apply for a business, agricultural, or salary-based loan with Vision Plus Wealth. Simple online application. RBZ licensed and regulated in Zimbabwe.')
+@section('robots', 'noindex, follow')
+@section('canonical', url('/loan-application'))
+
 @section('content')
 <style>
     /* Loan Application Form Styles */

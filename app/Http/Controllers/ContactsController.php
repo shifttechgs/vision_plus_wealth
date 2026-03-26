@@ -85,7 +85,7 @@ class ContactsController extends Controller
         $data['message'] = strip_tags($data['message'] ?? '');
 
         // Get contact email from environment
-        $contactEmail = env('CONTACT_EMAIL', 'sales@shifttechgs.com');
+        $contactEmail = env('CONTACT_EMAIL', 'online@visionpluswealth.com');
 
         try {
             // Send the contact form data via email
@@ -99,7 +99,7 @@ class ContactsController extends Controller
                 'ip' => $request->ip()
             ]);
 
-            return redirect('/contact')->with('success', '✅ Thank you for contacting us! Your message has been sent successfully. Our team will get back to you within 24 hours.');
+            return redirect('/contact')->with('success', 'Thank you for contacting us! Your message has been sent successfully. Our team will get back to you within 24 hours.');
 
         } catch (\Exception $e) {
             // Log the error with details
@@ -111,7 +111,7 @@ class ContactsController extends Controller
                 'trace' => $e->getTraceAsString()
             ]);
 
-            return redirect('/contact')->with('error', '❌ We\'re sorry, but there was an error sending your message. Please try again or contact us directly at ' . $contactEmail);
+            return redirect('/contact')->with('error', 'We\'re sorry, but there was an error sending your message. Please try again or contact us directly at ' . $contactEmail);
         }
     }
 }

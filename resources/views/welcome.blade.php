@@ -1,5 +1,13 @@
 @extends("layouts.master")
 
+@section('title', 'Business & Agricultural Loans in Zimbabwe — Vision Plus Wealth')
+@section('meta_description', 'Vision Plus Wealth offers fast business loans, agricultural financing, and salary-based loans across Zimbabwe. RBZ licensed and regulated. 500+ businesses funded. Apply online today.')
+@section('canonical', url('/'))
+@section('og_title', 'Business & Agricultural Loans in Zimbabwe — Vision Plus Wealth')
+@section('og_description', 'Fast business loans, agricultural financing, and salary-based loans across Zimbabwe. RBZ licensed. 500+ businesses funded, 98% approval rate. Apply in minutes.')
+@section('og_url', url('/'))
+@section('og_image', url('assets/img/all-images/hero/vpw.avif'))
+
 @push('styles')
     <link rel="stylesheet" href="assets/css/how-it-works.css">
 @endpush

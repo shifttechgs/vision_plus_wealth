@@ -34,6 +34,6 @@ class ContactFormMail extends Mailable
 
         return $this->view('emails.contact-inquiry')
             ->with('data', $this->data)
-            ->subject("🔔 New {$loanType} Inquiry from {$customerName} - Action Required");
+            ->subject("New {$loanType} Inquiry from {$customerName} — Vision Plus Wealth");
     }
 }

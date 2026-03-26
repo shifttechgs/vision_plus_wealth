@@ -31,7 +31,7 @@
         .header {
             margin-bottom: 22px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #1e3a5f;
+            border-bottom: 2px solid #0a1f3f;
         }
 
         .header-row {
@@ -84,13 +84,13 @@
             text-align: center;
             font-weight: bold;
             font-size: 12pt;
-            color: #1e3a5f;
+            color: #0a1f3f;
             margin: 8px 0 12px 0;
             letter-spacing: 0.5px;
         }
 
         .form-title {
-            background: #1e3a5f;
+            background: #0a1f3f;
             color: white;
             font-size: 12pt;
             font-weight: bold;
@@ -109,7 +109,7 @@
             margin-bottom: 10px;
             padding: 6px 10px;
             background: #f5f5f5;
-            border-left: 4px solid #1e3a5f;
+            border-left: 4px solid #0a1f3f;
             border-bottom: 1px solid #ccc;
         }
 
@@ -230,20 +230,6 @@
             background: #fff;
         }
 
-        .checkbox.checked::before {
-            content: '✓';
-            font-weight: bold;
-            color: #000;
-            font-size: 10pt;
-        }
-
-        .checkbox.unchecked::before {
-            content: '✗';
-            font-weight: normal;
-            color: #999;
-            font-size: 9pt;
-        }
-
         /* Next of Kin Boxes */
         .nok-row {
             display: table;
@@ -277,7 +263,7 @@
             display: inline-block;
             width: 22px;
             vertical-align: top;
-            color: #1e3a5f;
+            color: #0a1f3f;
         }
 
         .nok-field {
@@ -304,7 +290,7 @@
 
         /* Loan Details Banner */
         .tick-banner {
-            background: #1e3a5f;
+            background: #0a1f3f;
             color: white;
             text-align: center;
             padding: 10px 12px;
@@ -424,7 +410,7 @@
             width: 10%;
             font-weight: bold;
             background: #fafafa;
-            color: #1e3a5f;
+            color: #0a1f3f;
         }
 
         /* Footer */
@@ -466,7 +452,7 @@
                     <span style="font-size: 8.5pt;">{{ $data['application_number'] ?? '' }}</span>
                 </div>
                 <div class="logo-container">
-                    {{-- Logo removed as per requirements --}}
+                    <img src="file://{{ public_path('assets/img/logo/vpw_dark_logo.png') }}" class="logo" alt="Vision Plus Wealth">
                 </div>
                 <div class="branch">
                     <strong>Branch</strong><br>
@@ -594,9 +580,9 @@
             <div class="field-group" style="width: 55%;">
                 <span class="field-label">Status of employment</span>
                 <div>
-                    <span class="checkbox {{ (isset($data['employment_status']) && $data['employment_status'] == 'Permanent') ? 'checked' : '' }}"></span>Permanent
-                    <span class="checkbox {{ (isset($data['employment_status']) && $data['employment_status'] == 'Casual') ? 'checked' : '' }}"></span>Casual
-                    <span class="checkbox {{ (isset($data['employment_status']) && $data['employment_status'] == 'Contract') ? 'checked' : '' }}"></span>Contract
+                    <span class="checkbox">{!! (isset($data['employment_status']) && $data['employment_status'] == 'Permanent') ? '&#10003;' : '' !!}</span>Permanent
+                    <span class="checkbox">{!! (isset($data['employment_status']) && $data['employment_status'] == 'Casual') ? '&#10003;' : '' !!}</span>Casual
+                    <span class="checkbox">{!! (isset($data['employment_status']) && $data['employment_status'] == 'Contract') ? '&#10003;' : '' !!}</span>Contract
                 </div>
             </div>
             <div class="field-group" style="width: 22%;">
@@ -705,11 +691,11 @@
                 <div class="loan-field" style="width: 65%;">
                     <span class="field-label">Repayment Period</span>
                     <div style="padding: 4px 0;">
-                        <span class="checkbox {{ (isset($data['repayment_period']) && $data['repayment_period'] == '1') ? 'checked' : '' }}"></span><strong>1</strong>
-                        <span class="checkbox {{ (isset($data['repayment_period']) && $data['repayment_period'] == '2') ? 'checked' : '' }}"></span><strong>2</strong>
-                        <span class="checkbox {{ (isset($data['repayment_period']) && $data['repayment_period'] == '3') ? 'checked' : '' }}"></span><strong>3</strong>
-                        <span class="checkbox {{ (isset($data['repayment_period']) && $data['repayment_period'] == '4') ? 'checked' : '' }}"></span><strong>4</strong>
-                        <span class="checkbox {{ isset($data['repayment_period_other']) ? 'checked' : '' }}"></span><strong>Other</strong>
+                        <span class="checkbox">{!! (isset($data['repayment_period']) && $data['repayment_period'] == '1') ? '&#10003;' : '' !!}</span><strong>1</strong>
+                        <span class="checkbox">{!! (isset($data['repayment_period']) && $data['repayment_period'] == '2') ? '&#10003;' : '' !!}</span><strong>2</strong>
+                        <span class="checkbox">{!! (isset($data['repayment_period']) && $data['repayment_period'] == '3') ? '&#10003;' : '' !!}</span><strong>3</strong>
+                        <span class="checkbox">{!! (isset($data['repayment_period']) && $data['repayment_period'] == '4') ? '&#10003;' : '' !!}</span><strong>4</strong>
+                        <span class="checkbox">{!! isset($data['repayment_period_other']) && $data['repayment_period_other'] ? '&#10003;' : '' !!}</span><strong>Other</strong>
                         <span style="border-bottom: 2px solid #444; display: inline-block; min-width: 40px; text-align: center; padding: 2px 5px; font-weight: bold;">{{ $data['repayment_period_other'] ?? '' }}</span> <strong>Month(s)</strong>
                     </div>
                 </div>
@@ -782,7 +768,7 @@
 
         <!-- Signature -->
         <div class="signature-row">
-            <strong>Signature:</strong> <span class="signature-line">&nbsp;</span>
+            <strong>Signature:</strong> <span class="signature-line" style="font-size: 9.5pt; padding-left: 6px;">{{ isset($data['first_names']) ? strtoupper(substr($data['first_names'], 0, 1)) . '.' . strtoupper($data['surname'] ?? '') : '' }}</span>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <strong>Date:</strong> <span class="signature-line">{{ $data['submission_date'] ?? '' }}</span>
         </div>

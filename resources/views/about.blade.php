@@ -1,5 +1,12 @@
 @extends("layouts.master")
 
+@section('title', 'About Us — Registered Microfinance Institution Zimbabwe | Vision Plus Wealth')
+@section('meta_description', 'Vision Plus Wealth is a registered microfinance institution (MFI) founded in 2022 and licensed by the Reserve Bank of Zimbabwe. We empower businesses, agricultural ventures, and individuals with accessible financial solutions.')
+@section('canonical', url('/about-us'))
+@section('og_title', 'About Vision Plus Wealth — Registered Microfinance in Zimbabwe')
+@section('og_description', 'Founded in 2022, licensed by the Reserve Bank of Zimbabwe. Empowering micro, small, and medium businesses across Zimbabwe with tailored financial solutions.')
+@section('og_url', url('/about-us'))
+
 @push('styles')
     <link rel="stylesheet" href="assets/css/about-premium.css">
 @endpush
@@ -11,7 +18,7 @@
         <div class="row">
             <div class="col-lg-12 m-auto">
                 <div class="inner-header text-center">
-                    <h2>About Us</h2>
+                    <h1>About Us</h1>
                     <div class="space24"></div>
                     <a href="{{ url('/') }}">Home <i class="fa-solid fa-angle-right"></i> <span>About Us</span></a>
                 </div>
@@ -65,18 +72,18 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="img2 reveal">
-                                <img src="assets/img/all-images/hero/vpw.avif" alt="">
+                                <img src="assets/img/all-images/hero/vpw.avif" alt="Vision Plus Wealth office team">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="img2 reveal">
-                                <img src="assets/img/all-images/happyLoans.jpg" alt="">
+                                <img src="assets/img/all-images/happyLoans.jpg" alt="Happy Vision Plus Wealth loan customer">
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="space30"></div>
                             <div class="img1 reveal">
-                                <img src="assets/img/all-images/cta.png" alt="">
+                                <img src="assets/img/all-images/cta.png" alt="Apply for a loan with Vision Plus Wealth">
                             </div>
                         </div>
                     </div>
@@ -147,7 +154,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="img1">
-                                        <img src="assets/img/all-images/loans.jpg" alt="">
+                                        <img src="assets/img/all-images/loans.jpg" alt="Business loans and financial services in Zimbabwe">
                                     </div>
                                 </div>
                             </div>
@@ -177,7 +184,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="img1">
-                                        <img src="assets/img/all-images/mission.png" alt="">
+                                        <img src="assets/img/all-images/mission.png" alt="Vision Plus Wealth mission — empowering Zimbabwe's businesses">
                                     </div>
                                 </div>
                             </div>

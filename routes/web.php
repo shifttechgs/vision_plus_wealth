@@ -13,7 +13,8 @@ Route::get('/', function () {
 Route::get('/contact',[ContactsController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactsController::class, 'submitForm']);
 
-Route::get('/aboutUs',[PagesController::class, 'aboutUs'])->name('about.page');
+Route::get('/about-us', [PagesController::class, 'aboutUs'])->name('about.page');
+Route::redirect('/aboutUs', '/about-us', 301);
 
 // Loan Application Routes
 Route::get('/loan-application', [LoanApplicationController::class, 'index'])

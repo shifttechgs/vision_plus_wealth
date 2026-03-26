@@ -1,2 +1,5 @@
 User-agent: *
-Disallow:
+Disallow: /loan-application
+Disallow: /reboot
+
+Sitemap: https://www.visionpluswealth.com/sitemap.xml

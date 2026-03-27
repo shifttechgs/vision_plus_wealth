@@ -82,7 +82,8 @@
       "Bash(git rm:*)",
       "Bash(echo \"EXIT: $?\")",
       "Bash(git update-index:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git:*)"
     ],
     "deny": [],
     "ask": []

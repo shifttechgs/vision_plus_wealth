@@ -301,6 +301,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ── Hero Floating Feature Cards ── */
+.hero4-section-area {
+    overflow: visible !important;
+}
+
 .hero4-section-area .hero-image-wrapper {
     position: relative;
 }
@@ -368,13 +372,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-float-card--top {
     top: 15%;
-    left: -8%;
+    left: 2%;
     animation: floatUp 4s ease-in-out infinite;
 }
 
 .hero-float-card--mid {
     top: 48%;
-    right: -8%;
+    right: 2%;
     animation: floatDown 4.5s ease-in-out infinite;
 }
 

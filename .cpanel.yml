@@ -26,7 +26,7 @@ deployment:
     - /bin/cp public/sitemap.xml $DEPLOYPATH/public || true
 
     - /bin/cp artisan $DEPLOYPATH
-
+#fix this prosper
     # Clear Laravel caches
     - php $DEPLOYPATH/artisan config:clear
     - php $DEPLOYPATH/artisan cache:clear

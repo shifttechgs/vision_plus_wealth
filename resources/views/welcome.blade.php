@@ -25,27 +25,20 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="hero4-heading">
-                        <!-- Trust badge -->
-                        <div class="hero-trust-badge" data-aos="fade-up" data-aos-duration="600">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>RBZ Licensed & Regulated</span>
-                        </div>
-                        <div class="space12"></div>
-
                         <!-- Headline -->
-                        <h1 class="hero-headline text-anime-style-3">Get the Capital Your Business Needs — Fast.</h1>
+                        <h1 class="hero-headline text-anime-style-3">Different Needs, One Solution.</h1>
 
-                        <div class="space12"></div>
+                        <div class="space20"></div>
 
-                        <!-- Tagline -->
-                        <p class="hero-tagline" data-aos="fade-up" data-aos-duration="750"><em>Different Needs, One Solution.</em></p>
+                        <!-- Description -->
+                        <p class="hero-subline" data-aos="fade-up" data-aos-duration="750">VisionPlus Wealth provides accessible, personalised financing with fast, flexible loans that help individuals, entrepreneurs, and SMEs grow with confidence.</p>
 
                         <div class="space20"></div>
 
                         <!-- CTA -->
                         <div class="btn-area1" data-aos="fade-up" data-aos-duration="900">
                             <a href="{{ url('/loan-application') }}" class="vl-btn4">Apply For a Loan <span><i class="fa-solid fa-arrow-right"></i></span></a>
-                            <a href="{{ url('/contact') }}" class="vl-btn4 btn2">Talk to an Advisor <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                            <a href="{{ url('/contact') }}" class="vl-btn4 btn2">Speak to an Advisor <span><i class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
 
                         <div class="space16"></div>
@@ -53,16 +46,16 @@
                         <!-- Inline social proof -->
                         <div class="hero-proof" data-aos="fade-up" data-aos-duration="1000">
                             <div class="hero-proof-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span><strong>500+</strong> businesses funded</span>
+                                <i class="fas fa-users"></i>
+                                <span>Trusted by <strong>1,000+</strong> clients</span>
                             </div>
                             <div class="hero-proof-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span><strong>98%</strong> approval rate</span>
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Licensed &amp; compliant</span>
                             </div>
                             <div class="hero-proof-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span><strong>$2M+</strong> disbursed</span>
+                                <i class="fas fa-star"></i>
+                                <span><strong>98%</strong> satisfaction</span>
                             </div>
                         </div>
                     </div>
@@ -72,6 +65,34 @@
                     <div class="images-area hero-image-wrapper" data-aos="fade-left" data-aos-duration="1000">
                         <div class="img1">
                             <img src="assets/img/all-images/hero/vpw.avif" alt="VisionPlus Wealth — empowering businesses" loading="eager">
+                        </div>
+                        <!-- Floating feature cards -->
+                        <div class="hero-float-card hero-float-card--top" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                            <div class="hero-float-card__icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="hero-float-card__text">
+                                <strong>Fast Approvals</strong>
+                                <span>24-48 hours</span>
+                            </div>
+                        </div>
+                        <div class="hero-float-card hero-float-card--mid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                            <div class="hero-float-card__icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div class="hero-float-card__text">
+                                <strong>Flexible Rates</strong>
+                                <span>Clear &amp; competitive</span>
+                            </div>
+                        </div>
+                        <div class="hero-float-card hero-float-card--bot" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                            <div class="hero-float-card__icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="hero-float-card__text">
+                                <strong>100% Secure</strong>
+                                <span>No hidden fees</span>
+                            </div>
                         </div>
                     </div>
                 </div>

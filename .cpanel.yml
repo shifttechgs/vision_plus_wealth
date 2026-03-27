@@ -13,8 +13,17 @@ deployment:
     - /bin/cp -R resources $DEPLOYPATH
     - /bin/cp -R routes $DEPLOYPATH
     - /bin/cp -R vendor $DEPLOYPATH
+    # Ensure public directory exists
+    - mkdir -p $DEPLOYPATH/public
+
+    # Copy public files
+    - /bin/cp -R public/assets $DEPLOYPATH/public
     - /bin/cp -R public/build $DEPLOYPATH/public || true
-    - /bin/cp -R public/assets $DEPLOYPATH/public || true
+    - /bin/cp public/index.php $DEPLOYPATH/public
+    - /bin/cp public/.htaccess $DEPLOYPATH/public
+    - /bin/cp public/favicon.ico $DEPLOYPATH/public || true
+    - /bin/cp public/robots.txt $DEPLOYPATH/public || true
+    - /bin/cp public/sitemap.xml $DEPLOYPATH/public || true
 
     - /bin/cp artisan $DEPLOYPATH
 

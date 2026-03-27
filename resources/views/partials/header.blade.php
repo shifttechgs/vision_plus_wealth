@@ -8,31 +8,31 @@
 </div>
 <!--===== PROGRESS ENDS=======-->
 
-<!--===== OFFER BANNER STARTS =======-->
-<div class="offer-banner-wrapper">
-    <div class="offer-banner">
-        <div class="container">
-            <div class="offer-content">
-                <div class="offer-left">
-                    <span class="offer-badge pulse">🔥 Limited Time</span>
-                </div>
-                <div class="offer-center">
-                    <span class="offer-text">Get approved in <strong>24 hours</strong> + <strong>Zero application fees</strong> this month!</span>
-                </div>
-                <div class="offer-right">
-                    <span class="offer-countdown" id="offerCountdown">
-                        <i class="fas fa-clock"></i>
-                        <span class="countdown-text">Ends in: <strong>5 days</strong></span>
-                    </span>
-                </div>
-            </div>
-            <button class="offer-close" id="offerClose" aria-label="Close offer banner">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    </div>
-</div>
-<!--===== OFFER BANNER ENDS =======-->
+{{--<!--===== OFFER BANNER STARTS =======-->--}}
+{{--<div class="offer-banner-wrapper">--}}
+{{--    <div class="offer-banner">--}}
+{{--        <div class="container">--}}
+{{--            <div class="offer-content">--}}
+{{--                <div class="offer-left">--}}
+{{--                    <span class="offer-badge pulse">🔥 Limited Time</span>--}}
+{{--                </div>--}}
+{{--                <div class="offer-center">--}}
+{{--                    <span class="offer-text">Get approved in <strong>24 hours</strong> + <strong>Zero application fees</strong> this month!</span>--}}
+{{--                </div>--}}
+{{--                <div class="offer-right">--}}
+{{--                    <span class="offer-countdown" id="offerCountdown">--}}
+{{--                        <i class="fas fa-clock"></i>--}}
+{{--                        <span class="countdown-text">Ends in: <strong>5 days</strong></span>--}}
+{{--                    </span>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <button class="offer-close" id="offerClose" aria-label="Close offer banner">--}}
+{{--                <i class="fas fa-times"></i>--}}
+{{--            </button>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+{{--<!--===== OFFER BANNER ENDS =======-->--}}
 
 <!--=====HEADER START=======-->
 <header class="homepage4-body">

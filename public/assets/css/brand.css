@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero background */
 .hero4-section-area {
     background: linear-gradient(135deg, #0a1f3f 0%, #0A4D8C 100%) !important;
-    padding: 160px 0 100px 0 !important;
+    padding: 190px 0 100px 0 !important;
     position: relative;
 }
 
@@ -272,6 +272,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero4-section-area .hero-image-wrapper {
     min-height: auto !important;
     position: relative;
+    margin-top: 40px;
 }
 
 .hero4-section-area .hero-image-wrapper .img1 {

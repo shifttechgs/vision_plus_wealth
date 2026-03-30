@@ -16,23 +16,22 @@ deployment:
     # Ensure public directory exists
     - mkdir -p $DEPLOYPATH/public
 
-    # Copy public files
-    - /bin/cp -R public/assets $DEPLOYPATH/public
-    - /bin/cp -R public/build $DEPLOYPATH/public || true
-    - /bin/cp public/index.php $DEPLOYPATH/public
-    - /bin/cp public/.htaccess $DEPLOYPATH/public
-    - /bin/cp public/favicon.ico $DEPLOYPATH/public || true
-    - /bin/cp public/robots.txt $DEPLOYPATH/public || true
-    - /bin/cp public/sitemap.xml $DEPLOYPATH/public || true
-    - /bin/cp public/brand-guide.html $DEPLOYPATH/public || true
-    - /bin/cp -R public/images $DEPLOYPATH/public || true
-    - /bin/cp -R public/branches $DEPLOYPATH/public || true
+    # Copy public assets to domain root (where index.php serves from)
+    - /bin/cp -R public/assets $DEPLOYPATH/..
+    - /bin/cp -R public/build $DEPLOYPATH/.. || true
+    - /bin/cp public/.htaccess $DEPLOYPATH/..
+    - /bin/cp public/favicon.ico $DEPLOYPATH/.. || true
+    - /bin/cp public/robots.txt $DEPLOYPATH/.. || true
+    - /bin/cp public/sitemap.xml $DEPLOYPATH/.. || true
+    - /bin/cp public/brand-guide.html $DEPLOYPATH/.. || true
+    - /bin/cp -R public/images $DEPLOYPATH/.. || true
+    - /bin/cp -R public/branches $DEPLOYPATH/.. || true
 
     - /bin/cp artisan $DEPLOYPATH
 
     # Fix permissions so web server can read all files
-    - find $DEPLOYPATH/public/assets -type f -exec chmod 644 {} \;
-    - find $DEPLOYPATH/public/assets -type d -exec chmod 755 {} \;
+    - find $DEPLOYPATH/../assets -type f -exec chmod 644 {} \;
+    - find $DEPLOYPATH/../assets -type d -exec chmod 755 {} \;
 
 
     # Clear Laravel caches

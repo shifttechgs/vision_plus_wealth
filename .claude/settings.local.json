@@ -84,7 +84,8 @@
       "Bash(git update-index:*)",
       "Bash(git commit:*)",
       "Bash(git:*)",
-      "Bash(powershell -Command \":*)"
+      "Bash(powershell -Command \":*)",
+      "Bash(grep -r \"customer-entrepreneur\\\\|customer-professional\\\\|customer-shopowner\\\\|history-cityscape\\\\|step-apply\\\\|step-approved\\\\|step-documents\\\\|step-funds\" C:/wamp64_3.3.4/www/projects/vision_plus_wealth/resources/ --include=*.php --include=*.blade.php -l)"
     ],
     "deny": [],
     "ask": []

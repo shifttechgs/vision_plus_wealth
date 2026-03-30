@@ -24,6 +24,9 @@ deployment:
     - /bin/cp public/favicon.ico $DEPLOYPATH/public || true
     - /bin/cp public/robots.txt $DEPLOYPATH/public || true
     - /bin/cp public/sitemap.xml $DEPLOYPATH/public || true
+    - /bin/cp public/brand-guide.html $DEPLOYPATH/public || true
+    - /bin/cp -R public/images $DEPLOYPATH/public || true
+    - /bin/cp -R public/branches $DEPLOYPATH/public || true
 
     - /bin/cp artisan $DEPLOYPATH
 #fix this prosper

@@ -118,6 +118,9 @@
                 </div>
 
                 <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="hero-image-inner">
+                        <img src="{{ asset('assets/img/all-images/hero/hero-img1.png') }}" alt="Financial growth">
+                    </div>
                     <div class="hero-card floating">
                         <div class="card-icon">
                             <i class="fas fa-chart-line"></i>

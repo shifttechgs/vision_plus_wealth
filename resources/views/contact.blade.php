@@ -320,130 +320,126 @@
         </div>
     </div>
 
-    <!-- Google Maps JavaScript API -->
-{{--    <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}"></script>--}}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_z7Ofh4HDMdtA4qnF64HV0oxkA_7-i3w"></script>
+    <!-- Leaflet.js (OpenStreetMap) - No API key required -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        .branch-marker {
+            background: #0a1f3f;
+            border: 2px solid #ffffff;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            width: 28px;
+            height: 28px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+        }
+        .branch-marker.hq {
+            background: #004d99;
+            width: 34px;
+            height: 34px;
+            border-width: 3px;
+        }
+        .branch-marker-inner {
+            background: #ffffff;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .branch-marker.hq .branch-marker-inner {
+            width: 12px;
+            height: 12px;
+        }
+        @keyframes markerDrop {
+            0%   { opacity: 0; transform: rotate(-45deg) translateY(-30px); }
+            100% { opacity: 1; transform: rotate(-45deg) translateY(0); }
+        }
+        .branch-marker { animation: markerDrop 0.4s ease forwards; }
+    </style>
 
     <script>
         // Branch locations data
         const branches = [
-            { name: "Kwekwe", lat: -18.9296, lng: 29.8149 },
-            { name: "Mutare", lat: -18.9758, lng: 32.6504 },
-            { name: "Bulawayo", lat: -20.1325, lng: 28.6265 },
-            { name: "Guruve", lat: -16.6700, lng: 30.7050 },
-            { name: "Gweru", lat: -19.4500, lng: 29.8167 },
-            { name: "Masvingo", lat: -20.0637, lng: 30.8277 },
-            { name: "Harare", lat: -17.8252, lng: 31.0335 },
-            { name: "Karoi", lat: -16.8096, lng: 29.6923 },
-            { name: "Chinhoyi", lat: -17.3650, lng: 30.2000 },
-            { name: "Zvishavane", lat: -20.3267, lng: 30.0665 },
-            { name: "Gokwe", lat: -18.2150, lng: 28.9340 },
-            { name: "Gwanda", lat: -20.9363, lng: 29.0060 },
-            { name: "Chipinge", lat: -20.1890, lng: 32.6236 },
-            { name: "Mutoko", lat: -17.3965, lng: 32.2260 },
-            { name: "Mudzi", lat: -16.9590, lng: 32.4150 }
+            { name: "Kwekwe",     lat: -18.9296, lng: 29.8149, address: "121 Gum Avenue, Office 10 Fidelity House, Kwekwe" },
+            { name: "Mutare",     lat: -18.9758, lng: 32.6504, address: "52 Second Street, Mutare" },
+            { name: "Bulawayo",   lat: -20.1325, lng: 28.6265, address: "Office 302, Old CABS Building, Corner Liopod Takawira & Jason Moyo, Bulawayo" },
+            { name: "Guruve",     lat: -16.6700, lng: 30.7050, address: "77 Tahwa Stores (Sub Office), Guruve" },
+            { name: "Gweru",      lat: -19.4500, lng: 29.8167, address: "Shop 1A, First Floor, Moonlight House, 5th Street, Gweru" },
+            { name: "Masvingo",   lat: -20.0637, lng: 30.8277, address: "Shop 19, New Market Centre, Mutare Road, Masvingo" },
+            { name: "Harare",     lat: -17.8252, lng: 31.0335, address: "9th Floor Michael House, 62 Nelson Mandela Avenue, Harare" },
+            { name: "Karoi",      lat: -16.8096, lng: 29.6923, address: "37 St Jameson, New Dairyboard Depot, Karoi" },
+            { name: "Chinhoyi",   lat: -17.3650, lng: 30.2000, address: "259 Link Street, Chinhoyi" },
+            { name: "Zvishavane", lat: -20.3267, lng: 30.0665, address: "Chikozho Complex, Kataza Road, Opposite Liquordem, Zvishavane" },
+            { name: "Gokwe",      lat: -18.2150, lng: 28.9340, address: "Room 3, Gokwe Garment Complex, Gokwe" },
+            { name: "Gwanda",     lat: -20.9363, lng: 29.0060, address: "ZFU Building, Stand 160, Queen Street, Gwanda" },
+            { name: "Chipinge",   lat: -20.1890, lng: 32.6236, address: "9697 Main Street, Chipinge" },
+            { name: "Mutoko",     lat: -17.3965, lng: 32.2260, address: "1 Badger Complex, Behind Redan Bookshop, Mutoko" },
+            { name: "Mudzi",      lat: -16.9590, lng: 32.4150, address: "Chataika Complex, Shop 2, Opposite Kariri Complex, Kotwa, Mudzi" }
         ];
 
         // Initialize map
         function initMap() {
-            // Center of Zimbabwe (approximate)
-            const zimbabweCenter = { lat: -19.0, lng: 30.0 };
-
-            // Create map
-            const map = new google.maps.Map(document.getElementById('branchMap'), {
+            const map = L.map('branchMap', {
+                center: [-19.0, 30.0],
                 zoom: 7,
-                center: zimbabweCenter,
-                mapTypeControl: true,
-                streetViewControl: false,
-                fullscreenControl: true,
-                styles: [
-                    {
-                        featureType: "poi",
-                        elementType: "labels",
-                        stylers: [{ visibility: "off" }]
-                    }
-                ]
+                fullscreenControl: true
             });
 
-            // Create bounds to fit all markers
-            const bounds = new google.maps.LatLngBounds();
+            // OpenStreetMap tile layer - completely free, no API key
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-            // Add markers for each branch
+            const bounds = [];
+
             branches.forEach((branch, index) => {
-                const position = { lat: branch.lat, lng: branch.lng };
+                const isHQ = branch.name === 'Harare';
 
-                // Create marker with location pin icon
-                const marker = new google.maps.Marker({
-                    position: position,
-                    map: map,
-                    title: branch.name,
-                    animation: google.maps.Animation.DROP,
-                    icon: {
-                        path: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z',
-                        fillColor: branch.name === 'Harare' ? '#0a1f3f' : '#0a1f3f',
-                        fillOpacity: 1,
-                        strokeColor: '#ffffff',
-                        strokeWeight: 2,
-                        scale: 1.8,
-                        anchor: new google.maps.Point(12, 22),
-                        labelOrigin: new google.maps.Point(12, 9)
-                    }
+                // Custom drop pin icon
+                const icon = L.divIcon({
+                    className: '',
+                    html: `<div class="branch-marker${isHQ ? ' hq' : ''}" style="animation-delay: ${index * 50}ms"><div class="branch-marker-inner"></div></div>`,
+                    iconSize: isHQ ? [34, 34] : [28, 28],
+                    iconAnchor: isHQ ? [17, 34] : [14, 28],
+                    popupAnchor: [0, -30]
                 });
 
-                // Create info window
-                const infoWindow = new google.maps.InfoWindow({
-                    content: `
-                        <div style="padding: 12px; min-width: 200px;">
-                            <h4 style="margin: 0 0 8px 0; color: #0a1f3f; font-size: 1.1rem; font-weight: 700;">
-                                ${branch.name === 'Harare' ? '🏢 ' : '📍 '}${branch.name} Branch
-                            </h4>
-                            ${branch.name === 'Harare' ?
-                                `<p style="margin: 0; color: #666; font-size: 0.9rem; line-height: 1.5;">
-                                    9th Floor Michael House<br>
-                                    62 Nelson Mandela Avenue<br>
-                                    Harare, Zimbabwe
-                                </p>
-                                <a href="https://maps.app.goo.gl/XKqAHdNGdBBGWia98" target="_blank"
-                                   style="display: inline-block; margin-top: 10px; color: #0066cc; text-decoration: none; font-weight: 600; font-size: 0.9rem;">
-                                    Get Directions →
-                                </a>` :
-                                `<p style="margin: 0; color: #666; font-size: 0.9rem;">
-                                    Visit us for personalized financial solutions
-                                </p>`
-                            }
-                        </div>
-                    `
-                });
+                const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(branch.address)}`;
+                const popupContent = `
+                    <div style="padding: 12px; min-width: 210px;">
+                        <h4 style="margin: 0 0 8px 0; color: #0a1f3f; font-size: 1.05rem; font-weight: 700;">
+                            ${isHQ ? '🏢 ' : '📍 '}${branch.name} Branch${isHQ ? ' (HQ)' : ''}
+                        </h4>
+                        <p style="margin: 0 0 10px 0; color: #555; font-size: 0.88rem; line-height: 1.6;">
+                            ${branch.address}
+                        </p>
+                        <a href="${directionsUrl}" target="_blank"
+                           style="display: inline-block; color: #0066cc; text-decoration: none; font-weight: 600; font-size: 0.85rem;">
+                            Get Directions →
+                        </a>
+                    </div>
+                `;
 
-                // Add click listener to marker
-                marker.addListener('click', () => {
-                    infoWindow.open(map, marker);
-                });
+                L.marker([branch.lat, branch.lng], { icon: icon, title: branch.name })
+                    .addTo(map)
+                    .bindPopup(popupContent);
 
-                // Extend bounds to include this marker
-                bounds.extend(position);
-
-                // Add slight delay to marker drops for visual effect
-                setTimeout(() => {
-                    marker.setAnimation(null);
-                }, 500 + (index * 50));
+                bounds.push([branch.lat, branch.lng]);
             });
 
-            // Fit map to show all markers with padding
-            map.fitBounds(bounds);
-
-            // Add padding to bounds
-            const listener = google.maps.event.addListener(map, "idle", function() {
-                if (map.getZoom() > 7) map.setZoom(7);
-                google.maps.event.removeListener(listener);
-            });
+            // Fit map to show all markers
+            map.fitBounds(bounds, { padding: [30, 30], maxZoom: 7 });
         }
 
         // Populate branch list
         function populateBranchList() {
             const branchListContainer = document.getElementById('branchList');
 
-            // Sort branches alphabetically
             const sortedBranches = [...branches].sort((a, b) => a.name.localeCompare(b.name));
 
             sortedBranches.forEach(branch => {

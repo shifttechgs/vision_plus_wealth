@@ -26,8 +26,8 @@
     <meta name="twitter:image" content="@yield('og_image', url('assets/img/logo/vpw_dark_logo.png'))">
 
     <!--=====FAB ICON=======-->
-    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/svg+xml">
-    <link rel="icon" href="assets/img/logo/favicon.png" type="image/svg+xml">
+    <link rel="shortcut icon" href="assets/img/logo/vpw_fav_icon.png" type="image/svg+xml">
+    <link rel="icon" href="assets/img/logo/vpw_fav_icon.png" type="image/svg+xml">
 
     <!-- Brand Fonts (TEMPORARY — remove with brand.css) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

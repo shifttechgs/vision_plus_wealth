@@ -83,7 +83,8 @@
       "Bash(echo \"EXIT: $?\")",
       "Bash(git update-index:*)",
       "Bash(git commit:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(powershell -Command \":*)"
     ],
     "deny": [],
     "ask": []

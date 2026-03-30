@@ -29,7 +29,12 @@ deployment:
     - /bin/cp -R public/branches $DEPLOYPATH/public || true
 
     - /bin/cp artisan $DEPLOYPATH
-#fix this prosper
+
+    # Fix permissions so web server can read all files
+    - find $DEPLOYPATH/public/assets -type f -exec chmod 644 {} \;
+    - find $DEPLOYPATH/public/assets -type d -exec chmod 755 {} \;
+
+
     # Clear Laravel caches
     - php $DEPLOYPATH/artisan config:clear
     - php $DEPLOYPATH/artisan cache:clear
